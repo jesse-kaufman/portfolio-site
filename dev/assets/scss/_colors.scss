@@ -47,8 +47,8 @@ $pinned-posts-group-border-bottom: $css-grey !default;
 
 // Elements of the site which are expected to follow accent color
 // In this current form, `accentColor` in hugo.toml will have higher precedence than these declarations
-$aTag-mixin-a-box-shadow: $pine-green !default; // Box shadow for Mixin "aTag" used by figure element
-$aTag-mixin-a-hover-box-shadow: $pine-green !default; // Box shadow on hover for Mixin "aTag" used by figure element
+$aTag-mixin-a-box-shadow: #00b8d4 !default; // Box shadow for Mixin "aTag" used by figure element
+$aTag-mixin-a-hover-box-shadow: #00b8d4 !default; // Box shadow on hover for Mixin "aTag" used by figure element
 $content-anchor-hover: $pine-green !default; // Anchor text hover color
 $post-description-a-hover-border-bottom: $pine-green !default; // Anchor text on hover for post description in list
 $tableofcontents-a-hover-border-bottom: $pine-green !default; // Table of Contents on hover

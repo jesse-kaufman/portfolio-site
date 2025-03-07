@@ -165,9 +165,17 @@ a {
   transition-timing-function: ease-out;
   font-weight: 300;
 
+  div.content & {
+    color: $aTag-mixin-a-box-shadow;
+    font-weight: 400;
+
+    &:hover {
+      color: white;
+    }
+  }
+
   &:hover {
-    color: $a-hover;
-    text-shadow: 0 0 1px $a-hover;
+    color: white;
   }
 }
 
