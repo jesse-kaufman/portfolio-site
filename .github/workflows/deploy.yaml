@@ -23,14 +23,9 @@ jobs:
           cd dev  # Navigate to the dev directory
           hugo    # Build the site (output goes to dev/public)
 
-      - name: Deploy to Live
+      - name: Trigger Deployment via Webhook
         run: |
-          rsync -av --delete dev/public/ /home/containers/portfolio/live/public/  # Sync built files to live/public
-          # You can use other deployment methods if needed, like SCP, FTP, etc.
-
-      - name: Commit changes (optional)
-        run: |
-          cd live
-          git add .
-          git commit -m "Deploy latest Hugo build"
-          git push
+          curl -X POST https://apis.lloydnet.org/portfolio/api/v1 \
+          -H "Authorization: Bearer YOUR_SECRET_TOKEN" \
+          -H "Content-Type: application/json" \
+          -d '{"message": "Deployment triggered by GitHub Actions"}'
