@@ -9,7 +9,10 @@ tags:
   - smart-home
   - zigbee
 ---
-## Food Left in Microwave Reminder
+- [Food left in microwave reminders](#food-left-in-microwave-reminders)
+- [Wet clothes in washer reminders](#wet-clothes-in-washer-reminders)
+
+## Food left in microwave reminders
 
 This automation ensures that food left in the microwave doesn't go unnoticed by leveraging smart home technology. The system operates as follows:
 
