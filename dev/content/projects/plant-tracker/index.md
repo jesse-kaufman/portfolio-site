@@ -9,6 +9,7 @@ type: post
 tags:
   - node.js
   - express.js
+  - mongodb
 ---
 The Plant Tracker API will allow users to manage and track their plants through different growth stages. Built with Node.js, Express.js, and MongoDB, the API will store plant data such as growth stages, start dates, and projected harvest dates. Users will be able to update plant stages, archive or delete plants, and retrieve plant information via a RESTful API. The application will be containerized with Docker for easy deployment and scalability, with Nginx acting as a reverse proxy to ensure secure and efficient traffic routing.
 
