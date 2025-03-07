@@ -6,9 +6,9 @@ description: ""
 images:
   - val_batch0_pred.jpg
 tags:
-  - artificial intelligence
+  - artificial-intelligence
   - automation
-  - home assistant
+  - home-assistant
   - node-red
 type: post
 ---
