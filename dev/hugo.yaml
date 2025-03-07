@@ -31,8 +31,7 @@ params:
   footerHideThemeName: true
   usesAnimation: true
   enableRobotsTXT: true
-  homeSubtitle: Welcome to my portfolio.
-
+  homeSubtitle: Welcome to my development portfolio.
   justifyContent: false
 
   relatedPosts: true
