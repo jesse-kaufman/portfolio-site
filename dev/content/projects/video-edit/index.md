@@ -1,7 +1,7 @@
 ---
 date: 2025-03-05T17:00:56-06:00
 draft: false
-title: Media Conversion and Standardization Tool
+title: Media conversion and standardization tool
 description: ""
 tags:
   - node.js
@@ -31,7 +31,6 @@ The tool also provides flexibility with two distinct quality settings:
 
 - **Regular Quality:** Provides optimal video and audio output for general use, ensuring high quality for most scenarios.
 - **TV Quality:** Lowers resolution and bitrate to reduce file size, ideal for streaming or devices with limited storage.
-
 
 ## Outcomes
 
