@@ -1,7 +1,7 @@
 ---
 date: 2025-03-05T17:00:56-06:00
 draft: false
-title: AI-powered Trash Can Detection
+title: AI-powered trash can detection system
 description: ""
 images:
   - val_batch0_pred.jpg
