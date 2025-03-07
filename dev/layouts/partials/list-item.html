@@ -1,0 +1,29 @@
+{{- $group_by_date := and (isset .Params "group_list_by_date") (ne .Params.group_list_by_date false) }}
+
+<li class="post-item">
+    <a href="{{.Permalink}}">
+        <span class="post-title">{{.Title}}</span>
+        {{- if $group_by_date }}
+        <span class="post-day">{{ .Date.Format .Site.Params.dateformShort }}</span>
+        {{- end -}}
+    </a>
+    {{- if and .Page.Params.description (in .Site.Params.listLayout "description") -}}
+    <span class="post-description">{{ .Page.Params.description }}</span>
+    {{- end -}}
+    {{- if or (in .Site.Params.listLayout "tags") (in .Site.Params.listLayout "categories") -}}<div class="post-taxonomy">
+        {{- if and .Page.Params.tags (in .Site.Params.listLayout "tags") -}}
+        <span class="post-tags">
+            {{- range .Page.Params.tags -}}
+            <a href="{{ "tags/" | absLangURL }}{{ . | urlize }}" class="{{ . | lower | replaceRE "\\.| " "_" }} tag">{{- . -}}</a>
+            {{- end -}}
+        </span>
+        {{- end -}}
+        {{- if and .Page.Params.categories (in .Site.Params.listLayout "categories") -}}
+        <span class="post-categories">
+            {{- range .Page.Params.categories -}}
+            <a href="{{ "categories/" | absLangURL }}{{ . | urlize }}" class="category">{{- . -}}</a>
+            {{- end -}}
+        </span>
+        {{- end -}}
+    </div>{{- end -}}
+</li>
