@@ -1,0 +1,36 @@
+name: Deploy Hugo Site
+
+on:
+  push:
+    branches:
+      - main # Trigger deploy on pushes to the 'main' branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.145.0" # Specify the Hugo version
+
+      - name: Build the site
+        run: |
+          cd dev  # Navigate to the dev directory
+          hugo    # Build the site (output goes to dev/public)
+
+      - name: Deploy to Live
+        run: |
+          rsync -av --delete dev/public/ /home/containers/portfolio/live/public/  # Sync built files to live/public
+          # You can use other deployment methods if needed, like SCP, FTP, etc.
+
+      - name: Commit changes (optional)
+        run: |
+          cd live
+          git add .
+          git commit -m "Deploy latest Hugo build"
+          git push
