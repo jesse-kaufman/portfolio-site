@@ -42,3 +42,26 @@ This system is built using a combination of **smart home automation platforms, I
 - **[EMQX](https://www.emqx.com/):** Facilitates communication between Home Assistant and Zigbee devices (via Zigbee2MQTT).
 
 This stack allows for **real-time event detection, recurring reminders with multiple alert levels (e.g., notice, critical, warning), and seamless smart home integration.**
+
+---
+
+## Wet clothes in washer reminders
+
+This automation helps remind users when the washing cycle is complete, and wet clothes are left in the washer:
+
+- **Smart washer communication**: The smart washer communicates its state to Home Assistant via webhooks, providing real-time updates on the washing cycle.
+- **Cycle completion notification**: Once the washing cycle is complete, a notification is sent to all devices in the home, and *"washing cycle complete"* is announced on smart speakers in any occupied rooms.
+- **Wet clothes detection**: If the washer door is closed at the time of cycle completion, a binary input sensor (labeled "wet clothes in washer") is turned on and the washer is marked as "occupied" in Home Assistant.
+- **Follow-up notification**: A 15-minute timer begins upon cycle completion. Once the timer finishes, a notification stating *"there are wet clothes in the washer"* is sent to all devices and announced on any smart speakers in occupied rooms.
+- **Door open action**: If the washer door is opened at any point during the timer, the timer is stopped, the "wet clothes in washer" sensor is turned off, and any washing machine notifications are cleared from devices to prevent notification clutter.
+
+### Wet clothes tech stack
+
+- **[Node-RED](https://nodered.org/):** Used for orchestrating the automation workflows and integrating various devices and services.
+- **[Home Assistant](https://www.home-assistant.io/):** Central hub for managing and automating smart devices, providing webhook support and device state monitoring.
+- **[Zigbee2MQTT](https://www.zigbee2mqtt.io/):** A bridge for communication between Zigbee devices and Home Assistant, facilitating the integration of Zigbee-enabled devices like the contact sensor.
+- **[EMQX](https://www.emqx.com/):** Facilitates communication between Home Assistant and Zigbee devices (via Zigbee2MQTT).
+- **Zigbee contact sensor**: Monitors the washer door status, used to detect if the door is open or closed when the washing cycle finishes.
+- **Smart washer**: The smart washer communicates its state to Home Assistant via webhooks, providing updates on the cycle completion.
+- **[Home Assistant companion app](https://companion.home-assistant.io/):** Sends device notifications when certain conditions are met, such as washing cycle completion or wet clothes left in the washer.
+- **Smart speakers**: Announcements are made on smart speakers in occupied rooms to alert users about the washing cycle status and wet clothes.
