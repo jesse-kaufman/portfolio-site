@@ -3,7 +3,6 @@ date: 2025-03-05T17:00:56-06:00
 draft: false
 title: ADHD Quality of Life enhancements through automation
 description: ""
-type: post
 tags:
   - home-assistant
   - node-red
