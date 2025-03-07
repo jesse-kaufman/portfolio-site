@@ -126,6 +126,11 @@ pre {
   }
 }
 
+strong,
+strong a {
+  font-weight: 400;
+}
+
 code {
   color: hsl(0, 1%, 67%);
   background: $code-background;
