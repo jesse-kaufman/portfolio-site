@@ -7,6 +7,7 @@ tags:
   - home-assistant
   - node-red
   - smart-home
+  - zigbee
 ---
 ## Food Left in Microwave Reminder
 
