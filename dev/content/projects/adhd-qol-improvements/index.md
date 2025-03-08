@@ -14,7 +14,7 @@ tags:
 
 ## Food left in microwave reminders
 
-This automation ensures that food left in the microwave doesn't go unnoticed by leveraging smart home technology. The system operates as follows:
+{{< figure src="/projects/adhd-qol-improvements/food-in-microwave-notification.jpg" alt="Notification sent by Home Assistant companion app." caption="Notification sent by Home Assistant." class="right" >}}This automation ensures that food left in the microwave doesn't go unnoticed by leveraging smart home technology. The system operates as follows:
 
 1. **Detecting microwave activity:** A smart plug monitors power usage to determine when the microwave is in use. If power consumption exceeds a defined threshold, the system marks the microwave as **"running."**
 
@@ -47,7 +47,7 @@ This stack allows for **real-time event detection, recurring reminders with mult
 
 ## Wet clothes in washer reminders
 
-This automation helps remind users when the washing cycle is complete, and wet clothes are left in the washer:
+{{< figure src="/projects/adhd-qol-improvements/wet-clothes-in-washer.jpg" alt="Notification sent by Home Assistant companion app." caption="Notification sent by Home Assistant." class="right" >}}This automation helps remind users when the washing cycle is complete, and wet clothes are left in the washer:
 
 - **Smart washer communication**: The smart washer communicates its state to Home Assistant via webhooks, providing real-time updates on the washing cycle.
 - **Cycle completion notification**: Once the washing cycle is complete, a notification is sent to all devices in the home, and *"washing cycle complete"* is announced on smart speakers in any occupied rooms.
