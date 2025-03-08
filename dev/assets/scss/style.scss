@@ -591,6 +591,7 @@ h3 {
   display: flex;
   margin-bottom: 1.9em;
   line-height: normal;
+  margin-top: 1em;
 
   .post-year {
     padding-top: 6px;
@@ -612,8 +613,8 @@ h3 {
 
   .post-item {
     border-bottom: 1px $post-item-border-bottom dashed;
-    padding-top: 0.6em;
-    padding-bottom: 0.6em;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
 
     a {
       display: flex;
@@ -790,7 +791,8 @@ hr.post-end {
     p {
       font-size: .8em;
       font-style: italic;
-      margin-top: 0;
+      margin-top: 0.5em;
+      margin-bottom: 0;
       line-height: 1.1em;
       @include dimmed;
     }
@@ -1068,16 +1070,10 @@ a.footnote-ref {
 
   figure.left {
     margin-left: -240px;
-    p {
-      text-align: left;
-    }
   }
 
   figure.right {
     margin-right: -240px;
-    p {
-      text-align: right;
-    }
   }
 
   figure.big {
