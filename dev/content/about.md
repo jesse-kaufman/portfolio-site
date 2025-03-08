@@ -1,7 +1,7 @@
 ---
 date: '2025-03-05T17:25:44-06:00'
-draft: true
-title: 'About'
+draft: false
+title: 'About Jesse Kaufman'
 ---
 I am a passionate and versatile software developer with over 25 years of experience in web development, primarily focusing on PHP, JavaScript, and Node.js. Over the years, I have transitioned to modern development practices, exploring technologies like Node.js, Express.js, MongoDB, and Docker. This shift is driven by my keen interest in event-driven programming and working with NoSQL databases, while also embracing DevOps principles, including CI/CD workflows, containerization, automation, and test-driven development.
 
