@@ -476,6 +476,10 @@ h2,h3,h4,h5,h6 {
   margin-block-end: 0.1em;
 }
 
+h3 code {
+  margin-left: -0.1em;
+}
+
 .project-page h1 {
   font-weight: 100;
 }
