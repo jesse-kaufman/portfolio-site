@@ -25,6 +25,8 @@ tags:
 
 4. **Clearing notifications on interaction:** Once the door is opened, any microwave notifications are cleared from devices to prevent clutter and notification fatigue.
 
+### Outcome
+
 This automation has reduced the amount of times I've forgotten about food in the microwave to **zero.**
 
 ### Food in microwave tech stack
