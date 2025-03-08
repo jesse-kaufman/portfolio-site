@@ -12,7 +12,7 @@ tags:
   - node-red
 type: post
 ---
-Forgetting to take out the trash can be frustrating, and I do it a lot. To solve this problem, I built a reminder system using Home assistant and Node-RED to alert me on my phone, computers, TV, and smart speakers. This worked great IF I remembered to turn off the "put out trash today" switch...I didn't.
+{{< figure src="/projects/ai-trash-detection/trash-reminder.jpg" alt="Notification sent by Home Assistant companion app." caption="Notification sent by Home Assistant." class="right rounded" >}}Forgetting to take out the trash can be frustrating, and I do it a lot. To solve this problem, I built a reminder system using Home assistant and Node-RED to alert me on my phone, computers, TV, and smart speakers. This worked great IF I remembered to turn off the "put out trash today" switch...I didn't.
 
 So, I created an locally-hosted AI-powered solution using YOLO object detection, with a model specifically trained to recognize my trash cans. Now, the system automatically stops the reminders once I’ve put the trash out!
 
