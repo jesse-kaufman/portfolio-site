@@ -322,9 +322,7 @@ table {
   animation-fill-mode: forwards;
 }
 
-body .content figure {
-  margin: 0em 1em 1.5em 0.5em;
-}
+
 
 .hdr-wrapper {
   display: flex;
@@ -791,12 +789,16 @@ hr.post-end {
   figure {
     max-width: 100%;
     height: auto;
-    margin: 0;
     text-align: center;
 
-    &.rounded img {
-      border-radius: 20px;
+    &.rounded {
+      margin-right: 0!important;
+      margin-left: 0!important;
+      img {
+        border-radius: 20px;
+      }
     }
+
 
     p {
       font-size: .8em;
