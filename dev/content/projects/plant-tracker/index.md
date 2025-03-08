@@ -1,8 +1,8 @@
 ---
 date: 2025-03-05T17:00:56-06:00
 draft: false
-title: Plant Tracker API Project
-description: ""
+title: Plant Tracker API project
+description: A plant tracking API built with Node.js and Express, designed to manage plant growth from seedling to harvest with efficient status updates and progress tracking.
 images:
   - val_batch0_pred.jpg
 type: post

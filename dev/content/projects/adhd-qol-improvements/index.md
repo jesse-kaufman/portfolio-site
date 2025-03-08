@@ -1,7 +1,7 @@
 ---
 date: 2025-03-04T17:00:56-06:00
 title: ADHD Quality of Life enhancements through automation
-description: "Two automations that enhance the quality of life in this neurodivergent household."
+description: Two smart home automations designed to improve daily life in a neurodivergent household—intelligent reminders to prevent food from being forgotten in the microwave and wet clothes from sitting in the washer.
 tags:
   - home-assistant
   - node-red
