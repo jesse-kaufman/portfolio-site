@@ -7,7 +7,9 @@ tags:
   - node.js
   - express.js
 ---
-This custom-built video editing tool automates multiple tasks to streamline the process of converting and editing videos, making it efficient and easy vs having to remeber ffmpeg command line switches. Key features of the tool include:
+[{{< svg name="github" >}} Github](https://github.com/jesse-kaufman/video-edit)
+
+This custom-built video editing tool automates multiple tasks to streamline the process of converting and editing videos, making it efficient and easy vs having to remeber ffmpeg command line switches.
 
 ## Tech Stack
 
