@@ -106,7 +106,7 @@
   animation-name: bounce;
   transform-origin: center bottom;
 }
-@keyframes bounceInRight {
+/*@keyframes bounceInRight {
   0%,
   60%,
   75%,
@@ -134,7 +134,7 @@
 }
 .bounceInRight {
   animation-name: bounceInRight;
-}
+}*/
 @keyframes bounceOutRight {
   20% {
     opacity: 1;
