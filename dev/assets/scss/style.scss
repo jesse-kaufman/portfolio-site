@@ -392,13 +392,13 @@ body .content figure {
 
 #mobile-menu {
   position: fixed;
-  bottom: 4.8em;
-  right: 4.5em;
+  right: 0;
+  top: 56px;
   display: none;
   padding: .6em 1.8em;
   z-index: 1;
   box-sizing: border-box;
-  box-shadow: -1px -2px 3px 0px rgba(0, 0, 0, 0.45);
+  box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.45);
   background-color: $mobile-menu-background;
 
   ul {
