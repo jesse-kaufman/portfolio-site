@@ -777,7 +777,6 @@ hr.post-end {
   border-style: solid;
   border-bottom-width: 4px;
 }
-
 .content {
   {{- with .Site.Params.justifyContent }}
   text-align: justify;
