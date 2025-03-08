@@ -787,6 +787,8 @@ hr.post-end {
     p {
       font-size: .8em;
       font-style: italic;
+      margin-top: 0;
+      line-height: 1.1em;
       @include dimmed;
     }
   }
