@@ -692,7 +692,6 @@ h3 {
   }
 
   .post-description {
-    font-size:x-small;
     @include dimmed;
   }
   .post-taxonomy {
@@ -923,7 +922,10 @@ a.footnote-ref {
 
 .post-description {
   font-size: .8rem;
-  line-height: normal;
+  line-height: 1.2em;
+  margin-bottom: 0.75em;
+  display: block;
+  font-style: italic;
   @include dimmed;
 
   p {
