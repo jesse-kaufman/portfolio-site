@@ -60,7 +60,11 @@ This stack allows for **real-time event detection, recurring reminders with mult
 
 5. **Door open action**: If the washer door is opened at any point during the timer, the timer is stopped, the "wet clothes in washer" sensor is turned off, and any washing machine notifications are cleared from devices to prevent notification clutter.
 
-### Wet clothes tech stack
+## Outcome
+
+This automation has prevented me from ever having to re-wash mildew-y clothes once since deployment. It saves me from smelly clothes and wasting time and money re-washing clothes after forgetting about them.
+
+### Tech stack
 
 - **[Node-RED](https://nodered.org/):** Used for orchestrating the automation workflows and integrating various devices and services.
 - **[Home Assistant](https://www.home-assistant.io/):** Central hub for managing and automating smart devices, providing webhook support and device state monitoring.
