@@ -7,6 +7,7 @@ tags:
   - node-red
   - smart-home
   - zigbee
+  - mqtt
 ---
 - [Food left in microwave reminders](#food-left-in-microwave-reminders)
 - [Wet clothes in washer reminders](#wet-clothes-in-washer-reminders)

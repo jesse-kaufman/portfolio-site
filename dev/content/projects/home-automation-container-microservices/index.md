@@ -8,5 +8,6 @@ tags:
   - smart-home
   - zigbee
   - docker
+  - mqtt
 ---
 ### *Coming Soon*
