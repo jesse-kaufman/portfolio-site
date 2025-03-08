@@ -2,7 +2,7 @@
 date: 2025-03-04T17:00:56-06:00
 draft: false
 title: ADHD Quality of Life enhancements through automation
-description: ""
+description: "Two automations that enhance the quality of life in this neurodivergent household."
 tags:
   - home-assistant
   - node-red

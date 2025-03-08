@@ -2,7 +2,7 @@
 date: 2025-03-05T17:00:56-06:00
 draft: false
 title: AI-powered trash can detection system
-description: ""
+description: "Trash can detection system for smart reminders powered by locally hosted machine learning and a custom-trained model."
 images:
   - val_batch0_pred.jpg
 tags:
