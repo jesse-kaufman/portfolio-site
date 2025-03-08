@@ -788,6 +788,10 @@ hr.post-end {
     margin: 0;
     text-align: center;
 
+    &.rounded img {
+      border-radius: 20px;
+    }
+
     p {
       font-size: .8em;
       font-style: italic;
