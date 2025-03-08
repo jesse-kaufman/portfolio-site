@@ -46,8 +46,8 @@ params:
       url: https://github.com/jesse-kaufman
     - name: linkedin
       url: https://linkedin.com/in/glandix
-    - name: instagram
-      url: https://instagram.com/jessekphoto
+    - name: email
+      url: mailto:jesse@jessekaufman.com
 menu:
   main:
     - name: "Projects"
