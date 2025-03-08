@@ -662,10 +662,14 @@ h3 {
         background: #2a88a1;
       }
       &.docker {
-        background: #1D63ED;
+        background: #1a51bd;
+      }
+      &.mqtt {
+        background: #b58f28;
+        color: black;
       }
       &.smart-home {
-        background: #333333;
+        background: #222222;
       }
       &.zigbee {
         background: #8c230d;
@@ -680,7 +684,7 @@ h3 {
         background: #a86932;
       }
       &.express_js {
-        background: $blueberry;
+        background: #2c3e50;
       }
       &.mongodb {
         background: #00684a;
