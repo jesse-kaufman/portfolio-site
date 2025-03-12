@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
+        with:
+          submodules: recursive
 
       - name: Set up Hugo
         uses: peaceiris/actions-hugo@v2
@@ -21,6 +23,7 @@ jobs:
       - name: Build the site
         run: |
           cd dev  # Navigate to the dev directory
+          git submodule update --init --recursive
           hugo    # Build the site (output goes to dev/public)
 
       - name: Trigger Deployment via Webhook
