@@ -19,6 +19,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: "0.145.0" # Specify the Hugo version
+          extended: true # Enable Hugo extended version
 
       - name: Build the site
         run: |
