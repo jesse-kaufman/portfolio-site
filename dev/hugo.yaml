@@ -57,3 +57,7 @@ menu:
     - name: "About"
       url: "/about/"
       weight: 2
+
+    - name: "Resume"
+      url: "/docs/jesse-kaufman-resume.pdf"
+      weight: 2
