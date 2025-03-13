@@ -50,14 +50,14 @@ params:
       url: mailto:jesse@jessekaufman.com
 menu:
   main:
-    - name: "Projects"
-      url: "/projects/"
+    - name: Projects
+      url: /projects/
       weight: 1
 
-    - name: "About"
-      url: "/about/"
+    - name: About
+      url: /about/
       weight: 2
 
-    - name: "Resume"
-      url: "/docs/jesse-kaufman-resume.pdf"
-      weight: 2
+    - name: Resume
+      url: /docs/jesse-kaufman-resume.pdf
+      weight: 3
