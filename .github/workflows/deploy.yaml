@@ -21,7 +21,7 @@ jobs:
           hugo-version: "0.145.0" # Specify the Hugo version
           extended: true # Enable Hugo extended version
 
-      - name: Build the site
+      - name: Test building site
         run: |
           cd dev  # Navigate to the dev directory
           git submodule update --init --recursive
