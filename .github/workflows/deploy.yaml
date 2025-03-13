@@ -15,7 +15,7 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Set up Hugo
+      - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: "0.145.0" # Specify the Hugo version
@@ -23,11 +23,11 @@ jobs:
 
       - name: Test building site
         run: |
-          cd dev  # Navigate to the dev directory
+          cd src  # Navigate to the src directory
           git submodule update --init --recursive
-          hugo    # Build the site (output goes to dev/public)
+          hugo    # Build the site (output goes to src/public)
 
-      - name: Trigger Deployment via Webhook
+      - name: Trigger deployment via webhook
         run: |
           curl -X POST https://apis.lloydnet.org/actions/api/v1/portfolio \
           -H "Authorization: Bearer YOUR_SECRET_TOKEN" \
