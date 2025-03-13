@@ -61,3 +61,7 @@ menu:
     - name: Resume
       url: /docs/jesse-kaufman-resume.pdf
       weight: 3
+
+    - name: Photography
+      url: https://shop.jessekaufman.com
+      weight: 4
