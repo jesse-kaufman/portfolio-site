@@ -2,3 +2,6 @@ dev/public/*
 dev/resources/_gen/*
 dev/.hugo_build.lock
 live/public/*
+live/logs/*
+build/*
+.env
