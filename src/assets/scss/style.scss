@@ -793,6 +793,12 @@ hr.post-end {
     height: auto;
     text-align: center;
 
+    &.narrow {
+      max-width: 400px;
+      margin-block-start: auto;
+      margin-block-end: auto;
+    }
+
     &.rounded {
       margin-right: 0!important;
       margin-left: 0!important;
