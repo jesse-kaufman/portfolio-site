@@ -3,7 +3,7 @@ date: 2025-03-07T17:00:56-06:00
 title: Orchestrating home automation with containerized microservices
 description: An overview of using Docker to orchestrate a scalable and efficient home automation system, leveraging containerized microservices for seamless integration and management of smart devices.
 images:
-  - home-automation-containers.jpg
+  - /projects/home-automation-container-microservices/home-automation-containers.jpg
 tags:
   - home-assistant
   - node-red
