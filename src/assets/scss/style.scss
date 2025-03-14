@@ -791,6 +791,7 @@ hr.post-end {
   figure {
     max-width: 100%;
     height: auto;
+    display: inline-block;
     text-align: center;
 
     &.narrow {
@@ -800,8 +801,6 @@ hr.post-end {
     }
 
     &.rounded {
-      margin-right: 0!important;
-      margin-left: 0!important;
       img {
         border-radius: 20px;
       }
