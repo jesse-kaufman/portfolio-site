@@ -743,6 +743,7 @@ h3 {
   background-size: cover;
   background-position: center;
   transition: opacity .5s;
+  filter: blur(1px);
 }
 
 .show-bg-img {
