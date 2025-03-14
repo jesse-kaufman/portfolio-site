@@ -38,7 +38,7 @@ The site is hosted on my own infrastructure, with separate development and produ
     - *Hugo automatically rebuilds files when modifications are detected*
 3. Once edits are finalized, local commits are pushed to Github and Github actions run the deployment workflow below
 
-*This ensures that there is never an administrative UI exposed to external threats.*
+***This ensures that there is never an administrative UI exposed to external threats.***
 
 ### Github actions workflow
 
