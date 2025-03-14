@@ -62,7 +62,6 @@ This event-driven, asynchronous camera notification system processes motion even
 
 ![Image-downloaded flow section in Node-RED](image-downloaded.jpg)
 
-
 ### 5a. **Image description with Google Gemini**
 
 - After the image is classified by YOLO, an `image_classified` event is triggered.
