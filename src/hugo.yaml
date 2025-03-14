@@ -21,7 +21,9 @@ params:
     email: jesse@jessekaufman.com
     phone: +13164611421
   # description = "CHANGE ME SITE DESCRIPTION"
-  # images = [""]
+  images:
+    - /images/vscodium.jpg
+    - /projects/event-driven-camera-notifications/camera-dashboard.jpg
   dateformShort: "Jan 2"
   dateform: "Jan 2, 2006"
   dateformNum: "2006-01-02"
