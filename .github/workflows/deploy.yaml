@@ -30,6 +30,6 @@ jobs:
       - name: Trigger deployment via webhook
         run: |
           curl -X POST https://apis.lloydnet.org/actions/api/v1/portfolio \
-          -H "Authorization: Bearer YOUR_SECRET_TOKEN" \
+          -H "Authorization: Bearer ${{ secrets.API_SECRET }}" \
           -H "Content-Type: application/json" \
           -d '{"message": "Deployment triggered by GitHub Actions"}'
