@@ -1,7 +1,7 @@
 ---
 date: 2025-03-07T17:00:56-06:00
 title: Home Assistant container microservices setup
-description: An overview of using Docker to orchestrate a scalable and efficient home automation system, leveraging containerized microservices for seamless integration and management of smart devices.
+description: This project leverages Docker containers to create a scalable and efficient home automation system with microservices for seamless integration, management, and control of various smart devices and services.
 images:
   - /projects/home-assistant-containers/home-assistant-containers.jpg
 tags:
@@ -13,7 +13,7 @@ tags:
   - MQTT
   - MySQL
 ---
-This project leverages Docker containers to create a scalable and efficient home automation system, utilizing containerized microservices for seamless integration, management, and control of various smart devices and services.
+This project leverages Docker containers to create a scalable and efficient home automation system with microservices for seamless integration, management, and control of various smart devices and services.
 
 **Diagram of Docker containers covered in this project**:
 {{< figure src="/projects/home-assistant-containers/home-assistant-containers.jpg" alt="Docker container setup for home automation system." caption="Docker container setup for home automation system." class="rounded" >}}
