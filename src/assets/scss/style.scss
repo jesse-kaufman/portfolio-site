@@ -644,6 +644,9 @@ h3 {
       &.home-assistant {
         background: #2a88a1;
       }
+      &.machine-learning {
+        background: #272822;
+      }
       &.github-actions {
         background: #ff5252;
       }
@@ -923,9 +926,8 @@ a.footnote-ref {
 }
 
 .tag {
-  text-transform: lowercase;
   &::before {
-    {{- with .Site.Params.tagSymbol | default "#" -}}content: "{{ . }}"{{- end -}}
+    {{- with .Site.Params.tagSymbol | default "" -}}content: "{{ . }}"{{- end -}}
   }
 }
 .category {

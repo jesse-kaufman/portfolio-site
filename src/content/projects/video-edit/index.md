@@ -4,8 +4,8 @@ draft: false
 title: Media conversion and standardization tool
 description: This custom-built video editing tool automates multiple tasks to streamline the process of converting and editing videos, making it efficient and easy vs having to remeber ffmpeg command line switches.
 tags:
-  - node.js
-  - express.js
+  - Node.js
+  - Express.js
 ---
 [{{< svg name="github" >}} Github](https://github.com/jesse-kaufman/video-edit)
 

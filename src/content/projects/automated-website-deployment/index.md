@@ -3,10 +3,10 @@ date: 2025-03-13T17:00:56-06:00
 title: Automated deployment for portfolio site
 description: This project implements a streamlined CI/CD pipeline (with Github actions) for my self-hosted portfolio website, built with Hugo CMS and deployed as static files. The automated deployment process ensures seamless updates while maintaining a clear separation between development and production environments.
 tags:
-  - ci/cd
-  - github-actions
-  - docker
-  - nginx
+  - CI/CD
+  - Github actions
+  - Docker
+  - NGINX
 ---
 This project implements a streamlined CI/CD pipeline (using Github actions) for my self-hosted portfolio website, built with Hugo CMS and deployed as static files. When commits are pushed to the Github repository, an automated deployment workflow is triggered to publish the changes to the live site.
 

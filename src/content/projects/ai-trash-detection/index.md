@@ -6,11 +6,12 @@ description: An AI-powered smart reminder system utilizing a YOLO-trained object
 images:
   - /projects/ai-trash-detection/val_batch0_pred.jpg
 tags:
-  - artificial-intelligence
+  - machine learninig
+  - artificial intelligence
   - automation
-  - home-assistant
-  - node-red
-  - docker
+  - Home Assistant
+  - Node-RED
+  - Docker
 type: post
 ---
 {{< figure src="/projects/ai-trash-detection/trash-reminder.jpg" alt="Notification sent by Home Assistant companion app." caption="Notification sent by Home Assistant." class="right rounded" >}}Forgetting to take out the trash can be frustrating, and I do it a lot. To solve this problem, I built a reminder system using Home assistant and Node-RED to alert me on my phone, computers, TV, and smart speakers. This worked great IF I remembered to turn off the "put out trash today" switch...I didn't.

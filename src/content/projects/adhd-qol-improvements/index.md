@@ -5,11 +5,11 @@ description: Two smart home automations designed to improve daily life in a neur
 images:
   - food-in-microwave-notification.jpg
 tags:
-  - home-assistant
-  - node-red
-  - smart-home
-  - zigbee
-  - mqtt
+  - Home Assistant
+  - Node-RED
+  - smart home
+  - Zigbee
+  - MQTT
 ---
 - [Food left in microwave reminders](#food-left-in-microwave-reminders)
 - [Wet clothes in washer reminders](#wet-clothes-in-washer-reminders)

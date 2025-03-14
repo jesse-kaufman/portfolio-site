@@ -5,13 +5,13 @@ description: An overview of using Docker to orchestrate a scalable and efficient
 images:
   - /projects/home-assistant-containers/home-assistant-containers.jpg
 tags:
-  - home-assistant
-  - node-red
-  - smart-home
-  - zigbee
-  - docker
-  - mqtt
-  - mysql
+  - Home Assistant
+  - Node-RED
+  - smart home
+  - Zigbee
+  - Docker
+  - MQTT
+  - MySQL
 ---
 This project leverages Docker containers to create a scalable and efficient home automation system, utilizing containerized microservices for seamless integration, management, and control of various smart devices and services.
 
