@@ -9,7 +9,7 @@ tags:
   - artificial intelligence
   - Docker
   - NGINX
-  - Dode-RED
+  - Node-RED
   - automation
   - Home Assistant
 ---
