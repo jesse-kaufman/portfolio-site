@@ -4,7 +4,7 @@ draft: false
 title: AI-powered trash can detection system
 description: An AI-powered smart reminder system utilizing a YOLO-trained object detection model to identify trash cans in security camera footage, allowing for intelligent reminders for taking out the trash that adjust to real-world conditions.
 images:
-  - val_batch0_pred.jpg
+  - /projects/ai-trash-detection/val_batch0_pred.jpg
 tags:
   - artificial-intelligence
   - automation
