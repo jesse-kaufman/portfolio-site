@@ -41,7 +41,7 @@ After training the model and ensuring its accuracy, I integrated it into my home
 
 ## Results and Impact
 
-This system has significantly improved the reliability of my trash reminders and reduced notification fatigue. The project demonstrates a practical application of machine learning and automation to solve everyday challenges efficiently.
+This system has significantly improved the reliability of my trash reminders and reduced notification fatigue. And I no longer have to remember to mark the trash cans as being put out, which saves me from being reminded when it isn't necessary. The project demonstrates a practical application of machine learning and automation to solve everyday challenges efficiently.
 
 ## Conclusion
 
