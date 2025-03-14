@@ -7,9 +7,9 @@ images:
   - val_batch0_pred.jpg
 type: post
 tags:
-  - Node.js
   - Express.js
   - MongoDB
+  - Node.js
 ---
 [{{< svg name="github" >}} Github](https://github.com/jesse-kaufman/plantsdb)
 

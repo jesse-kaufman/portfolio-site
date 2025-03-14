@@ -5,13 +5,13 @@ description: This event-driven, asynchronous camera notification system processe
 images:
   - /projects/event-driven-camera-notifications/camera-dashboard.jpg
 tags:
-  - machine learning
   - artificial intelligence
+  - automation
   - Docker
+  - Home Assistant
+  - machine learning
   - NGINX
   - Node-RED
-  - automation
-  - Home Assistant
 ---
 ## Overview
 

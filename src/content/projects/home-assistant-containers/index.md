@@ -5,13 +5,13 @@ description: This project leverages Docker containers to create a scalable and e
 images:
   - /projects/home-assistant-containers/home-assistant-containers.jpg
 tags:
+  - Docker
   - Home Assistant
+  - MQTT
+  - MySQL
   - Node-RED
   - smart home
   - Zigbee
-  - Docker
-  - MQTT
-  - MySQL
 ---
 This project leverages Docker containers to create a scalable and efficient home automation system with microservices for seamless integration, management, and control of various smart devices and services.
 

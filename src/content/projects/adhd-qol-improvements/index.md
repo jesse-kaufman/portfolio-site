@@ -6,10 +6,10 @@ images:
   - food-in-microwave-notification.jpg
 tags:
   - Home Assistant
+  - MQTT
   - Node-RED
   - smart home
   - Zigbee
-  - MQTT
 ---
 - [Food left in microwave reminders](#food-left-in-microwave-reminders)
 - [Wet clothes in washer reminders](#wet-clothes-in-washer-reminders)
