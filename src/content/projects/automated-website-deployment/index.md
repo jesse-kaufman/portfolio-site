@@ -31,7 +31,7 @@ The site is hosted on my own infrastructure, with separate development and produ
     └── public/
 ```
 
-### Development process
+## Development process
 
 1. Run `hugo server`, which serves the website from the `./public` directory at `http://localhost:1313`
 2. Make edits to content or Sass stylesheets, committing locally to git as necessary
@@ -49,7 +49,7 @@ The site is hosted on my own infrastructure, with separate development and produ
 5. The `hugo` command is run to build the site in the test environment
 6. If sucessful, a POST request is sent to my webhook deployment API with an `Authorization: Bearer <token>` header
 
-### Custom API for Continuous Deployment
+### Custom deployment API for continuous deployment
 
 I developed a lightweight API using **Node.js and Express** to automate deployments. This API listens for webhook requests from **GitHub**, allowing updates to be triggered automatically whenever changes are pushed to the repository. It runs inside a Docker container using Traefik for a reverse proxy.
 
