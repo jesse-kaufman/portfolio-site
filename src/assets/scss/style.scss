@@ -659,6 +659,9 @@ h3 {
       &.home-assistant {
         background: #2a88a1;
       }
+      &.github-actions {
+        background: #ff5252;
+      }
       &.docker {
         background: #1a51bd;
       }
@@ -686,6 +689,15 @@ h3 {
       }
       &.mongodb {
         background: #00684a;
+      }
+      &.ci-cd {
+        background: #21759b;
+      }
+      &.nginx {
+        background: #018472;
+      }
+      &.mysql {
+        background: #3b3e48;
       }
     }
   }
