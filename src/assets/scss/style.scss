@@ -653,7 +653,7 @@ h3 {
       opacity: 0.7;
       border: 0.5px solid #222;
 
-      &.node_js {
+      &.node-js {
         background: $tag-node-bg;
       }
       &.home-assistant {
@@ -681,7 +681,7 @@ h3 {
       &.automation {
         background: #a86932;
       }
-      &.express_js {
+      &.express-js {
         background: #2c3e50;
       }
       &.mongodb {

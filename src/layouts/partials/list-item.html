@@ -14,7 +14,7 @@
         {{- if and .Page.Params.tags (in .Site.Params.listLayout "tags") -}}
         <span class="post-tags">
             {{- range .Page.Params.tags -}}
-            <a href="{{ "tags/" | absLangURL }}{{ . | urlize }}" class="{{ . | lower | replaceRE "\\.| " "_" }} tag">{{- . -}}</a>
+            <a href="{{ "tags/" | absLangURL }}{{ . | urlize }}" class="{{ . | lower | replaceRE "\\.| |\\/" "-" }} tag">{{- . -}}</a>
             {{- end -}}
         </span>
         {{- end -}}
