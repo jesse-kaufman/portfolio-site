@@ -59,10 +59,6 @@ I developed a lightweight API using **Node.js and Express** to automate deployme
 2. Runs `hugo --minify --destination ../build` in the development environment to build the static files for the site into `/home/containers/portfolio/build`
 3. Uses `rsync` to copy files from the build directory to the live directory
 
-#### GitHub Integration
-
-The API is configured to receive **GitHub Webhook** events when updates are pushed to the repository. This enables a push-to-deploy workflow, eliminating the need for manual intervention.
-
 ## Benefits
 
 - **Automated Deployment** – No manual file transfers or server-side updates required
