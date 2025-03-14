@@ -1,6 +1,6 @@
 ---
 date: 2025-03-14T10:00:56-06:00
-title: Event-driven asynchronous camera notification system
+title: Event-driven, asynchronous security camera notifications
 description: This event-driven, asynchronous camera notification system processes motion events from security cameras, classifies and describes images, and sends notifications based on various detection types such as person, pet, vehicle, or motion.
 images:
   - /projects/event-driven-camera-notifications/camera-dashboard.jpg
