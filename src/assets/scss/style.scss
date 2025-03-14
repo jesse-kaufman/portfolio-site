@@ -51,21 +51,6 @@ $inserted-text-underline: {{.}};
   background: $text-select;
 }
 
-/* Webkit Scrollbar Customize */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  background: $pagescrollbar-background;
-}
-
-::-webkit-scrollbar-thumb {
-  background: $pagescrollbar-thumb;
-
-  &:hover {
-    background: $pagescrollbar-thumb-hover;
-  }
-}
-
 html {
   background: $html-background;
   line-height: 1.6;
