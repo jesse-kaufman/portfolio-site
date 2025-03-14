@@ -37,6 +37,8 @@ After training the model and ensuring its accuracy, I integrated it into my home
 - **Image Processing:** Node-RED sends API request with image to YOLO Docker container, where it is analyzed to detect the presence of a trash can and returns the results.
 - **Notification System:** If a trash can is detected by the front cameras, it confirms the trash has been put out and stops the reminders.
 
+{{< figure src="/projects/ai-trash-detection/trash-input-boolean.jpg" alt="Image of 'Trash cans out back' input boolean in Home Assistant." caption="Image of 'Trash cans out back' input boolean in Home Assistant." class="narrow" >}}
+
 ## Results and Impact
 
 This system has significantly improved the reliability of my trash reminders and reduced notification fatigue. The project demonstrates a practical application of machine learning and automation to solve everyday challenges efficiently.
