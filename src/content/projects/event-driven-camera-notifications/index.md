@@ -10,6 +10,7 @@ tags:
   - Docker
   - Home Assistant
   - machine learning
+  - MQTT
   - NGINX
   - Node-RED
 ---
