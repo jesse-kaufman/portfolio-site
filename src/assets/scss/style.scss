@@ -1131,6 +1131,10 @@ a.footnote-ref {
     margin-right: -240px;
   }
 
+  figure.small {
+    max-width: 40%!important;
+  }
+
   figure.big {
     width: 1200px;
     margin-left: -240px;
