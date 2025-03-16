@@ -29,6 +29,11 @@
 	<h1>{{ .Title }}</h1>
 	<p class="post-date">{{ .Date.Format "January 2, 2006" }}</p>
 
+	<div id="toc">
+		<h3>Table of Contents</h3>
+		{{ .TableOfContents }}
+	</div>
+
 	<div class="content">
 		{{ .Content | replaceRE "(<h[1-6] id=\"([^\"]+)\".+)(</h[1-6]+>)" `${1}<a href="#${2}" class="anchor"
 				aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"

@@ -972,11 +972,11 @@ a.footnote-ref {
 }
 
 #toc {
-  position: fixed;
   left: 50%;
   top: 0;
-  display: none;
   background-color: $tableofcontents-background;
+  border-bottom: 0.5px solid rgba(255,255,255,0.1);
+  padding-bottom: 0.5em;
 }
 
 .toc-title {
@@ -994,6 +994,12 @@ a.footnote-ref {
     padding-left: 1em;
     padding-right: 1em;
     margin: 0;
+  }
+
+  li {
+    line-height: 1.2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
 
   /* scrollbar customization for ToC */
@@ -1020,7 +1026,7 @@ a.footnote-ref {
   &>ul {
     list-style-type: none;
     overflow-y: auto;
-    height: calc(100vh - 300px);
+    /*height: calc(100vh - 300px);*/
 
     ul ul {
       font-size: .9em;
@@ -1114,11 +1120,6 @@ a.footnote-ref {
     margin-top: 8em;
   }
 
-  .desktop-only,
-  #toc.show-toc {
-    display: block;
-  }
-
   .desktop-only-ib {
     display: inline-block;
   }
@@ -1145,8 +1146,9 @@ a.footnote-ref {
   }
 
   #toc {
-    top: 13em;
-    margin-left: 370px;
+    position: fixed;
+    top: 9em;
+    margin-left: 390px;
     max-width: 220px;
   }
 }
