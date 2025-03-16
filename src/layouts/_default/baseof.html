@@ -70,6 +70,27 @@
 	{{- partial "mathjax.html" . -}}
 	{{- partial "mermaid.html" . -}}
 	{{- if templates.Exists "partials/extra-foot.html" -}}{{- partial "extra-foot.html" . -}}{{- end }}
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			document.querySelectorAll(".content img").forEach(img => {
+				img.style.cursor = "zoom-in"; // Indicate the image is clickable
+				img.addEventListener("click", function () {
+					let overlay = document.createElement("div");
+					overlay.classList.add("lightbox-overlay");
+
+					let enlargedImg = document.createElement("img");
+					enlargedImg.src = img.src;
+
+					overlay.appendChild(enlargedImg);
+					overlay.addEventListener("click", () => overlay.remove());
+					document.body.appendChild(overlay);
+				});
+			});
+		});
+	</script>
+
+
 </body>
 
 </html>
