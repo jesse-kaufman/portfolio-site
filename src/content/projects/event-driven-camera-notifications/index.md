@@ -31,6 +31,17 @@ This event-driven, asynchronous camera notification system processes motion even
 
 {{< figure src="/projects/event-driven-camera-notifications/latest-image-dashboard.jpg" alt="Image of latest camera images in Home Assistant" caption="Image of latest camera images in Home Assistant" class="rounded narrow" >}}
 
+## Tech Stack
+
+- [eufy-security-ws](https://github.com/bropat/eufy-security-ws) - integrates Eufy Security cameras into Home Assistant
+- [Home Assistant](https://www.home-assistant.io) - provides interface to cameras and motion detections
+- [Node-RED](https://www.nodered.org) - handles all logic for automations
+- [YOLO](https://www.ultralytics.com/yolo) - provides AI-powered object detection
+- [YOLO web service](https://github.com/JavierMtz5/YOLOv8-docker.git) - Provides web API interface for YOLO inside Docker container
+- [Google Gemini](https://gemini.google.com) - provides detailed description of image
+- [EMQX](https://www.emqx.com) - MQTT broker used for messaging
+- [Labelme](https://labelme.io/) - used for labelling images for iterative learning
+
 ## Workflow & System Components
 
 ### 1. **Motion detection and initial event classification**
