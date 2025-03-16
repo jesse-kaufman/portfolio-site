@@ -103,8 +103,10 @@ tags:
 
 ## Future Improvements
 
-- Enhancing event filtering and classification capabilities
-- More refinements to make the flow more asynchronous and modular
+- Support for image changes without related detection event
+  - *Camera images occasionally update when a detection event did not occur and this would download those and update the latest camera's image without the describe or notification steps.*
+- Support for multiple simultaneous detection types (e.g., image with a vehicle and person)
+- Refinements to make the flow more asynchronous and modular—especially the portion that copies files into event-specific directories
 - Reducing amount of data sent in payload / stored in flow context for improved memory efficiency
 
 This system ensures that camera-triggered events are processed quickly and accurately, providing reliable notifications to users based on detected activity.
