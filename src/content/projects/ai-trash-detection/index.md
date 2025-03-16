@@ -11,6 +11,7 @@ tags:
   - Docker
   - Home Assistant
   - machine learninig
+  - MQTT
   - Node-RED
 type: post
 ---
@@ -20,6 +21,16 @@ So, I created an locally-hosted AI-powered solution using YOLO object detection,
 
 ![Alt text](val_batch0_pred.jpg)
 
+## Tech Stack
+
+- [eufy-security-ws](https://github.com/bropat/eufy-security-ws) - integrates Eufy Security cameras into Home Assistant
+- [Home Assistant](https://www.home-assistant.io) - provides interface to cameras and motion detections
+- [Node-RED](https://www.nodered.org) - handles all logic for automations
+- [YOLO](https://www.ultralytics.com/yolo) - provides AI-powered object detection
+- [YOLO web service](https://github.com/JavierMtz5/YOLOv8-docker.git) - Provides web API interface for YOLO inside Docker container
+- [EMQX](https://www.emqx.com) - MQTT broker used for messaging
+- [Labelme](https://labelme.io/) - used for labelling images for iterative learning
+
 ## Machine Learning Approach
 
 I leveraged YOLO, a real-time object detection algorithm, to train a model specifically designed to detect my trash cans. The process involved:
@@ -28,7 +39,7 @@ I leveraged YOLO, a real-time object detection algorithm, to train a model speci
 - **Model Training:** Using YOLO to train a custom model, fine-tuning hyperparameters for accuracy.
 - **Testing and Optimization:** Conducting multiple tests to minimize false positives and enhance detection reliability in all conditions.
 - **Retraining and Fine-tuning:** Analyzing misdetections, labeling them correctly, and retraining the model to improve accuracy.
-- **API setup:** Configuring an API Docker container to serve as the interface between the YOLO model and my home automation system.
+- **API setup:** Configuring an [API Docker container](https://github.com/JavierMtz5/YOLOv8-docker) to serve as the interface between the YOLO model and my home automation system.
 
 ## Integration with Home Automation
 
@@ -40,9 +51,41 @@ After training the model and ensuring its accuracy, I integrated it into my home
 
 {{< figure src="/projects/ai-trash-detection/trash-input-boolean.jpg" alt="Image of 'Trash cans out back' input boolean in Home Assistant." caption="Image of 'Trash cans out back' input boolean in Home Assistant." class="narrow" >}}
 
+## Trash can detection logic
+
+Four cameras in two locations are checked for trash cans: two in front (front door and front yard) and two in the backyard (driveway and back door). This lets me know with reasonable certainty whether the trash cans are in the front or back yard. The selected cameras also reduce the likelihood of a neighbor's trash cans being detected.
+
+![Image of Node-RED logic flow for trash can detection](detect-trash-cans-logic.jpg)
+
+1. Node-RED listens to the MQTT topic `camera/+/event` for an `image_downloaded` event
+2. The image size is compared to the known size of a full notification image and only proceeds if it is
+    - This prevents cropped images (such as would occur with a person detection event on the camera) from being processed for trash cans, as they often are cropped out
+3. The image is sent to a locally-run YOLO service using a model custom-trained on my particular trash cans
+4. The number of trash cans detected is counted and if > 1, the trash cans are assumed to be in the same location as the camera image being processed
+5. If the trash cans were NOT detected, only update the trash cans' location between 5AM and 11PM
+    - This prevents false negatives from causing my reminders to prematurely be disabled when a dark camera image causes the system to think the trash cans are no longer out back
+
+## "Put out trash" reminder logic
+
+![Image of Node-RED logic flow for turning on/off 'Put out trash' boolean](turn-on-off-take-out-trash.jpg)
+
+1. If a "Put out trash" event is in the "Household Tasks" calendar in Home Assistant, a "Put out trash" input boolean is turned on
+2. If trash cans are NOT detected out back and trash is scheduled to be put out today, it's assumed the trash has been put out, so "Put out trash" is turned off
+3. If trash cans ARE detected out back and trash is scheduled to be put out today, the "Put out trash" boolean is turned on
+    - This is a fail-safe in the off-chance that a false negative causes the system to think trash had been put out prematurely
+4. At 9am, 12pm, 5pm, and 7pm if "Put out trash" boolean is on, reminders are sent in the form of notifications and spoken announcements on smart speakers in occupied rooms. If "Put out trash" is off, the reminders are skipped.
+
+![Image of Node-RED logic flow for sending reminders](put-out-trash-reminders.jpg)
+
 ## Results and Impact
 
 This system has significantly improved the reliability of my trash reminders and reduced notification fatigue. And I no longer have to remember to mark the trash cans as being put out, which saves me from being reminded when it isn't necessary. The project demonstrates a practical application of machine learning and automation to solve everyday challenges efficiently.
+
+## Future improvements
+
+- Streamline YOLO call to reduce duplicated nodes
+- Support for when one trash can is in front and the other is in back
+- Iterative training for a few rare edge cases that result in a false negative
 
 ## Conclusion
 
