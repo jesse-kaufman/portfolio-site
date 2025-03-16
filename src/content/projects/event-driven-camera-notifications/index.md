@@ -74,7 +74,7 @@ tags:
 
 ![Image-downloaded flow section in Node-RED](image-downloaded.jpg)
 
-### 5a. **Image description with Google Gemini**
+### 4a. **Image description with Google Gemini**
 
 - After the image is classified by YOLO, an `image_classified` event is triggered.
 - The image is then sent to Google Gemini with a prompt (based on what was detected and verified by YOLO) for a description.
@@ -82,18 +82,18 @@ tags:
 
 ![Image classification/verification flow section in Node-RED](image-classified.jpg)
 
-### 5b. **Event-specific image handling**
+### 4b. **Event-specific image handling**
 
 - After the image is classified by YOLO, the image is copied into event-specific locations (if applicable), so Home Assistant has image entities for last motion, last person, last known person, last vehicle, and last pet, which can be used for notifications and dashboards.
 
 ![Image download flow section in Node-RED](specific-events.jpg)
 
-### 7. **Timeout handling**
+### 5. **Timeout handling**
 
 - If any of the steps (except the YOLO classification) times out, the system skips the remaining steps and moves on to the next one.
 - If YOLO times out, the system proceeds directly to the description step without changing the event type.
 
-### 8. **Notification**
+### 6. **Notification**
 
 - If the event type is "person", "known person", "pet", or "vehicle", a notification is sent to all devices.
 - For "person" and "known person" events, an announcement is made on smart speakers in rooms where people are present.
