@@ -28,7 +28,7 @@ This automation ensures that food left in the microwave doesn't go unnoticed by 
 
 3. **Recurring reminders** – a two-minute timer starts. If the microwave door remains closed after the timer expires, a repeating notification is sent every two minutes: *"There's food in the microwave"*
 
-4. **Clearing notifications on interaction** – Once the door is opened, any microwave notifications are cleared from devices to prevent clutter and notification fatigue
+4. **Clearing notifications on interaction** – once the door is opened, any microwave notifications are cleared from devices to prevent clutter and notification fatigue
 
 ### Outcome
 
@@ -78,6 +78,6 @@ This automation has prevented me from ever having to re-wash mildew-y clothes on
 - **[Zigbee2MQTT](https://www.zigbee2mqtt.io/)** – bridges Zigbee devices with MQTT for integration with Home Assistant
 - **[EMQX](https://www.emqx.com/)** – facilitates communication between Home Assistant and Zigbee devices (via Zigbee2MQTT)
 - **Zigbee contact sensor** – used to detect if the door is open or closed when the washing cycle finishes
-- **Smart washer** – the smart washer communicates its state to Home Assistant via webhooks, providing updates on the cycle status
+- **Smart washer** – communicates cycle state to Home Assistant via webhooks
 - **[Home Assistant companion app](https://companion.home-assistant.io/)** – provides support for notifications on phones, computers, and tablets
 - **Smart speakers** – used for spoken announcements in occupied rooms
