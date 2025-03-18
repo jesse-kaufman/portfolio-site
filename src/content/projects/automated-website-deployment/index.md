@@ -19,16 +19,21 @@ My portfolio is built using [Hugo](https://gohugo.io/)—a fast and flexible sta
 The site is hosted on my own infrastructure, with separate development and production environments in a single root directory, as shown below:
 
 ```bash
-/home/containers/portfolio/
-├── src/
-│   ├── content
-│   ├── public
-│   └── ...
-├── build/
-└── live/
-    ├── config/
-    ├── logs/
-    └── public/
+/portfolio/
+├── build/             # temporary build directory
+├── live/
+│   ├── config/        # NGINX config
+│   ├── logs/          # NGINX logs
+│   └── public/        # generated files for live copy (mapped inside container)
+└── src/
+    ├── assets/
+    │   └── scss/      # SCSS files for stylesheets
+    ├── content/       # Markdown files for pages
+    ├── layout/        # Hugo template overrides
+    ├── public/        # generated files for development copy
+    ├── themes/
+    │   └── hermit-v2/ # theme submodule (hermit-v2) for Hugo
+    └── ...
 ```
 
 ## Development process
