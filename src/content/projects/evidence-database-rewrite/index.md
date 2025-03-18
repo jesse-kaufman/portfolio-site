@@ -20,9 +20,9 @@ This project is a full rewrite of [an evidence database originally built with **
 ## Why the rewrite?
 
 - **Learn Node.js & MongoDB** – Gained hands-on experience in a real-world project
-- **Rethink the Schema** – Optimized data storage and relationships, taking advantage of MongoDB's document storage model
-- **Improve Performance** – The original version relied on a **massive SQL join** that caused significant slowdowns in search and initial rendering
-- **Simplify the Tech Stack** – Eliminated the need for a separate web server for backend logic
+- **Rethink the schema** – Optimized data storage and relationships, taking advantage of MongoDB's document storage model
+- **Improve performance** – The original version relied on a **massive SQL join** that caused significant slowdowns in search and initial rendering
+- **Simplify the tech stack** – Eliminated the need for a separate web server for backend logic
 
 ## Tech stack
 
@@ -63,7 +63,7 @@ This collection contains each evidence item in a document with optional sub-docu
 | `body`        | String   | body of text                                      |
 | `hash`        | String   | MD5 used to detect potential duplicates           |
 | `attachments[]`     | \[[Attachment](#attachment-sub-document)\]    | *optional;* array of attachments sent with text              |
-| `screenshots[]`     | \[[Screenshot](#screenshot-sub-document)\]    | *optional;* array of screenshots of text              |
+| `screenshots[]`     | \[String\]    | *optional;* array of screenshots of text              |
 
 #### Example text
 
