@@ -116,12 +116,12 @@ tags:
 ## Future Improvements
 
 - Locally-hosted alternative to Google Gemini
-  - *Considering CLIP + GPT or similar*
+  - *Likely CLIP + GPT or similar running on an Apple M1, which is the only accelerated platform I have available at the moment*
 - Support for image changes without related detection event
-  - *Camera images occasionally update when a detection event did not occur and this would download those and update the latest camera's image without the describe or notification steps.*
+  - *Camera images occasionally update when a detection event did not occur. This would download those and update the latest camera's image without the describe or notification steps.*
 - Support for multiple simultaneous detection types (e.g., image with a vehicle and person)
 - Refinements to make the flow more asynchronous and modular—especially the portion that copies files into event-specific directories
-- Reducing amount of data sent in payload / stored in flow context for improved memory efficiency
+- Reduce amount of data sent in payload / stored in flow context for improved memory efficiency less redundancy
 
 ## Summary
 
