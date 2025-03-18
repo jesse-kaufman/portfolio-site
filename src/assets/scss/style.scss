@@ -446,7 +446,9 @@ p.img-404 {
   }
 }
 
-h1,h2,h3,h4,h5,h6 { line-height: 1em; }
+h1,h2,h3,h4,h5,h6 {
+  line-height: 1em;
+}
 
 h2 {
   font-size: 1.6em;
@@ -470,7 +472,14 @@ h1 {
 }
 h2,h3,h4,h5,h6 {
   margin-block-start: 1.8em;
-  margin-block-end: 0.1em;
+  margin-block-end: 0.4em;
+}
+h1+h2,
+h2+h3,
+h3+h4,
+h4+h5,
+h5+h6 {
+  margin-block-start: 1.3em;
 }
 .content h2:first-child {
   margin-block-start: 1em;
@@ -487,6 +496,7 @@ h3 code {
 h2 {
   border-bottom: 1px solid #cccccc50;
   padding-bottom: 0.1em;
+  font-weight: 500;
 }
 h3 {
   text-transform: uppercase;
