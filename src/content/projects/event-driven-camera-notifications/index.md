@@ -42,7 +42,7 @@ tags:
 - [EMQX](https://www.emqx.com) - MQTT broker used for messaging
 - [Labelme](https://labelme.io/) - used for labelling images for iterative learning
 
-## Workflow & System Components
+## Workflow & system components
 
 ### 1. **Motion detection and initial event classification**
 
