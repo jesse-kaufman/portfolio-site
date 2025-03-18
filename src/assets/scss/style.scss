@@ -668,8 +668,17 @@ h3 {
       &.node-js {
         background: $tag-node-bg;
       }
+      &.traefik {
+        background: #25a2c2;
+      }
       &.home-assistant {
         background: #2a88a1;
+      }
+      &.php {
+        background: #4F5B93;
+      }
+      &.pug-js {
+        background: #A86454;
       }
       &.machine-learning {
         background: #272822;
