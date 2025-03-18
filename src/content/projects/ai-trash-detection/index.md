@@ -43,6 +43,37 @@ I leveraged YOLO—a real-time object detection algorithm—to train a model spe
 - **Retraining and fine-tuning:** Analyzing misdetections, labeling them correctly, and retraining the model to improve accuracy
 - **API setup:** Configuring an [API Docker container](https://github.com/JavierMtz5/YOLOv8-docker) to serve as the interface between the YOLO model and my home automation system
 
+```yaml
+# Docker Compose file for YOLO trash can detection API container
+services:
+  yolo:
+    container_name: yolo
+    image: glandix/yolo
+    build:
+      context: yolo-trashcan/build
+      dockerfile: Dockerfile
+      pull: true
+    ports:
+      - 9192:8080
+    env_file:
+      - ../.env
+    restart: always
+    volumes:
+      # Maps custom-trained model to expected location within container
+      # (allows reuse of the image with other models)
+      - ./yolo-objects/yolo11m.pt:/home/app/yolov8m.pt
+      # Maps directory where camera images are located for processing
+      - /home/storage/internal/ha_media:/media
+    deploy:
+      resources:
+        limits:
+          pids: 600
+          cpus: "6"
+          memory: 8G
+    security_opt:
+      - no-new-privileges:true
+```
+
 ## Integration with Home Automation
 
 After training the model and ensuring its accuracy, I integrated it into my home automation setup using Node-RED:
@@ -69,6 +100,31 @@ This lets me know with reasonable certainty **whether the trash cans are in the 
     - *This prevents cropped images (such as would occur with a person detection event on the camera) from being processed for trash cans, as they often are cropped out*
 3. The image is sent to a locally-run YOLO service using a model custom-trained on my particular trash cans
 4. The number of trash cans detected is counted and if > 1, the trash cans are assumed to be in the same location as the camera image being processed
+
+    ```js
+    //
+    // Code for "Process detections" function node
+    //
+
+    // Only count detections with a confidence level of 75%+
+    let confidence = 0.75
+
+    // If detections were returned, process them
+    if (msg.payload.data.inference_results[0].detections.length > 0) {
+        const detections = msg.payload.data.inference_results[0].detections
+
+        // Filter array of detections by confidence level
+        const trashCans = detections.filter((value) => value.name === "trash can" && value.confidence > confidence)
+
+        // Save trash can count to msg
+        msg.numTrashCans = trashCans.length
+    }
+
+    // If any trash cans were detected, set state to "on"
+    msg.state = msg.numTrashCans > 0 ? "on" : "off"
+    return msg;
+    ```
+
 5. If the trash cans were NOT detected, only update the trash cans' location between 5AM and 11PM
     - *This prevents false negatives from causing my reminders to prematurely be disabled when a dark camera image causes the system to think the trash cans are no longer out back*
 
