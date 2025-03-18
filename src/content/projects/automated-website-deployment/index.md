@@ -10,11 +10,11 @@ tags:
 ---
 This project implements a streamlined CI/CD pipeline (using Github actions) for my self-hosted portfolio website, built with Hugo CMS and deployed as static files. When commits are pushed to the Github repository, an automated deployment workflow is triggered to publish the changes to the live site.
 
-## Architecture & Workflow
+## Architecture & workflow
 
 My portfolio is built using [Hugo](https://gohugo.io/)—a fast and flexible static site generator. Hugo compiles the site into static HTML, CSS, and JavaScript files, creating a performant site with reduced attack surface for optimal security.
 
-### Self-Hosting & Directory Structure
+### Directory structure
 
 The site is hosted on my own infrastructure, with separate development and production environments in a single root directory, as shown below:
 
@@ -49,7 +49,7 @@ The site is hosted on my own infrastructure, with separate development and produ
 5. The `hugo` command is run to build the site in the test environment
 6. If successful, a POST request is sent to my webhook deployment API with an `Authorization: Bearer <token>` header
 
-### Custom deployment API for continuous deployment
+### Custom API for continuous deployment
 
 I developed a lightweight API using **Node.js and Express** to automate deployments. This API listens for webhook requests from **GitHub**, allowing updates to be triggered automatically whenever changes are pushed to the repository. It runs inside a Docker container using Traefik for a reverse proxy.
 
