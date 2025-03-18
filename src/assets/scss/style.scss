@@ -1151,17 +1151,13 @@ a.footnote-ref {
 
   #toc {
     position: fixed;
-    top: 9em;
+    top: 7em;
     margin-left: 390px;
     max-width: 320px;
   }
 }
 
 @media (min-width: 1800px) {
-  .site-main {
-    margin-top: 10em;
-  }
-
   .section-inner {
     max-width: 1600px;
   }
@@ -1190,9 +1186,7 @@ a.footnote-ref {
   }
 
   #toc {
-    top: 15em;
-    margin-left: 490px;
-    max-width: 300px;
+    margin-left: 520px;
   }
 }
 @media (min-width: 761px) {
