@@ -73,7 +73,7 @@ I developed a lightweight API using **Node.js and Express** to automate deployme
 
 1. Validates the request using CORS and an API secret
 2. Runs `hugo --minify --destination ../build` in the development environment to build the static files for the site into `/home/containers/portfolio/build`
-3. Uses `rsync` to copy files from the build directory to the live directory
+3. Uses `rsync` to copy files from the `./build` to `./live/public`
 
 ## Benefits
 
