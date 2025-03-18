@@ -39,7 +39,7 @@ This project is a full rewrite of [an evidence database originally built with **
 
 **Schema improvements** – Unlike SQL where each communication type (emails, texts, social posts) needed a separate table, MongoDB allowed all communication types in a single collection, storing only the necessary properties per document.
 
-**Improved attachment handling** – The original system required a separate table for attachments. With MongoDB, attachments were stored as subdocuments in an array, eliminating the need for extra queries.
+**Improved attachment handling** – The original system required a separate table for attachments. With MongoDB, attachments were stored as sub-documents in an array, eliminating the need for extra queries.
 
 ## New features & enhancements
 
