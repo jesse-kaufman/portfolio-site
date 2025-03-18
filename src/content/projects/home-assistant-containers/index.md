@@ -11,6 +11,7 @@ tags:
   - MySQL
   - Node-RED
   - smart home
+  - Traefik
   - Zigbee
 ---
 This project leverages Docker containers to create a scalable and efficient home automation system with microservices for seamless integration, management, and control of various smart devices and services.
