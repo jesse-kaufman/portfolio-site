@@ -827,8 +827,8 @@ hr.post-end {
 
     &.narrow {
       max-width: 400px;
-      margin-block-start: auto;
-      margin-block-end: auto;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &.rounded {
@@ -1142,8 +1142,8 @@ a.footnote-ref {
     display: inline-block;
   }
 
-  figure.left {
-    margin-left: -240px;
+  .content figure.left {
+    margin-left: -240px!important;
   }
 
   figure.right {
