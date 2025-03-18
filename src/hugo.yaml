@@ -16,6 +16,10 @@ markup:
     endLevel: 3
     ordered: false
     startLevel: 2
+  highlight:
+    codeFences: true
+    noClasses: false
+    style: onedark
 params:
   contact:
     email: jesse@jessekaufman.com
