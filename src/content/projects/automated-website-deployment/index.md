@@ -36,6 +36,16 @@ The site is hosted on my own infrastructure, with separate development and produ
     └── ...
 ```
 
+### Tech stack
+
+- [**Hugo CMS**](https://gohugo.io) – generates static files from Markdown and theme
+- [**Sass**](https://sass-lang.com/) – CSS preprocessor
+- [**Github actions**](https://www.github.com) – CI/CD workflow
+- [**Docker**](https://www.docker.com) – provides containerized server for live site
+- [**NGINX**](https://nginx.org/) – serves website within the container and uses Traefik for reverse proxy
+- [**Traefik**](https://traefik.io/traefik/) – reverse proxy providing HTTPS and LAN access to NGINX server running inside the container
+- [**CloudFlare tunnel**](https://www.cloudflare.com) – provides public access to services behind CG-NAT
+
 ## Development process
 
 1. Run `hugo server`, which serves the website from the `./public` directory at `http://localhost:1313`
