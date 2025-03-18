@@ -14,7 +14,7 @@ tags:
 - [Food left in microwave reminders](#food-left-in-microwave-reminders)
 - [Wet clothes in washer reminders](#wet-clothes-in-washer-reminders)
 
-## Food left in microwave reminders
+## **Food left in microwave reminders**
 
 {{< figure src="/projects/adhd-qol-improvements/food-in-microwave-notification.jpg" alt="Notification sent by Home Assistant companion app." caption="Notification sent by Home Assistant." class="left rounded" >}}
 
@@ -51,7 +51,7 @@ This stack allows for **real-time event detection, recurring reminders with mult
 
 ---
 
-## Wet clothes in washer reminders
+## **Wet clothes in washer reminders**
 
 {{< figure src="/projects/adhd-qol-improvements/wet-clothes-in-washer.jpg" alt="Notification sent by Home Assistant companion app." caption="Notification sent by Home Assistant." class="left rounded" >}}
 
