@@ -3,12 +3,12 @@
 @import "admonition";
 @import "mixins";
 @import "normalize.scss";
-@import "syntax.scss";
 {{ if ne false .Site.Params.usesAnimation }}
 @import "animate.scss";
 {{ end }}
 @import "scrolltotop.scss";
 @import "socialshare.scss";
+@import "syntax.scss";
 
 // Default Accent Color (accentColor) taken from hugo.toml
 // If accentColor is not present, it will fallback to declarations in _colors.scss
@@ -97,7 +97,7 @@ pre {
   letter-spacing: normal;
   white-space: pre;
   color: $pre-code;
-  background: $pre-background;
+  background: $pre-background!important;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   &.mermaid {
