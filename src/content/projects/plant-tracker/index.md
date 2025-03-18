@@ -13,22 +13,21 @@ tags:
 ---
 [{{< svg name="github" >}} Github](https://github.com/jesse-kaufman/plantsdb)
 
-The Plant Tracker API will allow users to manage and track their plants through different growth stages. Built with Node.js, Express.js, and MongoDB, the API will store plant data such as growth stages, start dates, and projected harvest dates. Users will be able to update plant stages, archive or delete plants, and retrieve plant information via a RESTful API. The application will be containerized with Docker for easy deployment and scalability, with Nginx acting as a reverse proxy to ensure secure and efficient traffic routing.
+The Plant Tracker API will allow users to manage and track their plants through different growth stages. Built with Node.js, Express.js, and MongoDB, the API will store plant data such as growth stages, start dates, and projected harvest dates. Users will be able to update plant stages, archive or delete plants, and retrieve plant information via a RESTful API. The application will be containerized with Docker for easy deployment and scalability.
 
 Planned future enhancements include a CLI client, a web GUI (likely in React), and incorporating notifications for plant care reminders [among others](#other-planned-features)
 
 ## Tech Stack
 
-- **Node.js & Express.js:** Together, they power the backend API, with Node.js handling asynchronous, event-driven tasks and Express providing a lightweight framework for routing and middleware integration.
-- **MongoDB:** A NoSQL database for storing plant data, offering flexibility and scalability in managing unstructured data.
-- **Docker:** Containerizes the application, ensuring consistent environments and simplifying deployment with Docker Compose to manage multiple services.
-- **Nginx:** Serves as a reverse proxy, improving security, load balancing, and overall scalability of the application.
+- **Node.js & Express.js** – Together, they power the backend API, with Node.js handling asynchronous, event-driven tasks and Express providing a lightweight framework for routing and middleware integration
+- **MongoDB** – A NoSQL database for storing plant data, offering flexibility and scalability in managing unstructured data
+- **Docker** – Containerizes the application, ensuring consistent environments and simplifying deployment with Docker Compose to manage multiple services
 
 ## Features
 
 - **Tracks the following information per plant:**
   - Name
-  - Plant ID (auto-generated if not provided)
+  - Plant Abbreviation (auto-generated if not provided)
   - Source (seed or clone)
   - Projected harvest date (auto-calculated and updated with each stage change)
   - Start date (date of sprouting)
@@ -38,7 +37,7 @@ Planned future enhancements include a CLI client, a web GUI (likely in React), a
   - Start date of cure phase
   - Current stage (seedling, vegetative, flowering, harvested, curing)
 
-- **Automatically generates unique plant IDs** if not provid
+- **Automatically generates unique plant abbreviations** if not provided
 
 ---
 

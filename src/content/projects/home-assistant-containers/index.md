@@ -69,7 +69,7 @@ This project leverages Docker containers to create a scalable and efficient home
 
 ## CloudFlare Tunnel container
 
-- The CloudFlare Tunnel container is used to securely allow public access to certain services on the local network—even when behind CGNAT.
+- The CloudFlare Tunnel container is used to securely allow public access to certain services on the local network—even when behind CG-NAT.
 - Restricts and filters traffic to protect the network, ensuring only specific services are publicly available and blocking potential malicious access to local services.
 
 ## Additional Notes

@@ -47,7 +47,7 @@ The site is hosted on my own infrastructure, with separate development and produ
 3. Hugo extended version is installed
 4. All submodules are pulled
 5. The `hugo` command is run to build the site in the test environment
-6. If sucessful, a POST request is sent to my webhook deployment API with an `Authorization: Bearer <token>` header
+6. If successful, a POST request is sent to my webhook deployment API with an `Authorization: Bearer <token>` header
 
 ### Custom deployment API for continuous deployment
 

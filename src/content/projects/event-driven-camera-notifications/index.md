@@ -24,41 +24,41 @@ tags:
 
 ## Key Features
 
-- **Event-Driven Architecture**: The system uses event-driven principles to handle motion detection and image processing efficiently.
-- **Image Verification**: YOLO and Google Gemini ensure accurate person detection and image description.
-- **Asynchronous Processing**: Timeouts and event-based triggers allow for asynchronous, non-blocking operations.
-- **Flexible Notification System**: Notifications are sent to all devices, with custom smart speaker announcements for person/known person events.
+- **Event-Driven Architecture** – The system uses event-driven principles to handle motion detection and image processing efficiently
+- **Image Verification** – YOLO and Google Gemini ensure accurate person detection and image description
+- **Asynchronous Processing** – Timeouts and event-based triggers allow for asynchronous, non-blocking operations
+- **Flexible Notification System** – Notifications are sent to all devices, with custom smart speaker announcements for person/known person events
 
 ## Tech Stack
 
-- [eufy-security-ws](https://github.com/bropat/eufy-security-ws) - integrates Eufy Security cameras into Home Assistant
-- [Home Assistant](https://www.home-assistant.io) - provides interface to cameras and motion detections
-- [Node-RED](https://www.nodered.org) - handles all logic for automations
-- [YOLO](https://www.ultralytics.com/yolo) - provides AI-powered object detection
-- [YOLO web service](https://github.com/JavierMtz5/YOLOv8-docker.git) - Provides web API interface for YOLO inside Docker container
-- [Google Gemini](https://gemini.google.com) - provides detailed description of image
-- [EMQX](https://www.emqx.com) - MQTT broker used for messaging
-- [Labelme](https://labelme.io/) - used for labelling images for iterative learning
+- [eufy-security-ws](https://github.com/bropat/eufy-security-ws) – integrates Eufy Security cameras into Home Assistant
+- [Home Assistant](https://www.home-assistant.io) – provides interface to cameras and motion detections
+- [Node-RED](https://www.nodered.org) – handles all logic for automations
+- [YOLO](https://www.ultralytics.com/yolo) – provides AI-powered object detection
+- [YOLO web service](https://github.com/JavierMtz5/YOLOv8-docker.git) – provides web API interface for YOLO inside Docker container
+- [Google Gemini](https://gemini.google.com) – provides detailed description of image
+- [EMQX](https://www.emqx.com) – MQTT broker used for messaging
+- [Labelme](https://labelme.io/) – used for labelling images for iterative learning
 
 ## Workflow & system components
 
 ### 1. **Motion detection and initial event classification**
 
-- The system listens for motion events from Eufy cameras via the Home Assistant (HA) binary sensors for motion, person, known person, pet, and vehicle.
-- When any of these motion sensors are triggered, a motion event is classified based on the sensor type (e.g., person, pet, vehicle).
+- The system listens for motion events from Eufy cameras via the Home Assistant (HA) binary sensors for motion, person, known person, pet, and vehicle
+- When any of these motion sensors are triggered, a motion event is classified based on the sensor type (e.g., person, pet, vehicle)
 - The system sets a 5-second timeout after motion is detected:
-  - If the image does not change within this timeout, it fires an `image_change_timed_out` event.
-  - If the image changes within 2 seconds of the motion event, it fires an `image_changed` event and publishes this on the `cameras/[camera]/event` MQTT topic.
+  - If the image does not change within this timeout, it fires an `image_change_timed_out` event
+  - If the image changes within 2 seconds of the motion event, it fires an `image_changed` event and publishes this on the `cameras/[camera]/event` MQTT topic
 
 ![Motion-detected flow section in Node-RED](motion-detected.jpg)
 
 ### 2. **Image change and download**
 
-- A Home Assistant state change node monitors the camera's last event image for changes.
-- When a change is detected, the system begins a timeout for downloading the image.
-- After the image is downloaded, it is copied into the correct location for the camera’s last motion image entity.
-- The timestamp for the last motion is updated, and a `download_complete` event is fired.
-- Other flows, like [trash can detection](../ai-trash-detection/), listen for the `download_complete` event to trigger subsequent actions.
+- A Home Assistant state change node monitors the camera's last event image for changes
+- When a change is detected, the system begins a timeout for downloading the image
+- After the image is downloaded, it is copied into the correct location for the camera’s last motion image entity
+- The timestamp for the last motion is updated, and a `download_complete` event is fired
+- Other flows, like [trash can detection](../ai-trash-detection/), listen for the `download_complete` event to trigger subsequent actions
 
 ![Image-changed flow section in Node-RED](image-changed.jpg)
 
@@ -66,9 +66,9 @@ tags:
 
 ### 3. **Image classification / verification**
 
-- When the `download_complete` event is triggered in MQTT, the image is sent to YOLO for classification, which is used to verify the camera’s person detection.
-- If the event type is "person" and YOLO does not detect a person, the system changes the event type to a more generic "motion" event.
-- A timeout is also set for this classification step.
+- When the `download_complete` event is triggered in MQTT, the image is sent to YOLO for classification, which is used to verify the camera’s person detection
+- If the event type is "person" and YOLO does not detect a person, the system changes the event type to a more generic "motion" event
+- A timeout is also set for this classification step
 
 ![Image-downloaded flow section in Node-RED](image-downloaded.jpg)
 
@@ -87,11 +87,10 @@ tags:
 
 {{< figure src="/projects/event-driven-camera-notifications/describe-image.jpg" alt="Generate image description subflow in Node-RED" caption="Generate image description subflow in Node-RED" >}}
 
-
 ### 4b. **Event-specific image handling**
 
 - After the image is classified by YOLO, the image is copied into event-specific locations (if applicable)
-- This provides Home Assistant the image entities for last motion, last person, last known person, last vehicle, and last pet, which can be used for notifications and dashboards.
+- This provides Home Assistant the image entities for last motion, last person, last known person, last vehicle, and last pet, which can be used for notifications and dashboards
 
 {{< figure src="/projects/event-driven-camera-notifications/specific-events.jpg" alt="Image download flow section in Node-RED" caption="Image download flow section in Node-RED" >}}
 
@@ -107,9 +106,9 @@ tags:
 
 ### 6. **Notification logic**
 
-- If the event type is "person", "known person", "pet", or "vehicle", a notification is sent to all devices.
-- For "person" and "known person" events, an announcement is made on smart speakers in rooms where people are present.
-- If the cameras recognize the person, the AI describe portion is skipped and "`[name]` spotted." is used as the description instead.
+- If the event type is "person", "known person", "pet", or "vehicle", a notification is sent to all devices
+- For "person" and "known person" events, an announcement is made on smart speakers in rooms where people are present
+- If the cameras recognize the person, the AI describe portion is skipped and "`[name]` spotted." is used as the description instead
 
 !["Do camera notification" subflow](do-camera-notification.jpg)
 
