@@ -100,7 +100,7 @@ tags:
 ### 5. **Processing complete / timeout handling**
 
 - If YOLO times out, the system proceeds directly to the description step without changing the event type
-- If any othes step times out, the system skips the remaining steps and goes directly to the notification logic below
+- If any other step times out, the system skips the remaining steps and goes directly to the notification logic below
 - Once all steps have completed, a `image_processing_complete` event is sent over MQTT, which triggers the logic below
 
 ![Event notification flow section in Node-RED](send-notification.jpg)
