@@ -178,16 +178,30 @@ table {
   empty-cells: show;
   width: 100%;
   max-width: 100%;
+  margin-top: 0.25em;
+  margin-bottom: 2em;
 
   th,
   td {
-    padding: 1.5%;
-    border: 1px solid;
+    padding: 0.2em 0.5em;
+    border: 0.5px solid rgba(255,255,255,0.4);
+    line-height: 1.2em;
+    vertical-align: top;
+  }
+
+  td strong {
+    font-weight: 700;
   }
 
   th {
     font-weight: 700;
+    background: $text;
+    opacity: $dimmed-opacity;
+    color: $html-background;
     vertical-align: bottom;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    text-align: left;
   }
 }
 
