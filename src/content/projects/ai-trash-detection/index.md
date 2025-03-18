@@ -23,7 +23,7 @@ So, I created an locally-hosted AI-powered solution using YOLO object detection,
 
 ![Alt text](val_batch0_pred.jpg)
 
-## Tech Stack
+## Tech stack
 
 - [eufy-security-ws](https://github.com/bropat/eufy-security-ws) - integrates Eufy Security cameras into Home Assistant
 - [Home Assistant](https://www.home-assistant.io) - provides interface to cameras and motion detections
@@ -33,7 +33,7 @@ So, I created an locally-hosted AI-powered solution using YOLO object detection,
 - [EMQX](https://www.emqx.com) - MQTT broker used for messaging
 - [Labelme](https://labelme.io/) - used for labelling images for iterative learning
 
-## Machine Learning Approach
+## Machine learning approach
 
 I leveraged YOLO, a real-time object detection algorithm, to train a model specifically designed to detect my trash cans. The process involved:
 
