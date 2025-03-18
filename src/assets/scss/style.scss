@@ -806,6 +806,10 @@ hr.post-end {
     height: auto;
     display: inline-block;
     text-align: center;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-left: 0;
+    margin-right: 0;
 
     &.narrow {
       max-width: 400px;
