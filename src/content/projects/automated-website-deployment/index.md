@@ -36,7 +36,8 @@ The site is hosted on my own infrastructure, with separate development and produ
 1. Run `hugo server`, which serves the website from the `./public` directory at `http://localhost:1313`
 2. Make edits to content or Sass stylesheets, committing locally to git as necessary
     - *Hugo automatically rebuilds files when modifications are detected*
-3. Once edits are finalized, local commits are pushed to Github and Github actions run the deployment workflow below
+3. Once edits are finalized, local commits are pushed to Github
+4. Github actions run the deployment workflow below
 
 ***This ensures that there is never an administrative UI exposed to external threats.***
 
