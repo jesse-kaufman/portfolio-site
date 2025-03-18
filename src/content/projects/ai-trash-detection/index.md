@@ -135,7 +135,7 @@ This lets me know with reasonable certainty **whether the trash cans are in the 
 1. If a "Put out trash" event is in the "Household Tasks" calendar in Home Assistant, a "Put out trash" input boolean is turned on
 2. If trash cans are NOT detected out back and trash is scheduled to be put out today, it's assumed the trash has been put out, so "Put out trash" is turned off
 3. If trash cans ARE detected out back and trash is scheduled to be put out today, the "Put out trash" boolean is turned on
-    - This is a fail-safe in the off-chance that a false negative causes the system to think trash had been put out prematurely
+    - *This is a fail-safe in the off-chance that a false negative causes the system to think trash had been put out prematurely*
 4. At 9am, 12pm, 5pm, and 7pm if "Put out trash" boolean is on, reminders are sent in the form of notifications and spoken announcements on smart speakers in occupied rooms. If "Put out trash" is off, the reminders are skipped.
 
 ![Image of Node-RED logic flow for sending reminders](put-out-trash-reminders.jpg)
