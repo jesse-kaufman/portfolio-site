@@ -15,7 +15,7 @@ tags:
 
 This project was developed to aggregate and centralize evidence of harassment and stalking incidents, providing fast, user-friendly, searchable access for law enforcement and the district attorney handling the case. It enabled investigators and attorneys to efficiently filter and review various forms of digital contact between the harasser and victims.
 
-Project turnaround was of utmost importance as it dealt with an ongoing case. The original version of this project was created in about a day and a half with a rewrite happening a few months later. *Documentation on the Node.js/MongoDB rewrite of the project is coming soon.*
+Project turnaround was of utmost importance as it dealt with an ongoing case. The original version of this project was created in about a day and a half with [a rewrite a few months later](../evidence-database-rewrite/).
 
 ## Tech Stack
 
