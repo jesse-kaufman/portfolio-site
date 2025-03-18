@@ -1,14 +1,15 @@
 ---
 date: 2025-03-18T10:00:56-06:00
-title: "Evidence database for law enforcement – Initial version"
+title: "Evidence database for law enforcement – Initial PHP/MySQL version"
 description: This project was developed to aggregate and centralize evidence of harassment and stalking incidents, providing fast, user-friendly, searchable access for law enforcement and district attorney.
 images:
   - /projects/evidence-database/uml.svg
 tags:
   - Docker
+  - MySQL
   - NGINX
   - PHP
-  - MySQL
+  - Traefik
 ---
 ## Purpose
 
@@ -18,11 +19,12 @@ Project turnaround was of utmost importance as it dealt with an ongoing case. Th
 
 ## Tech Stack
 
-- **PHP** – powers the site's backend logic
-- **JavaScript** – powers the site's frontend logic
-- **MySQL** – database used to store evidence
-- **NGINX** – web server; one instance serves the main site while a separate CDN instance is used for images, videos, and audio files
-- **Docker** – provides containerization for MySQL and both NGINX instances
+- [**Docker**](https://www.docker.com) – provides containerization for MySQL and both NGINX instances
+- [**JavaScript**](https://www.javascript.com/) – powers the site's frontend logic
+- [**MySQL**](https://www.mysql.com) – database used to store evidence
+- [**NGINX**](https://nginx.org/) – web server; one instance serves the main site while a separate CDN instance is used for images, videos, and audio files
+- [**PHP**](https://www.php.net) – powers the site's backend logic
+- [**Traefik**](https://traefik.io/traefik/) - reverse proxy providing HTTPS
 
 ## Database schema
 
