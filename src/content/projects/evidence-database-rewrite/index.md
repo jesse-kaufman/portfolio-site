@@ -41,7 +41,7 @@ This project is a full rewrite of [an evidence database originally built with **
 
 **Improved attachment handling** – The original system required a separate table for attachments. With MongoDB, attachments were stored as subdocuments in an array, eliminating the need for extra queries.
 
-## New Features & Enhancements
+## New features & enhancements
 
 **Optional screenshots** – Each communication record can now include related screenshots (stored as subdocuments in an array)
 
