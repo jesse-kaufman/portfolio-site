@@ -52,7 +52,7 @@ tags:
 
 ![Motion-detected flow section in Node-RED](motion-detected.jpg)
 
-### 2. **Image change monitoring and download**
+### 2. **Image change and download**
 
 - A Home Assistant state change node monitors the camera's last event image for changes.
 - When a change is detected, the system begins a timeout for downloading the image.
@@ -64,7 +64,7 @@ tags:
 
 ![Image download flow section in Node-RED](download-image.jpg)
 
-### 3. **Image classification / verification with YOLO**
+### 3. **Image classification / verification**
 
 - When the `download_complete` event is triggered in MQTT, the image is sent to YOLO for classification, which is used to verify the camera’s person detection.
 - If the event type is "person" and YOLO does not detect a person, the system changes the event type to a more generic "motion" event.
@@ -72,7 +72,7 @@ tags:
 
 ![Image-downloaded flow section in Node-RED](image-downloaded.jpg)
 
-### 4a. **Image description with Google Gemini**
+### 4a. **Image description**
 
 - After the image is classified by YOLO, an `image_classified` event is triggered
 - **If the event is a "known person" event and the person name is set** in the payload, AI is skipped and the description is set to "\[name\] was spotted"
