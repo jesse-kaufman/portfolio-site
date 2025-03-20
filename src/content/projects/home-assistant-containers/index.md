@@ -14,6 +14,8 @@ tags:
   - Traefik
   - Zigbee
 ---
+{{< figure src="/projects/home-assistant-containers/home-assistant-dashboard.jpg" alt="Primary Home Assistant dashboard view." caption="Primary Home Assistant dashboard view." class="right small" >}}
+
 This project leverages Docker containers to create a scalable and efficient home automation system with microservices for seamless integration, management, and control of various smart devices and services.
 
 **Diagram of Docker containers covered in this project**:
