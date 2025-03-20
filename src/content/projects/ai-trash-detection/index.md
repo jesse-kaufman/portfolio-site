@@ -6,7 +6,7 @@ description: An AI-powered smart reminder system utilizing a YOLO-trained object
 images:
   - /projects/ai-trash-detection/val_batch0_pred.jpg
 tags:
-  - artificial intelligence
+  - AI
   - automation
   - Docker
   - Home Assistant

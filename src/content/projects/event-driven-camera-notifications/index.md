@@ -5,7 +5,7 @@ description: This event-driven, asynchronous camera notification system processe
 images:
   - /projects/event-driven-camera-notifications/camera-dashboard.jpg
 tags:
-  - artificial intelligence
+  - AI
   - automation
   - Docker
   - Home Assistant
