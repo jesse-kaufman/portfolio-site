@@ -1011,8 +1011,7 @@ a.footnote-ref {
 #toc {
   left: 50%;
   top: 0;
-  background-color: $tableofcontents-background;
-  border-bottom: 0.5px solid rgba(255,255,255,0.1);
+  border-bottom: $dimmed-border;
   padding-bottom: 0.5em;
 }
 
