@@ -34,13 +34,11 @@ params:
   dateformNumTime: "2006-01-02 15:04 -0700"
   footerCopyright: "All rights reserved "
   footerHideThemeName: true
-  usesAnimation: true
   enableRobotsTXT: true
   homeSubtitle: Welcome to my development portfolio.
   justifyContent: false
   relatedPosts: true
   code_copy_button: true
-  homeSubtitlePrinter: true
   scrollToTop: true
   global_mathjax: false
   readTime: true
