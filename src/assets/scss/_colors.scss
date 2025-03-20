@@ -25,8 +25,6 @@ $dark-orange: #ff9100;
 $crayola: #ff5252;
 $awesome: #ff1744;
 $folly: #f50057;
-$admonition-background-opacity: 0.1;
-
 $green: #498517;
 $blue: $blueberry;
 
@@ -114,6 +112,7 @@ $screen-reader-text: $lapis-lazuli !default;
 $screen-reader-text-background: $anti-flash-white !default;
 
 //Admonition colors
+$admonition-background-opacity: 0.1;
 $admonition-background: (
   "note": rgba($blueberry, $admonition-background-opacity),
   "info": rgba($turquoise-surf, $admonition-background-opacity),
