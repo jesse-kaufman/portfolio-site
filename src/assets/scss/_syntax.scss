@@ -8,7 +8,8 @@
 /* PreWrapper */
 .chroma {
   color: #abb2bf;
-  background-color: #282c34;
+  background: $pre-background;
+  backdrop-filter: blur(2px);
 }
 /* Other */
 .chroma .x {
