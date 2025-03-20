@@ -13,6 +13,8 @@ tags:
   - Pug.js
   - Traefik
 ---
+[{{< svg name="github" >}} Github](https://github.com/jesse-kaufman/evidencedb/tree/main/node-only)
+
 ## Overview
 
 This project is a full rewrite of [an evidence database originally built with **PHP and MySQL**](../evidence-database/), transitioning it to **Node.js and MongoDB** for improved performance, a simplified architecture, and hands-on learning. The database aggregates **communication records** (texts, emails, social media messages, etc.) for use by law enforcement and the district attorney in an ongoing harassment case.
