@@ -52,14 +52,14 @@ $pinned-posts-group-border-bottom: $css-grey !default;
 
 // Elements of the site which are expected to follow accent color
 // In this current form, `accentColor` in hugo.toml will have higher precedence than these declarations
-$aTag-mixin-a-box-shadow: #00b8d4 !default; // Box shadow for Mixin "aTag" used by figure element
-$aTag-mixin-a-hover-box-shadow: #00b8d4 !default; // Box shadow on hover for Mixin "aTag" used by figure element
+$aTag-mixin-a-box-shadow: $highlight-color !default; // Box shadow for Mixin "aTag" used by figure element
+$aTag-mixin-a-hover-box-shadow: $highlight-color !default; // Box shadow on hover for Mixin "aTag" used by figure element
 $content-anchor-hover: $pine-green !default; // Anchor text hover color
-$post-description-a-hover-border-bottom: $pine-green !default; // Anchor text on hover for post description in list
-$tableofcontents-a-hover-border-bottom: $pine-green !default; // Table of Contents on hover
-$scrolltotop-arrow: $pine-green !default; // Scroll yo Top arrow color
-$typewriter: #00b8d4 !default; // Typewriter carat color
-$footnote-ref-hover-background: $pine-green !default; // Footnote reference on hover
+$post-description-a-hover-border-bottom: $highlight-color !default; // Anchor text on hover for post description in list
+$tableofcontents-a-hover-border-bottom: $highlight-color !default; // Table of Contents on hover
+$scrolltotop-arrow: $highlight-color !default; // Scroll yo Top arrow color
+$typewriter: $highlight-color !default; // Typewriter carat color
+$footnote-ref-hover-background: $highlight-color !default; // Footnote reference on hover
 $marked-background: $pine-green !default; // Marked text background color
 $inserted-text-underline: $pine-green !default; // Inserted text underline color
 
