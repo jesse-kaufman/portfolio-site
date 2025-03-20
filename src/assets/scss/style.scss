@@ -7,7 +7,18 @@
 @import "admonition";
 
 // Scroll to Top color definition
-.scroll-up {
+a.scroll-up {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  header.slideInUp ~ & {
+    display: none;
+  }
+
+  header.slideDownOut ~ & {
+    display: block;
+  }
+
   .scroll {
     #st-ring {
       stroke: $scrolltotop-ring;
