@@ -133,10 +133,11 @@ a {
     }
 
     &.button {
+      font-size: 0.8em;
       padding: 0.5em 0.75em;
       background: $text;
       border-radius: 5px;
-      margin-top: 0.5em;
+      margin-top: 1em;
       display: inline-block;
       color: $site-header-background;
       opacity: $dimmed-opacity;
