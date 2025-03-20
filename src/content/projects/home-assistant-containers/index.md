@@ -19,7 +19,7 @@ tags:
 This project leverages Docker containers to create a scalable and efficient home automation system with microservices for seamless integration, management, and control of various smart devices and services.
 
 **Diagram of Docker containers covered in this project**:
-{{< figure src="/projects/home-assistant-containers/home-assistant-containers.jpg" alt="Docker container setup for home automation system." caption="Docker container setup for home automation system." class="rounded" >}}
+{{< figure src="/projects/home-assistant-containers/home-assistant-containers.jpg" alt="Docker container setup for home automation system." caption="Docker container setup for home automation system." class="narrow " >}}
 
 ## Home Assistant (HA) container
 
