@@ -614,7 +614,7 @@ h3 {
   text-align: center;
   font-size: 0.6em;
   line-height: normal;
-  @include dimmed;
+  opacity: $dimmed-opacity;
 
   p {
     margin-top: 0;
@@ -633,7 +633,7 @@ h3 {
     padding-top: 6px;
     margin-right: 1.8em;
     font-size: 1.6em;
-    @include dimmed;
+    opacity: $dimmed-opacity;
 
     &:hover {
       cursor: pointer;
@@ -667,7 +667,7 @@ h3 {
   .post-day {
     flex-shrink: 0;
     margin-left: 1em;
-    @include dimmed;
+    opacity: $dimmed-opacity;
   }
 
   .post-tags,
@@ -754,7 +754,7 @@ h3 {
   }
 
   .post-description {
-    @include dimmed;
+    opacity: $dimmed-opacity;
   }
   .post-taxonomy {
     display: flex;
@@ -828,7 +828,7 @@ h3 {
   .post-date {
     font-size: 0.9em;
     letter-spacing: normal;
-    @include dimmed;
+    opacity: $dimmed-opacity;
   }
 
   h1 {
@@ -882,7 +882,7 @@ hr.post-end {
       margin-top: 0.5em;
       margin-bottom: 0;
       line-height: 1.1em;
-      @include dimmed;
+      opacity: $dimmed-opacity;
     }
   }
 
@@ -1004,7 +1004,7 @@ a.footnote-ref {
   margin-bottom: 0.75em;
   display: block;
   font-style: italic;
-  @include dimmed;
+  opacity: $dimmed-opacity;
 
   p {
     margin: 0.8em 0;
@@ -1040,7 +1040,7 @@ a.footnote-ref {
 
 #TableOfContents {
   font-size: 0.8em;
-  @include dimmed;
+  opacity: $dimmed-opacity;
 
   ul {
     padding-left: 1em;
