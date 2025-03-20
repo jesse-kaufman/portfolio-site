@@ -54,10 +54,6 @@ Since I'm still working on my soldering skills, I opted for an ESP32 board with 
 
 The ESP32 board was then installed inside a small electronics project case I ordered online after using a Dremel to allow wires through the case when closed.
 
-### Wiring diagram
-
-
-
 ## **Sensor placement**
 
 {{< figure src="/projects/esp32-bed-occupancy-sensor/bed-sensor-placement.jpg" alt="Photo of bed sensor placement on box spring." caption="Photo of bed sensor placement on box spring." class="right small" >}}
