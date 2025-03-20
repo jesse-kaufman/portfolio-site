@@ -828,11 +828,6 @@ hr.post-end {
   border-bottom-width: 4px;
 }
 .content {
-  {{- with .Site.Params.justifyContent }}
-  text-align: justify;
-  text-justify: inter-ideograph; //For IE/Edge
-  {{- end }}
-
   @include aTag;
 
   li {
@@ -983,15 +978,8 @@ a.footnote-ref {
   }
 }
 
-.tag {
-  &::before {
-    {{- with .Site.Params.tagSymbol | default "" -}}content: "{{ . }}"{{- end -}}
-  }
-}
-.category {
-  &::before {
-    {{- with .Site.Params.categorySymbol | default "⊲" -}}content: "{{ . }}"{{- end -}}
-  }
+.category::before {
+  content: "Þ";
 }
 
 .post-description {
