@@ -1051,28 +1051,7 @@ a.footnote-ref {
     margin-bottom: 0.5em;
   }
 
-  /* scrollbar customization for ToC */
-  /* Width */
-  &>::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  /* Track */
-  &>::-webkit-scrollbar-track {
-    background: $tableofcontents-scrollbar-track;
-  }
-
-  /* Handle */
-  &>::-webkit-scrollbar-thumb {
-    background: $tableofcontents-scrollbar-thumb ;
-  }
-
-  /* Handle on hover */
-  &>::-webkit-scrollbar-thumb:hover {
-    background: $tableofcontents-scrollbar-thumb-hover;
-  }
-
-  &>ul {
+  & > ul {
     list-style-type: none;
     overflow-y: auto;
     /*height: calc(100vh - 300px);*/
