@@ -17,15 +17,15 @@ My home network is a self-hosted environment designed for automation, media mana
 **The primary goals of this setup are:**
 
 - Scalability & security
-- Self-sufficiency & DevOps practices
+- Self-sufficiency
 - Efficient container management
 - Automation & AI integration
 
 This project highlights my network and server administration skills, DevOps mindset, and ability to integrate diverse technologies into a cohesive, reliable system.
 
-## **Infrastructure & architecture**
+## **Hardware**
 
-My home network setup is built on a 3-server setup: The border router runs OPNsense and provides DNS, DHCP, and mail services to the LAN. The other two servers run Ubuntu with Docker Compose managing containerized services. The architecture is designed for modularity, automation, and ease of management, following DevOps best practices.
+My home network setup is built on a 3-server setup: The border router runs OPNsense and provides DNS, DHCP, and mail services to the LAN. The other two servers run Ubuntu with Docker Compose managing containerized services.
 
 ### Primary server
 
@@ -55,7 +55,7 @@ My home network setup is built on a 3-server setup: The border router runs OPNse
 
 ### Border router
 
-- OPNsense server
+- OPNsense
 - Provides routing, firewall, physical separation of IoT network, DNS, DHCP, and SMTP services for LAN
 - **Hardware:** Topton 4x i226-V 2.5Gbps micro firewall
   - **CPU:** Intel® Celeron® J4125
@@ -66,108 +66,115 @@ My home network setup is built on a 3-server setup: The border router runs OPNse
 
 ## **Docker services**
 
+These are the services (non-comprehensive) that are provided by Docker on the primary and secondary Linux servers.
+
 ### **Primary server**
 
 #### Smart home & automation
 
-- **Home Assistant** – used to manage smart home, provide entities to Node-RED with which it can interact, and provide UI for interacting with smart home devices
-- **Node-RED** – powers event-driven smart home automation
-- **MQTT** – used to communicate with Zigbee devices via Zigbee2MQTT and as messaging queue for Node-RED automations
-- **Zigbee2MQTT** – used to bridge Zigbee devices with MQTT for integration into Home Assistant
-- **Z-Wave JS UI** – integrates Z-Wave devices into Home Assistant
-- **ESPHome** – allows easy programming of ESP32 devices and greatly simplifies integration with Home Assistant
-- **eufy-security-ws** – used to integrate Eufy Security cameras into Home Assistant for event notifications and camera images
-- **MediaMTX** – provides interface to Eufy Security cameras for streaming live video
+- [Home Assistant](https://www.home-assistant.io) – used to manage smart home, provide entities to Node-RED with which it can interact, and provide UI for interacting with smart home devices
+- [Node-RED](https://www.nodered.org) – powers event-driven smart home automation
+- [EMQX](https://github.com/emqx/emqx) – MQTT broker used to communicate with Zigbee devices via Zigbee2MQTT and as messaging queue for Node-RED automations
+- [Zigbee2MQTT](https://www.zigbee2mqtt.io) – used to bridge Zigbee devices with MQTT for integration into Home Assistant
+- [Z-Wave JS UI](https://github.com/zwave-js/zwave-js-ui) – integrates Z-Wave devices into Home Assistant
+- [ESPHome](https://esphome.io/) – allows easy programming of ESP32 devices and greatly simplifies integration with Home Assistant
+- [eufy-security-ws](https://github.com/bropat/eufy-security-ws) – used to integrate Eufy Security cameras into Home Assistant for event notifications and camera images
+- [MediaMTX](https://github.com/bluenviron/mediamtx) – provides interface to Eufy Security cameras for streaming live video
 
 #### AI & computer vision
 
-- **YOLO API (trash can detection)** – detects trash cans in security footage for automation
-- **YOLO API (object detection)** – detects objects in security camera images to verify detections made by the security system's built-in AI
-- **Piper** – locally-hosted text-to-speech (TTS) service used for audible announcements on smart speakers
+- **[YOLO API](https://github.com/JavierMtz5/YOLOv8-docker) (trash can detection)** – provides API to YOLO instance that detects trash cans in security camera images
+- **[YOLO API](https://github.com/JavierMtz5/YOLOv8-docker) (object detection)** – provides API to YOLO instance that detects objects in security camera images to verify detections made by the security system's built-in AI
+- [Ultralytics YOLO11](https://github.com/ultralytics/ultralytics) – deep learning model providing fast and accurate real-time object detection and image segmentation
+- [Piper](https://github.com/rhasspy/piper) – locally-hosted text-to-speech (TTS) service used for audible announcements on smart speakers
 
-#### Monitoring & data storage
+#### Monitoring
 
-- **InfluxDB** – stores Home Assistant entity history as well as Telegraf data for processing and graphing in Grafana
-- **Telegraf** – scrapes data from Ubuntu host and other services and stores data in InfluxDB buckets for later processing/graphing with Grafana
-- **Grafana** – provides dashboard for viewing graphed data from InfluxDB
-- **Scrutiny** – provides web UI for S.M.A.R.T. hard drive monitoring tool as well as email notifications when an issue has been detected
+- [Telegraf](https://github.com/influxdata/telegraf) – scrapes data from Ubuntu host and other services and stores data in InfluxDB buckets for later processing/graphing with Grafana
+- [Grafana](https://github.com/grafana/grafana) – provides dashboard for viewing graphed data from InfluxDB and MariaDB databases
+- [Scrutiny](https://github.com/AnalogJ/scrutiny) – provides web UI for S.M.A.R.T. hard drive monitoring tool as well as email notifications when an issue has been detected
 
 #### Networking & security
 
-- **Traefik** – handles domain-based routing, SSL termination, and service discovery
-- **CloudFlare Tunnel** – provides selective public access to services behind CG-NAT and firewall
-- **fail2ban** – bans abusive IP addresses based on log entries from a number of services
-- **Authelia** – provides authentication for web-based services that do not have their own built-in authentication (authenticates against LDAP backend)
-- **NGINX** – web server used behind Traefik reverse proxy for CDN and core web server functionality in development projects
-- **Acme.sh** – automatically renews SSL certificates with Let's Encrypt
+- [CloudFlare](https://www.cloudflare.com) Tunnel – provides selective public access to services behind CG-NAT and firewall
+- [fail2ban](https://github.com/fail2ban/fail2ban) – bans abusive IP addresses based on log entries from a number of services
+- [Authelia](https://www.authelia.com/) – provides authentication for web-based services that do not have their own built-in authentication (authenticates against LDAP backend)
+- [NGINX](https://www.nginx.org) – web server used behind Traefik reverse proxy for CDN and core web server functionality in development projects
+- Acme.sh – automatically renews SSL certificates with Let's Encrypt
 
 #### Databases & caching
 
-- **Redis** – provides object storage to other containers for caching and session management
-- **MongoDB** – used for services requiring NoSQL storage
-- **MariaDB** – used for services requiring SQL-based relational database storage
-- **PostgreSQL** – used for services requiring Postgres-specific relational database storage
-- **phpMyAdmin** – provides web UI for managing MariaDB/MySQL
+- [Redis](https://github.com/redis/redis) – provides object storage to other containers for caching and session management
+- [MongoDB](https://www.mongodb.com/) – used for services requiring NoSQL storage
+- [MariaDB](https://www.mariadb.org) – used for services requiring SQL-based relational database storage
+- [InfluxDB](https://github.com/influxdata/influxdb) – stores Home Assistant entity history as well as Telegraf data for processing and graphing in Grafana
+- [PostgreSQL](https://www.postgresql.org/) – used for services requiring Postgres-specific relational database storage
+- [phpMyAdmin](https://www.phpmyadmin.net/) – provides web UI for managing MariaDB/MySQL
 
 #### Media & file management
 
-- **Jellyfin** – provides locally-hosted media server (think Netflix but local) for streaming movies and TV shows, listening to music, reading books, and reading comic books
-- **Jellysearch** – provides fast full-text search for Jellyfin by proxying search queries from Jellyfin to Jellysearch's Meilisearch database
-- **FileFlows** – distributed, automated conversion of media files into a standardized format for ingestion into Jellyfin
-- **Samba** – shares files on server with Mac/Windows/Linux clients using CIFS protocol
-- **Avahi** – provides ZeroConf for Samba server so shares show up automatically in GUI clients
+- [Jellyfin](https://www.jellyfin.org/) – provides locally-hosted media server (think Netflix but local) for streaming movies and TV shows, listening to music, reading books, and reading comic books
+- [Jellysearch](https://gitlab.com/DomiStyle/jellysearch) – provides fast full-text search for Jellyfin by proxying search queries from Jellyfin
+  - *uses dedicated instance of Meilisearch*
+- [FileFlows](https://www.fileflows.org/) – distributed, automated conversion of media files into a standardized format for ingestion into Jellyfin
+- [Samba](https://www.samba.org/) – shares files on server with Mac/Windows/Linux clients using CIFS protocol
+- [Avahi](https://avahi.org/) – provides ZeroConf/mDNS for Samba server so shares show up automatically in GUI clients
 
 #### Backup & system maintenance
 
-- **Kopia** – network-connected backup system providing centralized backups to multiple servers and user devices on the LAN
-- **Diun** – sends emails when a Docker image update has been detected
+- [Kopia](https://kopia.io/) – network-connected backup system providing centralized backups to multiple servers and user devices on the LAN
+- [Diun](https://crazymax.dev/diun/) – sends emails when a Docker image update has been detected
+- [dockcheck-web](https://github.com/Palleri/DCW) – web UI to see which Docker images have updates available
 
 #### Productivity & self-hosting
 
-- **Obsidian Sync** – locally-hosted synchronization service for Obsidian note-taking app (replacement for stock Notes app on iPhone)
-- **NextCloud** – provides web-based file access (think Google Drive), client file sync (think Dropbox), calendar/tasks/contacts sync, and OpenID Connect (OIDC) services for SSO (authenticates against LDAP backend)
-- **Caldera Office** – provides web-based document editing similar to Microsoft Office 365/Google Docs to NextCloud
-- **Light LDAP (LLDAP)** – provides single source of truth for user identity and authentication for other containers
-- **Outline** – self-hosted tool for managing notes and projects (think Microsoft Loop or Notion)
-  - runs its own instance of Redis and Postgres as part of compose stack
-- **Bookstack** – self-hosted tool for managing notes and projects similar to Outline (potentially deprecating Bookstack and switching); currently used to document network setup as well as household management in the event of my death (e.g., location of water shut-offs, circuit breaker, items to remember when winterizing house, odd quirks about the house, etc.)
+- [NextCloud](https://nextcloud.com) – provides web-based file access (think Google Drive), client file sync (think Dropbox), calendar/tasks/contacts sync, and OpenID Connect (OIDC) services for SSO (authenticates against LDAP backend)
+  - *uses centralized MariaDB container instance*
+- [Collabora Online](https://www.collaboraonline.com/) – provides web-based document editing to NextCloud (similar to Microsoft Office 365/Google Docs)
+- [Light LDAP (LLDAP)](https://github.com/lldap/lldap) – provides single source of truth for user identity and authentication for other containers
+- [Outline](https://github.com/outline/outline) – self-hosted tool for managing notes and projects (think Microsoft Loop or Notion)
+  - *uses dedicated Redis and Postgres containers for isolation and security*
+- [Bookstack](https://www.bookstackapp.com/) – self-hosted tool for managing notes and projects similar to Outline (*potentially deprecating Bookstack and switching*); currently used to document network setup as well as household management in the event of my death (e.g., location of water shut-offs, circuit breaker, items to remember when winterizing house, odd quirks about the house, etc.)
 
 ### **Secondary server**
 
 #### AI & computer vision
 
-- **Whisper web service** – API interface to faster-whisper for transcribing audio (e.g., creating subtitles for movies without subs)
+- [Whisper ASR Box](https://github.com/ahmetoner/whisper-asr-webservice) – web API interface for [faster-whisper](https://github.com/SYSTRAN/faster-whisper) to transcribe audio using AI (e.g., creating subtitles for movies without subs)
 
-#### Monitoring & data storage
+#### Monitoring
 
-- **Telegraf** – scrapes data from Ubuntu host and other services and stores data in InfluxDB buckets (on primary server) for later processing/graphing with Grafana
-- **Scrutiny** – provides web UI for S.M.A.R.T. hard drive monitoring tool as well as email notifications when an issue has been detected
+- [Telegraf](https://github.com/influxdata/telegraf) – scrapes data from Ubuntu host and other services and stores data in InfluxDB buckets for later processing/graphing with Grafana
+- [Scrutiny](https://github.com/AnalogJ/scrutiny) – provides web UI for S.M.A.R.T. hard drive monitoring tool as well as email notifications when an issue has been detected
 
 #### Databases & caching
 
-- **Redis** – provides object storage to other containers for caching and session management
-- **MariaDB** – used for services requiring SQL-based relational database storage
-- **PostgreSQL** – used for services requiring Postgres-specific relational database storage
+- [Redis](https://github.com/redis/redis) – provides object storage to other containers for caching and session management
+- [MariaDB](https://www.mariadb.org) – used for services requiring SQL-based relational database storage
+- [PostgreSQL](https://www.postgresql.org/) – used for services requiring Postgres-specific relational database storage
 
 #### Backup & system maintenance
 
-- **Kopia** – connects to Kopia instance on primary server for storage
-- **Diun** – sends emails when a Docker image update has been detected
+- [Kopia](https://kopia.io/) – network-connected backup system providing centralized backups to multiple servers and user devices on the LAN
+- [Diun](https://crazymax.dev/diun/) – sends emails when a Docker image update has been detected
+- [dockcheck-web](https://github.com/Palleri/DCW) – web UI to see which Docker images have updates available
 
 #### Media & file management
 
-- **Samba** – shares files on server with Mac/Windows/Linux clients using CIFS protocol
-- **Avahi** – provides ZeroConf for Samba server so shares show up automatically in GUI clients
-- **Jellyseerr** – user-friendly request site to automate adding movies/shows to Jellyfin
-- **Jellystat** – provides statistics on Jellyfin server usage
-- **Bazarr** – downloads subtitles for movies/shows missing subtitles; utilizes Whisper web service to transcribe audio using AI
+- [Samba](https://www.samba.org/) – shares files on server with Mac/Windows/Linux clients using CIFS protocol
+- [Avahi](https://avahi.org/) – provides ZeroConf/mDNS for Samba server so shares show up automatically in GUI clients
+- [Jellystat](https://github.com/CyferShepard/Jellystat) – provides statistics on Jellyfin server usage
+  - *uses dedicated PostgreSQL container instance for isolation and security*
+- [Bazarr](https://www.bazarr.media/) – downloads subtitles for movies/shows missing subtitles; also utilizes Whisper web service to transcribe audio using AI
 
 #### Productivity & self-hosting
 
-- **Vaultwarden** – password manager; open source implementation of Bitwarden server
-- **This website** – this very website is hosted on my secondary server
-- **Photography website** – WordPress site running WooCommerce and an instance of MariaDB
-- **Mealie** – self-hosted recipe website
-- **OwnTone** – daapd server (iTunes media server) allowing Apple's Music app to access Jellyfin music natively
-- **Plausible** – self-hosted website analytics that's watching you right now
-- **Github actions API** – small API I developed to accept incoming webhooks from Github actions to perform deployments locally
+- [Vaultwarden](https://github.com/dani-garcia/vaultwarden) – password manager; open source implementation of Bitwarden server
+- [This website](https://www.jessekaufman.com/) – this very website is hosted on my secondary server
+- [Photography website](https://shop.jessekaufman.com/) – WordPress site running WooCommerce
+  - *uses dedicated Mariadb container instance for isolation and security*
+- [Mealie](https://mealie.io/) – self-hosted recipe management
+- [OwnTone](https://owntone.github.io/owntone-server/) – daapd server (iTunes media server) allowing Apple's Music app to access Jellyfin music natively
+- [Plausible](https://github.com/plausible/analytics) – self-hosted website analytics that's watching you right now
+  - *uses dedicated PostgreSQL container instance for isolation and security*
+- [Github actions API](https://github.com/jesse-kaufman/githup-actions-api) – small API I developed to accept incoming webhooks from Github actions to perform deployments locally
