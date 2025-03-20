@@ -1,7 +1,7 @@
 ---
 date: 2025-03-20T00:00:56-06:00
 title: “Smart bed” – ESP32-based occupancy sensor
-description: This project is a full rewrite of an evidence database originally built with PHP and MySQL, transitioning it to Node.js and MongoDB for improved performance, a simplified architecture, and hands-on learning.
+description: This project enhances smart home automation by using an ESP32 microcontroller and force-sensitive resistors (FSRs) to accurately detect bed occupancy. By monitoring each side of the bed independently, it enables personalized automation and improves room occupancy detection.
 images:
   - /projects/esp32-bed-occupancy-sensor/bedroom-dashboard-section.jpg
 tags:
