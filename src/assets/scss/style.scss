@@ -848,6 +848,7 @@ hr.post-end {
     margin-block-end: 1em;
     margin-left: 0;
     margin-right: 0;
+    vertical-align: top;
 
     &.narrow {
       max-width: 400px;
@@ -875,13 +876,17 @@ hr.post-end {
   figure.left {
     float: left;
     margin-right: 1.5em;
-    max-width: 50%;
+    max-width: 40%;
   }
 
   figure.right {
     float: right;
     margin-left: 1.5em;
-    max-width: 50%;
+    max-width: 40%;
+  }
+
+  h2 {
+    clear: both;
   }
 
   figure.big {
@@ -1148,6 +1153,10 @@ a.footnote-ref {
 // Media Queries
 //
 @media (min-width: 800px) {
+  .content h2 {
+    clear: none!important;
+  }
+
   .site-main {
     margin-top: 8em;
   }
@@ -1167,7 +1176,7 @@ a.footnote-ref {
   }
 
   .content figure.left {
-    margin-left: -240px!important;
+    margin-left: -240px;
   }
 
   figure.right {
@@ -1175,7 +1184,8 @@ a.footnote-ref {
   }
 
   figure.small {
-    max-width: 40%!important;
+    max-width: 30%!important;
+    margin-right: 2%;
   }
 
   figure.big {
@@ -1206,12 +1216,11 @@ a.footnote-ref {
 
   figure.left {
     max-width: 75%;
-    margin-left: -320px;
+    margin-left: -320px!important;
   }
 
   figure.right {
     max-width: 75%;
-    margin-right: -320px;
   }
 
   figure.big {
