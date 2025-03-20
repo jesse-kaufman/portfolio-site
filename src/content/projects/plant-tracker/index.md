@@ -2,6 +2,7 @@
 date: 2025-03-05T17:00:56-06:00
 title: Plant Tracker API project
 description: A plant tracking API built with Node.js and Express, designed to manage plant growth from seedling to harvest with efficient status updates and progress tracking.
+github: https://github.com/jesse-kaufman/plantsdb
 images:
   - val_batch0_pred.jpg
 tags:
@@ -9,8 +10,6 @@ tags:
   - MongoDB
   - Node.js
 ---
-[{{< svg name="github" >}} Github](https://github.com/jesse-kaufman/plantsdb)
-
 The Plant Tracker API will allow users to manage and track their plants through different growth stages. Built with Node.js, Express.js, and MongoDB, the API will store plant data such as growth stages, start dates, and projected harvest dates. Users will be able to update plant stages, archive or delete plants, and retrieve plant information via a RESTful API. The application will be containerized with Docker for easy deployment and scalability.
 
 Planned future enhancements include a CLI client, a web GUI (likely in React), and incorporating notifications for plant care reminders [among others](#other-planned-features)
