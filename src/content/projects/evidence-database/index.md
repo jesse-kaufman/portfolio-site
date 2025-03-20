@@ -17,6 +17,8 @@ This project was developed to aggregate and centralize evidence of harassment an
 
 Project turnaround was of utmost importance as it dealt with an ongoing case. The original version of this project was created in about a day and a half with [a rewrite a few months later](../evidence-database-rewrite/).
 
+*I have been unable to find a copy of the original PHP version of this project or I would provide a GitHub link. However, the code for the initial PHP-based tools I wrote to import emails/texts from different sources can be found [here](https://github.com/jesse-kaufman/evidencedb/tree/main/import_tools).*
+
 ## Tech Stack
 
 - [**Docker**](https://www.docker.com) – provides containerization for MySQL and both NGINX instances
