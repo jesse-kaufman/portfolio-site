@@ -48,7 +48,6 @@ When either side of the bed is occupied, the main room light smoothly dims over 
 
 {{< figure src="/projects/esp32-bed-occupancy-sensor/bed-sensor-esp32-board.jpg" alt="Interior of bed sensor case showing wiring for ESP32 sensor." caption="Interior of bed sensor case showing wiring for ESP32 sensor." class="left small" >}}
 
-
 Since I'm still working on my soldering skills, I opted for an ESP32 board with headers pre-installed so I could use breadboard wires with pins for the connections. On the FSR end, I also opted for using the pin/header connection style over attempting to solder and potentially damaging the FSR. However, anywhere 2 or more wires meet was soldered and wrapped in heat-shrink insulation.
 
 {{< figure src="/projects/esp32-bed-occupancy-sensor/bed-sensor-case.jpg" alt="Complete bed sensor assembly for ESP32 board." caption="Complete bed sensor assembly for ESP32 board." class="right small" >}}
