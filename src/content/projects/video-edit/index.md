@@ -1,14 +1,14 @@
 ---
 date: 2025-03-05T17:00:56-06:00
 title: Media conversion and standardization tool
-description: This custom-built video editing tool automates multiple tasks to streamline the process of converting and editing videos, making it efficient and easy vs having to remeber ffmpeg command line switches.
+description: This custom-built video editing tool automates multiple tasks to streamline the process of converting and editing videos, making it efficient and easy vs having to remember ffmpeg command line switches.
 tags:
   - Express.js
   - Node.js
 ---
 [{{< svg name="github" >}} Github](https://github.com/jesse-kaufman/video-edit)
 
-This custom-built video editing tool automates multiple tasks to streamline the process of converting and editing videos, making it efficient and easy vs having to remeber ffmpeg command line switches.
+This custom-built video editing tool automates multiple tasks to streamline the process of converting and editing videos, making it efficient and easy vs having to remember ffmpeg command line switches.
 
 ## Tech Stack
 
@@ -21,7 +21,7 @@ This custom-built video editing tool automates multiple tasks to streamline the 
 - **Video conversion:** Converts video files to **HEVC (H.265)** format for efficient compression and high-quality playback.
 - **Audio conversion:** Converts audio to the **AAC** codec, ensuring compatibility across devices and maintaining audio quality.
 - **Metadata management:** Sets proper **metadata**, such as title, description, and other relevant attributes, to ensure videos are organized and accessible.
-- **Asynchronous operation:** Extracts/converts all subtitles and starts conversion process at the same time for optimum efficency.
+- **Asynchronous operation:** Extracts/converts all subtitles and starts conversion process at the same time for optimum efficiency.
 
 In addition to the core video and audio conversions, the tool offers several advanced features to further enhance the media editing process:
 
