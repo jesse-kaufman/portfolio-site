@@ -3,29 +3,12 @@
 @import "admonition";
 @import "mixins";
 @import "normalize.scss";
-{{ if ne false .Site.Params.usesAnimation }}
 @import "animate.scss";
-{{ end }}
 @import "scrolltotop.scss";
 @import "socialshare.scss";
 @import "syntax.scss";
 
-// Default Accent Color (accentColor) taken from hugo.toml
-// If accentColor is not present, it will fallback to declarations in _colors.scss
-{{- with .Site.Params.accentColor }}
-$aTag-mixin-a-box-shadow: {{.}};
-$aTag-mixin-a-hover-box-shadow: {{.}};
-$content-anchor-hover: {{.}};
-$footnote-ref-hover-background: {{.}};
-$post-description-a-hover-border-bottom: {{.}};
-$tableofcontents-a-hover-border-bottom: {{.}};
-$scrolltotop-arrow: {{.}};
-$typewriter: {{.}};
-$marked-background: {{.}};
-$inserted-text-underline: {{.}};
-{{ end -}}
-
-// Scroll to Top color defination
+// Scroll to Top color definition
 .scroll-up {
   .scroll {
     #st-ring {
