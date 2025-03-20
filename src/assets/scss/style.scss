@@ -1295,29 +1295,34 @@ a.footnote-ref {
   justify-content: flex-end;
 }
 
-// If homeSubtitlePrinter is true
-{{- if .Site.Params.homeSubtitlePrinter }}
-  #home-subtitle{
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .5em solid $typewriter; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto 1.5em auto; /* Gives that scrolling effect as the typing happens */
-    // letter-spacing: .100em; /* Adjust as needed */
-    animation: typing 5s steps({{ strings.RuneCount .Site.Params.homeSubtitle }}, end),blink-caret .75s linear 5.1s infinite;
-  }
+#home-subtitle {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.5em solid $typewriter; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto 1.5em auto; /* Gives that scrolling effect as the typing happens */
+  // letter-spacing: .100em; /* Adjust as needed */
+  animation: typing 5s
+      steps({{strings.RuneCount .Site.Params.homeSubtitle}}, end),
+    blink-caret 0.75s linear 5.1s infinite;
+}
 
-  /* The typing effect */
-  @keyframes typing {
-    from {max-width: 0;}
-    to {max-width: 100%;}
+/* The typing effect */
+@keyframes typing {
+  from {
+    max-width: 0;
   }
+  to {
+    max-width: 100%;
+  }
+}
 
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: $typewriter}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
   }
-{{ end -}}
-{{- if (fileExists "assets/scss/userstyles.scss") }}
-@import "userstyles.scss";
-{{ end -}}
+  50% {
+    border-color: $typewriter;
+  }
+}
