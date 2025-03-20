@@ -1,6 +1,6 @@
 ---
 date: 2025-03-19T05:00:56-06:00
-title: Home network & Docker setup
+title: Home server & Docker services setup
 description: My home network is a self-hosted environment designed for automation, media management, and system orchestration. It runs a Docker-based infrastructure that leverages various containerized services for AI-powered automation, notifications, and home management.
 tags:
   - Docker
