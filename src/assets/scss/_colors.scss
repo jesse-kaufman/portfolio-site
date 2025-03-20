@@ -71,19 +71,6 @@ $footnote-ref-background: $japanese-indigo !default;
 $scrolltotop-ring: $chinese-silver !default;
 $scrolltotop-circle: $arsenic !default;
 
-// Page Scrollbar
-$pagescrollbar-background: $japanese-indigo !default;
-$pagescrollbar-thumb: $taupe-grey !default;
-$pagescrollbar-thumb-hover: $bright-grey !default;
-
-// Table of Contents
-$tableofcontents-background: transparent;
-
-// Table of Contents Scrollbar
-$tableofcontents-scrollbar-track: darken($pagescrollbar-thumb, 10%) !default;
-$tableofcontents-scrollbar-thumb: $japanese-indigo !default;
-$tableofcontents-scrollbar-thumb-hover: lighten($japanese-indigo, 10%) !default;
-
 // Text color
 $text: $bright-grey !default;
 
