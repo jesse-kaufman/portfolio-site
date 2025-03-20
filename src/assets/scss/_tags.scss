@@ -1,0 +1,71 @@
+/** Background colors for post tags. */
+.post-tags a {
+  background: #000;
+  display: inline-block;
+  padding: 0.2em 0.75em;
+  border-radius: 1em;
+  font-size: 0.8em;
+  font-weight: 400;
+  margin-right: 0.5em;
+  opacity: 0.7;
+  border: 0.5px solid #222;
+
+  &.node-js {
+    background: #498517;
+  }
+  &.traefik {
+    background: #25a2c2;
+  }
+  &.home-assistant {
+    background: #2a88a1;
+  }
+  &.php {
+    background: #4f5b93;
+  }
+  &.pug-js {
+    background: #a86454;
+  }
+  &.machine-learning {
+    background: #272822;
+  }
+  &.github-actions {
+    background: #ff5252;
+  }
+  &.docker {
+    background: #1a51bd;
+  }
+  &.mqtt {
+    background: #b58f28;
+    color: black;
+  }
+  &.smart-home {
+    background: #222222;
+  }
+  &.zigbee {
+    background: #8c230d;
+  }
+  &.node-red {
+    background: #610d0d;
+  }
+  &.artificial-intelligence {
+    background: #a632a8;
+  }
+  &.automation {
+    background: #a86932;
+  }
+  &.express-js {
+    background: #2c3e50;
+  }
+  &.mongodb {
+    background: #00684a;
+  }
+  &.ci-cd {
+    background: #21759b;
+  }
+  &.nginx {
+    background: #018472;
+  }
+  &.mysql {
+    background: #3b3e48;
+  }
+}
