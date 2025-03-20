@@ -760,12 +760,13 @@ hr.post-end {
       opacity: $dimmed-opacity;
       box-shadow: inset 0 -2px 0 $button-hover-color !important;
 
-      &:hover:active {
-        opacity: $dimmed-opacity - 0.1;
-      }
-
+      /** Button hover styles. */
       &:hover {
         box-shadow: inset 0 -1.3em 0 $button-hover-color !important;
+        /** Active hover button styles. */
+        &:active {
+          opacity: $dimmed-opacity - 0.1;
+        }
       }
     }
   }
