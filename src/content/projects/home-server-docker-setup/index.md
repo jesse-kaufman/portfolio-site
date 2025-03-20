@@ -10,6 +10,8 @@ tags:
 ---
 ## **Overview**
 
+{{< figure src="/projects/home-server-docker-setup/grafana-dashboard-internet.jpg" alt="Grafana dashboard for monitoring Internet connection stats" caption="Grafana dashboard for monitoring Internet connection stats" class="right" >}}
+
 *This is a work in progress as I get everything documented.*
 
 My home network is a self-hosted environment designed for automation, media management, and system orchestration. It runs a Docker-based infrastructure that leverages various containerized services for AI-powered automation, notifications, and home management.
@@ -24,6 +26,8 @@ My home network is a self-hosted environment designed for automation, media mana
 This project highlights my network and server administration skills, DevOps mindset, and ability to integrate diverse technologies into a cohesive, reliable system.
 
 ## **Hardware**
+
+{{< figure src="/projects/home-server-docker-setup/grafana-dashboard-server.jpg" alt="Grafana dashboard for monitoring server resources" caption="Grafana dashboard for monitoring server resources" class="right" >}}
 
 My home network setup is built on a 3-server setup: The border router runs OPNsense and provides DNS, DHCP, and mail services to the LAN. The other two servers run Ubuntu with Docker Compose managing containerized services.
 
@@ -65,6 +69,9 @@ My home network setup is built on a 3-server setup: The border router runs OPNse
     - **128GB internal NVMe** – host OS
 
 ## **Docker services**
+
+
+{{< figure src="/projects/home-server-docker-setup/grafana-dashboard-server.jpg" alt="Grafana dashboard displaying container resource usage overview for primary server" caption="Grafana dashboard displaying container resource usage overview for primary server" class="right" >}}
 
 These are the services (non-comprehensive) that are provided by Docker on the primary and secondary Linux servers.
 
