@@ -35,6 +35,9 @@
 	</div>
 
 	<div class="content">
+		{{ if .Page.Params.github }}
+		<a class="button" href="{{ .Page.Params.github }}">{{partial "svg.html" (dict "name" "github")}} View on Github ▸</a>
+		{{ end }}
 		{{ .Content | replaceRE "(<h[1-6] id=\"([^\"]+)\".+)(</h[1-6]+>)" `${1}<a href="#${2}" class="anchor"
 				aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
