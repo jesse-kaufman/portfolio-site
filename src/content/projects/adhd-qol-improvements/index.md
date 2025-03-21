@@ -30,6 +30,8 @@ This automation ensures that food left in the microwave doesn't go unnoticed by 
 
 4. **Clearing notifications on interaction** – once the door is opened, any microwave notifications are cleared from devices to prevent clutter and notification fatigue
 
+{{< figure src="/projects/adhd-qol-improvements/food-in-microwave-flow.jpg" alt="Food left in microwave flow in Node-RED." caption="Food left in microwave flow in Node-RED." >}}
+
 ### Outcome
 
 This automation has reduced the amount of times I've forgotten about food in the microwave to **zero.**
@@ -66,6 +68,8 @@ This automation helps remind users when the washing cycle is complete, and wet c
 4. **Follow-up notification** – a 15-minute timer begins upon cycle completion. Once the timer finishes, a notification stating *"there are wet clothes in the washer"* is sent to all devices and announced on any smart speakers in occupied rooms
 
 5. **Door open action** – if the washer door is opened at any point during the timer, the timer is stopped, the "wet clothes in washer" sensor is turned off, and any washing machine notifications are cleared from devices to prevent notification clutter
+
+{{< figure src="/projects/adhd-qol-improvements/full-washing-machine-flow.jpg" alt="Full washing machine logic in Node-RED." caption="Full washing machine logic in Node-RED." >}}
 
 ### Outcome
 
