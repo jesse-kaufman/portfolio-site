@@ -11,6 +11,7 @@ tags:
   - smart home
   - Zigbee
 ---
+<!-- no toc -->
 - [Food left in microwave reminders](#food-left-in-microwave-reminders)
 - [Wet clothes in washer reminders](#wet-clothes-in-washer-reminders)
 
