@@ -342,10 +342,10 @@ table {
 
 .hdr-links {
   display: inline-block;
-  margin-left: 0.6em;
+  margin-left: 0.8em;
 
   & > a {
-    margin-left: 0.4em;
+    margin-left: 0.6em;
   }
 }
 
@@ -353,6 +353,7 @@ table {
   border: none;
   background: none;
   padding: 0;
+  font-size: 1.1em;
   margin-left: 0.4em;
   cursor: pointer;
 }
