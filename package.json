@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.0"
+  },
+  "name": "portfolio",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "This repository holds the files used to generate my [portfolio site](https://www.jessekaufman.com) which is powered by [Hugo CMS](https://www.gohugo.io). Github actions deploy changes to the live site when commits are pushed to Github.",
+  "main": "src/api/server.js",
+  "scripts": {
+    "dev": "node --env-file .env src/api/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/api/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesse-kaufman/portfolio-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesse-kaufman/portfolio-site/issues"
+  },
+  "homepage": "https://github.com/jesse-kaufman/portfolio-site#readme"
+}
