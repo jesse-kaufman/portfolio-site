@@ -17,11 +17,11 @@ services:
       - ./live/config:/etc/nginx/conf.d:rw
       - ./live/logs:/var/log/nginx:rw
     user: ${PUID}:${PGID}
-    # healthcheck:
-    #   test: curl -f http://localhost:80 --insecure -s
-    #   interval: 30s
-    #   timeout: 10s
-    #   retries: 5
+    healthcheck:
+      test: curl -f http://localhost:80 --insecure -s
+      interval: 10s
+      timeout: 10s
+      retries: 5
     tmpfs:
       - /tmp:rw,noexec,nosuid,uid=${PUID},gid=${PGID}
       - /run:rw,noexec,nosuid,uid=${PUID},gid=${PGID}
