@@ -10,19 +10,19 @@ process.env.NODE_ENV = process.env.NODE_ENV || "development"
 checkEnv(chalk.red)
 
 const app = express()
+const nodeEnv = process.env.NODE_ENV
 const port = process.env.PORT || 3000
-const smtpPort = process.env.SMTP_PORT
-const smtpServer = process.env.SMTP_SERVER
 const corsOrigin = process.env.CORS_ORIGIN
-
-const requiredEnvVars = ["MAIL_HOST", "MAIL_PORT", "MAIL_USER", "MAIL_PASS"]
-
-// Configure CORS to allow only requests from 'www.jessekaufman.com'
 const corsOptions = {
-  origin: corsOrigin, // Only allow this origin
   methods: "POST", // Limit allowed methods (optional, for security)
   allowedHeaders: "Content-Type", // Limit allowed headers (optional)
 }
+
+if (nodeEnv === "production") {
+  // Limit requests with CORS to origin
+  corsOptions.origin = corsOrigin
+}
+
 app.use(cors(corsOptions))
 
 // Middleware to parse incoming JSON requests
@@ -80,6 +80,9 @@ app.post("/contact/v1", (req, res) => {
 app.listen(port, () => {
   const colorFn = nodeEnv === "production" ? chalk.green : chalk.red
   console.log(colorFn(`Running in ${nodeEnv} mode`))
-  console.log(`${chalk.green("✔")} Using ${smtpServer}:${smtpPort} for email`)
+  console.log(
+    chalk.green("✔"),
+    `Using ${process.env.SMTP_SERVER}:${process.env.SMTP_PORT} for email`
+  )
   console.log(`Server is running on port ${port}`)
 })
