@@ -5,3 +5,4 @@ live/public/*
 live/logs/*
 build/*
 .env
+node_modules
