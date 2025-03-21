@@ -317,7 +317,7 @@ table {
 
   .site-nav {
     display: inline-block;
-    font-size: 1.1em;
+    font-size: 0.9em;
     opacity: 0.8;
 
     .has-children {
@@ -330,7 +330,8 @@ table {
     }
 
     a {
-      margin-left: 0.8em;
+      margin-left: 1em;
+      margin-right: 0.25em;
     }
   }
 }
