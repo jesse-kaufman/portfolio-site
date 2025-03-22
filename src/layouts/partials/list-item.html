@@ -1,9 +1,9 @@
-{{- $group_by_date := and (isset .Params "group_list_by_date") (ne .Params.group_list_by_date false) }}
+{{- $group_by_date := (ne .Page.Params.group_list_by_date false) }}
 
 <li class="post-item">
     <a href="{{.Permalink}}">
         <span class="post-title">{{.Title}}</span>
-        {{- if $group_by_date }}
+        {{- if (ne $group_by_date false) }}
         <span class="post-day">{{ .Date.Format .Site.Params.dateformShort }}</span>
         {{- end -}}
     </a>
