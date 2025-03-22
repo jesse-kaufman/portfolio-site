@@ -164,8 +164,6 @@ Streamlines code entry by mapping common syntax and command line elements such a
 - Type `/**` by holding `/*` key
 - Type `[]` followed by the left key by holding `{}` key
 
-*\* additional details coming soon.*
-
 {{< figure src="/projects/custom-keyboard-layout/code-layer.webp" alt="CODE layer on keyboard." caption="CODE layer on keyboard." >}}
 
 ## **FN Layer**
@@ -183,8 +181,6 @@ Various `MEH`[^2] combinations are available on the left hand, which are used fo
 
 [^1]: `HYPER` is shorthand for `SHIFT`+`⌃`+`⌥`+`⌘`+`P`; for example `HYPER`+`P` is `SHIFT`+`⌃`+`⌥`+`⌘`+`P`
 [^2]: `MEH` is shorthand for `SHIFT`+`⌃`+`⌥`; for example `MEH`+`P` is `SHIFT`+`⌃`+`⌥`+`P`
-
-*\* Additional details coming soon.*
 
 ## Future plans
 
