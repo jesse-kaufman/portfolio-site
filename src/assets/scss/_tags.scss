@@ -10,6 +10,14 @@
   opacity: 0.7;
   border: 0.5px solid #222;
 
+  &.ergodox,
+  &.qmk {
+    background: #00466d;
+  }
+  &.c {
+    background: #e86700;
+    color: black;
+  }
   &.esp32,
   &.esphome {
     background: #292819;

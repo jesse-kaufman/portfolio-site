@@ -6,10 +6,9 @@ github: https://github.com/jesse-kaufman/jk_ergodox_qmk_keymap/
 images:
   - /projects/custom-keyboard-layout/keyboard.webp
 tags:
-  - ESP32
-  - ESPHome
-  - Home Assistant
-  - Node-RED
+  - C
+  - ErgoDox
+  - QMK
 ---
 ## Overview
 
