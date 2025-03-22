@@ -43,7 +43,7 @@ params:
   global_mathjax: false
   readTime: true
   legacyLayout: false
-  listLayout: ["description", "tags", "categories", "legacy"]
+  listLayout: ["date", "description", "tags", "categories", "legacy"]
 
   socialLinks:
     - name: github
