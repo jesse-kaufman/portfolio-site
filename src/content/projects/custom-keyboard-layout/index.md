@@ -182,6 +182,26 @@ Various `MEH`[^2] combinations are available on the left hand, which are used fo
 [^1]: `HYPER` is shorthand for `SHIFT`+`⌃`+`⌥`+`⌘`+`P`; for example `HYPER`+`P` is `SHIFT`+`⌃`+`⌥`+`⌘`+`P`
 [^2]: `MEH` is shorthand for `SHIFT`+`⌃`+`⌥`; for example `MEH`+`P` is `SHIFT`+`⌃`+`⌥`+`P`
 
+## **Keycaps & switches**
+
+### Keycaps
+
+Most of the keycaps are from the awesome [Susuwatari](https://drop.com/buy/drop-matt3o-mt3-susuwatari-custom-keycap-set) set by MATT30, which uses the [MT3 profile](https://matt3o.com/mt3-keycap-profile-a-brief-history/). It has a look and feel that reminds me of an old terminal keyboard. I wanted the shiny look of those old keycaps, so I polished the Susuwatari keycaps to have a nice, smooth feel of old, worn keycaps.
+
+The `SPACE` and `ENTER` keys use G20 keycap profiles, so they're extremely low-profile and only have a slight angle toward my thumb. This allow my thumb to rest slightly lower than the other fingers, providing more ergonomics.
+
+Some of the keys are mounted sideways to better accommodate the shape of my hand and the angle of attack when pressing a key. Since I only ever use my thumb for the `K` key, the keycap is mounted upside down to improve comfort. The option and command keys on the left hand are at different orientations to allow differentiation by feel alone.
+
+### Switches
+
+- Most of the switches on the keyboard are Outemu low-profile brown switches for feedback without an audible click
+- Switches for keys that change layers use Outemu low-profile blue switches for a nice, click-y sound and feel
+- Modifiers, arrow keys, `PgUp`/`PgDn` and both thumb keys use Outemu low-profile black switches, for a buttery-smooth feel with no bump and extremely fast reaction (especially nice on arrow keys)
+- Volume control and zoom keys use Akko blacks with extra heavy springs
+- Other keys use Akko CS Sponge switches
+
+All switches have been hand-lubed for the best sound and feel and after a few years in use, all the keys are buttery-smooth with no scratchiness or spring ping.
+
 ## Future plans
 
 - Move backspace to `M` + `N` to reduce accidental firing; as I get faster in Colemak the current combo is occasionally fired because of the frequency of `N` + `E` being used together
