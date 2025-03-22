@@ -16,6 +16,12 @@ This custom keyboard layout is designed to reduce strain on the hands—especial
 
 {{< figure src="/projects/custom-keyboard-layout/keyboard.webp" alt="Photograph of keyboard and trackball on desk." caption="Photograph of keyboard and trackball on desk." >}}
 
+### Diagram conventions
+
+In the diagrams below, there are a few conventions in use. The main text on a key (centered) represents what is typed or the command when the key is PRESSED. Smaller text on the front of keys in a salmon color represent what is typed or the command when the key is HELD.
+
+In the diagrams of layers other than BASE, keys that are unimportant to that layer are rendered flat and lighter in color. Salmon-colored flat keys represent the key being held down to access the layer. For keys that type alpha characters on the BASE layer that are flat on another layer, the keys do nothing. Keys in the thumb clusters and non-alpha characters perform the same function as on the BASE layer.
+
 ## Goals
 
 - Minimize hand and finger strain—especially on pinkies
@@ -31,7 +37,7 @@ The keyboard features 5 main layers:
 - **BASE** – standard typing layer optimized for comfort and speed, based on Colemak-DH layout
 - **NUM** – numeric entry layer providing 9-key entry without leaving home row
 - **SYM** – symbol entry layer for punctuation and special characters
-- **CODE** – coding-specific layer with quick access to commonly used syntax elements
+- **CODE** – coding-specific layer with quick access to commonly used syntax and command line elements
 - **FN** – function layer providing quick access to arrow keys without leaving home row
 
 ## **BASE Layer**
@@ -53,7 +59,7 @@ All modifiers (Control, Shift, Option, Command) function as one-shot keys, meani
 - Pressing the key types `()` then moves the cursor between them for rapid typing of parenthetical text
 - Holding the key types `""` and then places the cursor between the quotes for rapid typing of quoted text
 
-#### `NEW TAB` / minimize window key
+#### New tab / minimize window key
 
 - Pressing the key opens a new tab
 - Holding the key minimizes the currently active window
@@ -67,7 +73,7 @@ All modifiers (Control, Shift, Option, Command) function as one-shot keys, meani
 Certain key combinations trigger specific actions:
 
 - **Backspace**: `N` + `E`
-- **Double quote (")**: `E` + `I`
+- **Double quote (`"`)**: `E` + `I`
 - **Escape**: `W` + `F`
 - **Tab**: `S` + `T`
 - **Copy**: `X` + `C`
@@ -78,25 +84,26 @@ Certain key combinations trigger specific actions:
 - **Mute**: `Vol+` + `Vol-`
 - **Home**: `PgUp` + `O`
 - **End**: `PgDn` + `?`
-- **Switch to last app (Cmd+Tab)**:
+- **Switch to last app (`⌘`+`Tab`)**:
   - Left hand: `R` + `S` + `T`
   - Right hand: `N` + `E` + `I`
-- **Bootloader (Load New Firmware)**: `Blue MEH` key + `Z`
+- **Bootloader (load new firmware)**: blue key on upper-left + `Z`
 
 ### Leader key – launching apps
 
 The leader key functions similarly to Vim's leader key, providing fast application launching:
 
-1. Pressing the leader key starts leader mode.
-2. Typing specific key sequences triggers predefined actions via Keyboard Maestro.
-3. If an unmapped sequence is typed, the system defaults to opening Spotlight Search and entering the typed characters.
+1. Pressing the leader key starts leader mode
+2. Typing specific key sequences triggers predefined actions via Keyboard Maestro using `HYPER`[^1] key combinations
+3. If an unmapped sequence is typed, the system defaults to opening Spotlight Search and entering the typed characters
 
 #### Example mappings
 
-  - `LEADER + T` → open Terminal
-  - `LEADER + S` → open Browser
-  - `LEADER + LR` → open Adobe Lightroom
-  - `LEADER + SMS` → open Messages
+- `LEADER` + `T` → open Terminal
+- `LEADER` + `S` → open Browser
+- `LEADER` + `LR` → open Adobe Lightroom
+- `LEADER` + `SMS` → open Messages
+- `LEADER` + `PLAY/PAUSE` → open Music
 
 #### Timing
 
@@ -113,44 +120,71 @@ The META keys provides quick access to application-specific commands:
 - **VSCodium**:
   - Tap `META` to toggle terminal visibility.
 - **Vim**:
-  - `META + Arrow Key` navigates between Vim panes.
+  - `META` + `Arrow Key` navigates between Vim panes.
 
 ## **NUM Layer**
 
 - Activated by holding the `S` key (left hand) or tapping the `L. NUM` key (right hand).
 - Turns the right-hand alpha keys into a 9-key number pad.
 
-{{< figure src="/projects/custom-keyboard-layout/num-layer.webp" alt="NUM layer on keyboard." caption="NUM layer on keyboard." class="" >}}
-
 ### Special keys
 
 - Holding `3` types a period (`.`)
 - Holding `2` types a comma (`,`)
 
+{{< figure src="/projects/custom-keyboard-layout/num-layer.webp" alt="NUM layer on keyboard." caption="NUM layer on keyboard." >}}
+
 ## **SYM Layer**
 
-- Optimized for quick symbol entry without extra key presses
-- Lesser-used and advanced symbols (such as those accessible while holding Option) are accessible via key holds
+This layer is optimized for quick symbol entry without extra key presses. Lesser-used and advanced symbols (such as those accessible while holding Option) are accessible via key holds instead of requiring option or shift keys to be held while pressing a key.
 
-*\* Layout image and additional details coming soon.*
+### Special features
+
+- Type `<=` and `>=` by holding `<` and `>` respectively
+- Type en dash (`–`) and em dash (`—`) by holding `-` and `=` respectively
+- Type `#!` by holding `#`
+- Type `()` followed by the left key by holding `(`
+- Type `{}` followed by the left key by holding `[]` key
+- Type `“`, `”`, `‘`, `’` without holding option or shift
+
+{{< figure src="/projects/custom-keyboard-layout/sym-layer.webp" alt="SYM layer on keyboard." caption="SYM layer on keyboard." >}}
 
 ## **CODE Layer**
 
-- Streamlines code entry by mapping common syntax elements:
-  - `=>`, `->`
-  - `/**`, `/*`, `*/`
-  - `===`, `[`, `]`, `[]`, `{`, `}`, `{}`
-  - `<>`, `</>`
+Streamlines code entry by mapping common syntax and command line elements such as:
 
-*\* Layout image and additional details coming soon.*
+- `=>`, `->`
+- `/**`, `/*`, `*/`
+- `[`, `]`, `{`, `}`
+- `<>`, `</>`
+- `~/`, `../`, `./`
+
+### Additional features
+
+- Type `/**` by holding `/*` key
+- Type `[]` followed by the left key by holding `{}` key
+
+*\* additional details coming soon.*
+
+{{< figure src="/projects/custom-keyboard-layout/code-layer.webp" alt="CODE layer on keyboard." caption="CODE layer on keyboard." >}}
 
 ## **FN Layer**
 
-- Optimized access to arrow keys without needing to leave the home row
+- Optimized access to arrow keys and other keyboard-based navigation without needing to leave the home row
 - Engaged by holding down `T` on the left hand or tapping one of the `L.FN` keys
+- Exit layer by releasing `T` or tapping one of the `L.BASE` keys (same keys that enter `L.FN`)
+- Holding `S` while holding `T` engages the NUM layer as long as `S` is held and reverts to FN layer when released
 
+{{< figure src="/projects/custom-keyboard-layout/fn-layer.webp" alt="Photograph of keyboard and trackball on desk." caption="Photograph of keyboard and trackball on desk." >}}
 
-*\* Layout image and additional details coming soon.*
+### Special keys
+
+Various `MEH`[^2] combinations are available on the left hand, which are used for in-app commands (primarily used in Lightroom when activating the FN layer through the `L.FN` key, not the momentary activation provided by holding `T`)
+
+[^1]: `HYPER` is shorthand for `SHIFT`+`⌃`+`⌥`+`⌘`+`P`; for example `HYPER`+`P` is `SHIFT`+`⌃`+`⌥`+`⌘`+`P`
+[^2]: `MEH` is shorthand for `SHIFT`+`⌃`+`⌥`; for example `MEH`+`P` is `SHIFT`+`⌃`+`⌥`+`P`
+
+*\* Additional details coming soon.*
 
 ## Future plans
 
