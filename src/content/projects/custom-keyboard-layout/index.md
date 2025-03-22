@@ -210,3 +210,5 @@ All switches have been hand-lubed for the best sound and feel and after a few ye
 ## Conclusion
 
 This keyboard layout significantly reduces hand strain while improving typing speed and workflow efficiency for developers. By incorporating multiple layers, intuitive combos, a leader key for launching apps, and META keys for in-app shortcuts, this layout is an advanced solution for programmers seeking ergonomic and rapid input solutions.
+
+Hands down, though, the switch to Colemak-DH has been the biggest improvement to my keyboard setup. Even on my laptop, I notice less strain on my hands.
