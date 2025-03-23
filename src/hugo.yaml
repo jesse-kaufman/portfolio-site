@@ -44,7 +44,9 @@ params:
   readTime: true
   legacyLayout: false
   listLayout: ["date", "description", "tags", "categories", "legacy"]
-
+  sitemap:
+    changefreq: weekly
+    priority: 0.8
   socialLinks:
     - name: github
       url: https://github.com/jesse-kaufman
