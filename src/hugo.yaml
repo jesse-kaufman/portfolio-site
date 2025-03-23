@@ -20,6 +20,7 @@ markup:
     codeFences: true
     noClasses: false
     style: onedark
+enableGitInfo: true
 params:
   contact:
     email: jesse@jessekaufman.com
