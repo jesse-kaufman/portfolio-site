@@ -22,10 +22,14 @@ markup:
     style: onedark
 enableGitInfo: true
 params:
+  author:
+    name: Jesse Kaufman
+    about: https://www.jessekaufman.com
   contact:
     email: jesse@jessekaufman.com
     phone: +13164611421
-  # description = "CHANGE ME SITE DESCRIPTION"
+    name: Jesse Kaufman
+  description: "Passionate and versatile problem-solver and software developer with over 25 years of experience in web development, primarily focusing on PHP, JavaScript, and Node.js."
   images:
     - /images/vscodium.jpg
     - /projects/event-driven-camera-notifications/camera-dashboard.jpg
