@@ -1,4 +1,4 @@
-[submodule "src/themes/hermit-v2"]
-	path = src/themes/hermit-v2
+[submodule "hugo/themes/hermit-v2"]
+	path = hugo/themes/hermit-v2
 	url = https://github.com/1bl4z3r/hermit-V2
 	branch = main

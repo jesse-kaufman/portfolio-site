@@ -23,9 +23,9 @@ jobs:
 
       - name: Test building site
         run: |
-          cd src  # Navigate to the src directory
+          cd hugo  # Navigate to the hugo directory
           git submodule update --init --recursive
-          hugo    # Build the site (output goes to src/public)
+          hugo    # Build the site (output goes to hugo/public)
 
       - name: Trigger deployment via webhook
         run: |
