@@ -27,6 +27,9 @@
   },
   "homepage": "https://github.com/jesse-kaufman/portfolio-site#readme",
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/vue": "^8.1.0",
+    "@vitejs/plugin-vue": "^5.2.3",
     "vitest": "^3.0.9"
   }
 }
