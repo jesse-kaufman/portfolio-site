@@ -22,14 +22,14 @@ tags:
 
 ![Image of camera dashboard in Home Assistant](camera-dashboard.jpg)
 
-## Key Features
+## Key features
 
 - **Event-Driven Architecture** – The system uses event-driven principles to handle motion detection and image processing efficiently
 - **Image Verification** – YOLO and Google Gemini ensure accurate person detection and image description
 - **Asynchronous Processing** – Timeouts and event-based triggers allow for asynchronous, non-blocking operations
 - **Flexible Notification System** – Notifications are sent to all devices, with custom smart speaker announcements for person/known person events
 
-## Tech Stack
+## Tech stack
 
 - [eufy-security-ws](https://github.com/bropat/eufy-security-ws) – integrates Eufy Security cameras into Home Assistant
 - [Home Assistant](https://www.home-assistant.io) – provides interface to cameras and motion detections
@@ -112,7 +112,7 @@ tags:
 
 !["Do camera notification" subflow](do-camera-notification.jpg)
 
-## Future Improvements
+## Future improvements
 
 - Locally-hosted alternative to Google Gemini
   - *Likely CLIP + GPT or similar running on an Apple M1, which is the only accelerated platform I have available at the moment*
