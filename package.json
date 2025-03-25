@@ -12,7 +12,8 @@
   "main": "src/api/server.js",
   "scripts": {
     "dev": "node --env-file .env src/api/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest run",
+    "test:watch": "vitest --watch",
     "start": "node src/api/server.js"
   },
   "repository": {
@@ -24,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/jesse-kaufman/portfolio-site/issues"
   },
-  "homepage": "https://github.com/jesse-kaufman/portfolio-site#readme"
+  "homepage": "https://github.com/jesse-kaufman/portfolio-site#readme",
+  "devDependencies": {
+    "vitest": "^3.0.9"
+  }
 }
