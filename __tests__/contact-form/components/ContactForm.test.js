@@ -1,4 +1,4 @@
-import { describe, test } from "vitest"
+import { describe, test, expect } from "vitest"
 import { render, screen } from "@testing-library/vue"
 import ContactForm from "@/assets/js/components/ContactForm.vue"
 
