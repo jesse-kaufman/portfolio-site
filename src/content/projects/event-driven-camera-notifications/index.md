@@ -66,8 +66,8 @@ tags:
 
 ### 3. **Image classification / verification**
 
-- When the `download_complete` event is triggered in MQTT, the image is sent to YOLO for classification, which is used to verify the camera’s person detection
-- If the event type is "person" and YOLO does not detect a person, the system changes the event type to a more generic "motion" event
+- When the `download_complete` event is triggered in MQTT and the detection type is "Person" or "Known Person", the image is sent to YOLO for classification, which is used to verify the cameras’ person detection
+- If YOLO does not detect a person, the system changes the event type to a more generic "Motion" event
 - A timeout is also set for this classification step
 
 ![Image-downloaded flow section in Node-RED](image-downloaded.jpg)
@@ -82,6 +82,8 @@ tags:
   - Whether or not the Automower is running (to help reduce false positives on pets)
 - **Image and prompt are sent Google Gemini**
 - Once finished, description is saved to a Home Assistant text entity, and a `describe_complete` event is emitted
+- If police are detected (based on finding key words in the description), a "Police Detected" input boolean is turned on
+  - This is used in the camera notification flow to update the icon and set the notification level to "critical" which causes alerts to occur even when silenced
 
 {{< figure src="/projects/event-driven-camera-notifications/image-classified.jpg" alt="Image classification/verification flow section in Node-RED" caption="Image classification/verification flow section in Node-RED" >}}
 
@@ -101,6 +103,7 @@ tags:
 - If YOLO times out, the system proceeds directly to the description step without changing the event type
 - If any other step times out, the system skips the remaining steps and goes directly to the notification logic below
 - Once all steps have completed, a `image_processing_complete` event is sent over MQTT, which triggers the logic below
+- If a person was detected (and verified by YOLO), an event is sent on  the `camera/[camera_name]/person` MQTT topic for use in other flows
 
 ![Event notification flow section in Node-RED](send-notification.jpg)
 
@@ -109,6 +112,9 @@ tags:
 - If the event type is "person", "known person", "pet", or "vehicle", a notification is sent to all devices
 - For "person" and "known person" events, an announcement is made on smart speakers in rooms where people are present
 - If the cameras recognize the person, the AI describe portion is skipped and "`[name]` spotted." is used as the description instead
+- The flow also has logic to check if the closest door was recently opened to silence alarms when the front door was open (or opened shortly after) when a person was detected
+- There are "person notification timers" for the front yard cameras as well as back yard cameras that are started when a person is detected
+  - If a person is detected in the same area (front or back yard) while the timers are running, notifications are silenced to prevent notification fatigue
 
 !["Do camera notification" subflow](do-camera-notification.jpg)
 
