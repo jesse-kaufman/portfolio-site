@@ -1,6 +1,6 @@
-src/public/*
-src/resources/_gen/*
-src/.hugo_build.lock
+hugo/public/*
+hugo/resources/_gen/*
+hugo/.hugo_build.lock
 live/public/*
 live/logs/*
 build/*
