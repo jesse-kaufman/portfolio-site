@@ -70,6 +70,10 @@ This project leverages Docker containers to create a scalable and efficient home
 - Provides video streaming and motion/person detection notifications.
 - Home Assistant connects to the Eufy security container via an open port on 127.0.0.1 for local communication.
 
+## Traefik
+
+- Provides HTTPS by acting as reverse proxy with minimal config needed (all that's required is adding a few labels to a container for it to work with Traefik)
+
 ## CloudFlare Tunnel
 
 - The CloudFlare Tunnel container is used to securely allow public access to certain services on the local network—even when behind CG-NAT.
