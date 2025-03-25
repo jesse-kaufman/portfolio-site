@@ -90,3 +90,11 @@ This project leverages Docker containers to create a scalable and efficient home
 ## Summary
 
 This project demonstrates a robust home automation setup using Docker containers to orchestrate a collection of microservices. Each service is carefully isolated in its own containerized environment to ensure optimal performance and security. Security is prioritized through the use of Traefik reverse proxies for secure HTTPS access, with LDAP authentication and Authelia providing streamlined and secure login capabilities across services. This modular, containerized approach allows for easy expansion and modification of the system as new devices and services are added.
+
+---
+
+## Change log
+
+- **2025-03-25:**
+  - Added information about Traefik
+  - Removed redundant "container" text from headings
