@@ -13,6 +13,11 @@
 	<script defer data-domain="jessekaufman.com"
 		src="https://plausible.lloydnet.org/js/script.file-downloads.outbound-links.pageview-props.revenue.tagged-events.js"></script>
 	<script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+	{{ if eq .RelPermalink "/contact/" }}
+	<script defer type="module" src="{{ " js/main.js" | relURL }}"></script>
+	{{ end }}
+
 	{{ range .AlternativeOutputFormats -}}
 	{{ printf `
 	<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Title | safeHTML }}
