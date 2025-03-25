@@ -82,8 +82,6 @@ tags:
   - Whether or not the Automower is running (to help reduce false positives on pets)
 - **Image and prompt are sent Google Gemini**
 - Once finished, description is saved to a Home Assistant text entity, and a `describe_complete` event is emitted
-- If police are detected (based on finding key words in the description), a "Police Detected" input boolean is turned on
-  - This is used in the camera notification flow to update the icon and set the notification level to "critical" which causes alerts to occur even when silenced
 
 {{< figure src="/projects/event-driven-camera-notifications/image-classified.jpg" alt="Image classification/verification flow section in Node-RED" caption="Image classification/verification flow section in Node-RED" >}}
 
@@ -98,7 +96,16 @@ tags:
 
 {{< figure src="/projects/event-driven-camera-notifications/latest-image-dashboard.jpg" alt="Image of latest camera images in Home Assistant" caption="Image of latest camera images in Home Assistant" class="narrow">}}
 
-### 5. **Processing complete / timeout handling**
+### 5. **Processing complete & check for police**
+
+- When the description is complete, a "image_processing_complete" event is fired on the MQTT topic `cameras/[camera_name]/event`
+- The description is checked for key words and a "Police Detected" input boolean is turned on if police are detected
+  - This is used in the camera notification flow to update the icon and set the notification level to "critical" which causes alerts to occur even when silenced
+
+{{< figure src="/projects/event-driven-camera-notifications/image-described.jpg" alt="Police check flow section in Node-RED" caption="Police check flow section in Node-RED" >}}
+
+
+### 6. **Processing complete / timeout handling**
 
 - If YOLO times out, the system proceeds directly to the description step without changing the event type
 - If any other step times out, the system skips the remaining steps and goes directly to the notification logic below
@@ -107,7 +114,7 @@ tags:
 
 ![Event notification flow section in Node-RED](send-notification.jpg)
 
-### 6. **Notification logic**
+### 7. **Notification logic**
 
 - If the event type is "person", "known person", "pet", or "vehicle", a notification is sent to all devices
 - For "person" and "known person" events, an announcement is made on smart speakers in rooms where people are present
