@@ -30,6 +30,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/vue": "^8.1.0",
     "@vitejs/plugin-vue": "^5.2.3",
+    "jsdom": "^26.0.0",
     "vitest": "^3.0.9"
   }
 }
