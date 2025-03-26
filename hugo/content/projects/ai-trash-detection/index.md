@@ -144,6 +144,9 @@ This lets me know with reasonable certainty **whether the trash cans are in the 
 
 - [ ] Streamline YOLO call to reduce duplicated nodes
 - [ ] Support for when one trash can is in front and the other is in back
+  - Would require more testing to ensure trash can count is correct in cameras that can see both
+  - Some cameras can only see one trash can, so this would need to be addressed
+  - Would require additional training to ensure accuracy of count
 
 ### Automated image collection
 
@@ -154,7 +157,8 @@ This lets me know with reasonable certainty **whether the trash cans are in the 
 
 ### Semi-automated retraining
 
-- [ ] Manually label images in training directory and generate dataset with `labelme2yolo`
+- [ ] Manually label images in training directory
+- [ ] Automatically generate dataset with `labelme2yolo` when new Labelme labels are detected in training directory
 - [ ] Automatically run YOLO iterative training process for ~10 epochs when changes are detected to output directory of `labelme2yolo`
 - [ ] Copy new model .pt file into place when complete
 - [ ] Clear out training directory periodically so the model isn't just memorizing
