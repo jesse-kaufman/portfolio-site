@@ -143,6 +143,9 @@ This lets me know with reasonable certainty **whether the trash cans are in the 
 ## **Future improvements**
 
 - [ ] Streamline YOLO call to reduce duplicated nodes
+- [ ] Add support for checking if image is mostly black and discarding any detection results to prevent false negatives
+  - Would fix the need for the current time-based condition which isn't ideal
+  - Maybe instead use lux measured by back door motion sensor?
 - [ ] Support for when one trash can is in front and the other is in back
   - Would require more testing to ensure trash can count is correct in cameras that can see both
   - Some cameras can only see one trash can, so this would need to be addressed
