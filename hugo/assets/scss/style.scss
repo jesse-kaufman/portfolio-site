@@ -695,6 +695,19 @@ hr.post-end {
     line-height: 1.3em;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+
+    // Style li elements containing a checkbox
+    &:has(input[type="checkbox"]) {
+      text-indent: -1.7em;
+      margin-left: 0.5em;
+      list-style: none;
+
+      & > ul > li {
+        text-indent: initial;
+        margin-left: -1em;
+        list-style: initial;
+      }
+    }
   }
 
   figure {
