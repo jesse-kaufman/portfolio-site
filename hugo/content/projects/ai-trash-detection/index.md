@@ -154,15 +154,16 @@ This lets me know with reasonable certainty **whether the trash cans are in the 
 
 ### Semi-automated retraining
 
-- [ ] Setup server to watch directory for new images or run the retraining periodically
-- [ ] Automatically run YOLO iterative training process for ~10 epochs
+- [ ] Manually label images in training directory and generate dataset with `labelme2yolo
+- [ ] Automatically run YOLO iterative training process for ~10 epochs when changes are detected to output directory of `labelme2yolo`
 - [ ] Copy new model .pt file into place when complete
 - [ ] Clear out training directory periodically so the model isn't just memorizing
 
-### Fully-automated retraining
+### Nearly fully-automated retraining
 
 - If trash cans out back is turned off only to be turned back on during the same day, submit the image that caused trash cans to be marked "not out back" for iterative retraining
 - Would require storing the filename of the image in a Home Assistant input_text when trash cans not out back is turned off
+- Images would still have to be labeled manually or semi-manually
 
 ## Conclusion
 
