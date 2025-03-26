@@ -140,12 +140,39 @@ This lets me know with reasonable certainty **whether the trash cans are in the 
 
 ![Image of Node-RED logic flow for sending reminders](put-out-trash-reminders.jpg)
 
-## Future improvements
+## **Future improvements**
 
-- Streamline YOLO call to reduce duplicated nodes
-- Support for when one trash can is in front and the other is in back
-- Iterative training for a few rare edge cases that result in a false negative (such as when mostly obscured by another object)
+- [ ] Streamline YOLO call to reduce duplicated nodes
+- [ ] Support for when one trash can is in front and the other is in back
+
+### Automated image collection
+
+- [ ] Add "Trash has been put out" notification
+- [ ] Add "No it wasn't" notification action (appears as button on notification)
+  - Send filename of image that caused trash to be marked as "put out" in action data
+- [ ] When "No it wasn't" action is triggered, copy the file into the training images directory
+
+### Semi-automated retraining
+
+- [ ] Setup server to watch directory for new images or run the retraining periodically
+- [ ] Automatically run YOLO iterative training process for ~10 epochs
+- [ ] Copy new model .pt file into place when complete
+- [ ] Clear out training directory periodically so the model isn't just memorizing
+
+### Fully-automated retraining
+
+- If trash cans out back is turned off only to be turned back on during the same day, submit the image that caused trash cans to be marked "not out back" for iterative retraining
+- Would require storing the filename of the image in a Home Assistant input_text when trash cans not out back is turned off
 
 ## Conclusion
 
 This project showcases how AI and automation can be combined to create smart, practical solutions. By leveraging YOLO’s real-time object detection, I developed a system that reduces forgetfulness and enhances household efficiency. It’s a great example of applying machine learning to everyday life in a meaningful way.
+
+---
+
+## Change log
+
+- **2025.03.26:**
+  - Added automated image collection to future improvements
+  - Added semi-automated retraining to future improvements
+  - Added fully automated retraining to future improvements
