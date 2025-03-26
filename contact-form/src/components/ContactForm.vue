@@ -5,7 +5,6 @@
       label="Your Name"
       name="name"
       type="text"
-      required
     />
     <button type="submit" disabled>Submit</button>
   </form>

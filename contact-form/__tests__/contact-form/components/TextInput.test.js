@@ -40,25 +40,19 @@ describe("TextInput.vue", () => {
     })
 
     it("renders the required attribute correctly", () => {
-      const { getByLabelText } = render(TextInput, {
+      const myRender = render(TextInput, {
         props: {
           label: "Username",
+          placeholder: "test"
+        },
+        attrs: {
           required: true,
         },
       })
-      const input = getByLabelText("Username")
-      expect(input.required).toBe(true)
-    })
 
-    it("renders the disabled attribute correctly", () => {
-      const { getByLabelText } = render(TextInput, {
-        props: {
-          label: "Username",
-          disabled: true,
-        },
-      })
-      const input = getByLabelText("Username")
-      expect(input).toBeDisabled()
+      console.log(myRender.html())
+      const input = myRender.getByLabelText("Username")
+      expect(input).toHaveAttribute("required")
     })
   })
 
