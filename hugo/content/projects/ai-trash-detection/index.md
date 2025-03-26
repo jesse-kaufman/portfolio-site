@@ -154,7 +154,7 @@ This lets me know with reasonable certainty **whether the trash cans are in the 
 
 ### Semi-automated retraining
 
-- [ ] Manually label images in training directory and generate dataset with `labelme2yolo
+- [ ] Manually label images in training directory and generate dataset with `labelme2yolo`
 - [ ] Automatically run YOLO iterative training process for ~10 epochs when changes are detected to output directory of `labelme2yolo`
 - [ ] Copy new model .pt file into place when complete
 - [ ] Clear out training directory periodically so the model isn't just memorizing
