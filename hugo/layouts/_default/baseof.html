@@ -14,6 +14,12 @@
 		src="https://plausible.lloydnet.org/js/script.file-downloads.outbound-links.pageview-props.revenue.tagged-events.js"></script>
 	<script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 
+	<style type="text/css">
+		#home-subtitle {
+			animation: typing 5s
+			steps({{strings.RuneCount .Site.Params.homeSubtitle}}, end), blink-caret 0.75s linear 5.1s infinite;		}
+	</style>
+
 	{{ if eq .RelPermalink "/contact/" }}
 	<script defer type="module" src="{{ " js/main.js" | relURL }}"></script>
 	{{ end }}

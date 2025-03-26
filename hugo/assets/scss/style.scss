@@ -1138,12 +1138,9 @@ a.footnote-ref {
 
 #home-subtitle {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.5em solid $typewriter; /* The typwriter cursor */
+  border-right: 0.5em solid $typewriter; /* The typewriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto 1.5em auto; /* Gives that scrolling effect as the typing happens */
-  animation: typing 5s
-      steps({{strings.RuneCount .Site.Params.homeSubtitle}}, end),
-    blink-caret 0.75s linear 5.1s infinite;
 }
 
 /* The typing effect */
