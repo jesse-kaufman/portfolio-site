@@ -45,7 +45,7 @@ Previously a manual process, I automated credit checks by integrating the Experi
 - If below, they were flagged for manual review by managers
 - A custom admin panel allowed managers to review and update request statuses while ensuring private data remained masked
 
-#### Impact
+### Impact
 
 - **Thousands of employee hours saved** by automating credit checks
 - **Improved customer experience** with faster request processing
