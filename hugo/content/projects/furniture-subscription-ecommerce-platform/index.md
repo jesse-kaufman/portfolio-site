@@ -15,7 +15,7 @@ tags:
 
 This project was a major undertaking I led as sole developer for over four years—taking the company from an existing Squarespace site to a fully interactive eCommerce platform. Throughout this time, I not only handled all development but also played a key role in design work for every version except the final facelift. I also did the initial studio and lifestyle photography for the site.
 
-## v1.0 – **Initial website**
+## v1.0 – **Existing website**
 
 Originally, the company operated with a simple Squarespace site featuring a basic form that stored submissions in a Google Doc. It had minimal features, analytics, and interactivity. Customers had no way to order online, pay, or even receive immediate feedback—they had to wait for a representative to contact them.
 
