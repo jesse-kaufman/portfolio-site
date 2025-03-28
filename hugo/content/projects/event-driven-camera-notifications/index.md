@@ -96,14 +96,13 @@ tags:
 
 {{< figure src="/projects/event-driven-camera-notifications/latest-image-dashboard.jpg" alt="Image of latest camera images in Home Assistant" caption="Image of latest camera images in Home Assistant" class="narrow">}}
 
-### 5. **Processing complete & check for police**
+### 5. **Describe complete & check for police**
 
 - When the description is complete, a "image_processing_complete" event is fired on the MQTT topic `cameras/[camera_name]/event`
 - The description is checked for key words and a "Police Detected" input boolean is turned on if police are detected
   - This is used in the camera notification flow to update the icon and set the notification level to "critical" which causes alerts to occur even when silenced
 
 {{< figure src="/projects/event-driven-camera-notifications/image-described.jpg" alt="Police check flow section in Node-RED" caption="Police check flow section in Node-RED" >}}
-
 
 ### 6. **Processing complete / timeout handling**
 
