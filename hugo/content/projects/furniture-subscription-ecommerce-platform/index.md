@@ -21,8 +21,6 @@ Originally, the company operated with a simple Squarespace site featuring a basi
 
 The rental model at the time was limited to three pre-defined furniture packages with minimal customization. Credit checks were conducted manually through Experian, adding another layer of inefficiency.
 
----
-
 ## v2.0 – **Interactivity & automation**
 
 Recognizing the need for a more modern, efficient system, I spearheaded the transition to a WordPress site hosted on Azure. This version introduced significant improvements in performance, SEO, and user experience.
@@ -53,8 +51,6 @@ Previously a manual process, I automated credit checks by integrating the Experi
 - **Improved customer experience** with faster request processing
 - **Reduced operational friction** by eliminating unnecessary back-and-forth with customers
 
----
-
 ## v3.0 – **eCommerce integration**
 
 This version introduced eCommerce capabilities, allowing customers to configure packages, add them to a cart, and pay online—marking the company’s first foray into online transactions.
@@ -75,16 +71,12 @@ This version introduced eCommerce capabilities, allowing customers to configure 
 - Improved front-end user experience and interactivity
 - Backend refinements to streamline admin processes
 
----
-
 ## v4.0 – **Full site redesign**
 
 The company underwent a full rebrand, requiring a complete site overhaul. This version introduced a **new logo, color scheme, fonts, photos, and copy**, while maintaining the core functionality.
 
 - While I worked from mockups provided by a designer, I made critical design refinements to ensure responsiveness and usability.
 - Functionality enhancements were developed in parallel with the redesign, including a new rental model: **rent by the piece.**
-
----
 
 ## v5.0 – **"By the piece" & rent-to-own**
 
@@ -103,8 +95,6 @@ This phase introduced a significant shift: customers could now rent individual f
 - **Location-based inventory:** Implemented per-city product categories and inventory tracking
 - **Subscription tracking enhancements:** Since WooCommerce Subscriptions didn’t support prorated final payments, I developed a custom solution to handle last-month adjustments
 
----
-
 ## v5.0 – **Site split & rebranding**
 
 Initially, the site was built to handle both "by the package" and "by the piece" offerings. However, the company decided to launch **a completely separate brand and website** for the new model.
@@ -114,8 +104,6 @@ Initially, the site was built to handle both "by the package" and "by the piece"
 - **Building an entirely new website** with a distinct brand identity, design, and user experience
 - **Migrating and adapting key functionalities** from the existing platform
 - **Ensuring both sites remained optimized and operational simultaneously**
-
----
 
 ## Final thoughts
 
