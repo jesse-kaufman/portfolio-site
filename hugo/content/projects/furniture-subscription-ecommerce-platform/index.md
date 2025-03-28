@@ -1,7 +1,7 @@
 ---
 date: 2025-03-28T11:00:56-06:00
 title: Furniture subscription eCommerce platform
-description: This project was a major undertaking I led as sole developer over four years, from the company's existing Squarespace site to a fully interactive eCommerce platform.
+description: This project was a major undertaking I led as sole developer for over four years—taking the company from an existing Squarespace site to a fully interactive eCommerce platform.
 images:
   - /projects/furniture-subscription-ecommerce-platform/furniture.jpg
 github: https://github.com/jesse-kaufman/evidencedb/tree/main/node-only
@@ -13,7 +13,7 @@ tags:
 ---
 {{< figure src="/projects/furniture-subscription-ecommerce-platform/furniture.jpg" alt="Photo of furniture from lifestyle shoot" caption="Photo of furniture from lifestyle shoot" class="left " >}}
 
-This project was a major undertaking I led as sole developer over four years, from the company's existing Squarespace site to a fully interactive eCommerce platform. Throughout this time, I not only handled all development but also played a key role in design work for every version except the final facelift. I also did the initial studio and lifestyle photography for the site.
+This project was a major undertaking I led as sole developer for over four years—taking the company from an existing Squarespace site to a fully interactive eCommerce platform. Throughout this time, I not only handled all development but also played a key role in design work for every version except the final facelift. I also did the initial studio and lifestyle photography for the site.
 
 ## v1.0 – **Initial website**
 
