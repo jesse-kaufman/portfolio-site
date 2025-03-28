@@ -150,3 +150,6 @@ This system ensures that camera-triggered events are processed quickly and accur
   - Moved firing event on `camera/[camera_name]/person` to the end of the flow so YOLO verification will prevent superfluous events to be fired when YOLO says a person is not in the image
   - Only run YOLO verification on person events to reduce resource usage (since this is currently run on a non-accelerated CPU)
   - Updated screenshots to reflect changes in flow mentioned above
+- **2025.03.28**:
+  - Fixed missing classify_timed_out in final logic before sending notification
+  - Simplified classify flow to use a single function node
