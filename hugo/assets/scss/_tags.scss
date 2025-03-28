@@ -18,12 +18,23 @@
     background: #e86700;
     color: black;
   }
+  &.apache {
+    background: #3e3d25;
+  }
   &.esp32,
   &.esphome {
     background: #292819;
   }
+  &.linux {
+    background: #8c58ec;
+  }
   &.node-js {
     background: #498517;
+  }
+  &.python,
+  &.pygtk {
+    background: #6bd3ed;
+    color: black;
   }
   &.traefik {
     background: #25a2c2;
