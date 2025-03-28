@@ -119,7 +119,7 @@ Initially, the site was built to handle both "by the package" and "by the piece"
 
 ## Final thoughts
 
-Over four years, I single-handedly transformed this company’s online presence from a basic Squarespace form to a sophisticated, interactive, multi-site eCommerce platform.
+Over four years, I transformed this company’s online presence from a basic Squarespace form to a sophisticated, interactive, multi-site eCommerce platform.
 
 I handled every aspect of development—back-end, front-end, API integrations, performance optimizations, automation, and even significant portions of the design process. Despite juggling multiple other projects for the company during this time, I built, optimized, and scaled the entire system without additional development support.
 
