@@ -72,7 +72,16 @@ tags:
 
 ![Image-downloaded flow section in Node-RED](image-downloaded.jpg)
 
-### 4a. **Image description**
+### 4a. **Event-specific image handling**
+
+- After the image is classified by YOLO, the image is copied into event-specific locations (if applicable)
+- This provides Home Assistant the image entities for last motion, last person, last known person, last vehicle, and last pet, which can be used for notifications and dashboards
+
+{{< figure src="/projects/event-driven-camera-notifications/specific-events.jpg" alt="Image download flow section in Node-RED" caption="Image download flow section in Node-RED" >}}
+
+{{< figure src="/projects/event-driven-camera-notifications/latest-image-dashboard.jpg" alt="Image of latest camera images in Home Assistant" caption="Image of latest camera images in Home Assistant" class="narrow">}}
+
+### 4b. **Image description**
 
 - After the image is classified by YOLO, an `image_classified` event is triggered
 - **If the event is a "known person" event and the person name is set** in the payload, AI is skipped and the description is set to "\[name\] was spotted"
@@ -87,14 +96,6 @@ tags:
 
 {{< figure src="/projects/event-driven-camera-notifications/describe-image.jpg" alt="Generate image description subflow in Node-RED" caption="Generate image description subflow in Node-RED" >}}
 
-### 4b. **Event-specific image handling**
-
-- After the image is classified by YOLO, the image is copied into event-specific locations (if applicable)
-- This provides Home Assistant the image entities for last motion, last person, last known person, last vehicle, and last pet, which can be used for notifications and dashboards
-
-{{< figure src="/projects/event-driven-camera-notifications/specific-events.jpg" alt="Image download flow section in Node-RED" caption="Image download flow section in Node-RED" >}}
-
-{{< figure src="/projects/event-driven-camera-notifications/latest-image-dashboard.jpg" alt="Image of latest camera images in Home Assistant" caption="Image of latest camera images in Home Assistant" class="narrow">}}
 
 ### 5. **Describe complete & check for police**
 
