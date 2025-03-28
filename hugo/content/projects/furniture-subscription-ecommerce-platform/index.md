@@ -11,6 +11,8 @@ tags:
   - WooCommerce
   - WordPress
 ---
+{{< figure src="/projects/furniture-subscription-ecommerce-platform/furniture.jpg" alt="Photo of furniture from lifestyle shoot" caption="Photo of furniture from lifestyle shoot" class="left " >}}
+
 This project was a major undertaking I led as sole developer over four years, from the company's existing Squarespace site to a fully interactive eCommerce platform. Throughout this time, I not only handled all development but also played a key role in design work for every version except the final facelift. I also did the initial studio and lifestyle photography for the site.
 
 ## v1.0 – **Initial Website**
