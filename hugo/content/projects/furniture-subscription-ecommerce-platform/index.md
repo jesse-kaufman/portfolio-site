@@ -105,8 +105,7 @@ Initially, the site was built to handle both "by the package" and "by the piece"
 - **Migrating and adapting key functionalities** from the existing platform
 - **Ensuring both sites remained optimized and operational simultaneously**
 
-
-All in about few month's timeframe.
+All in few month's timeframe.
 
 ## Final thoughts
 
