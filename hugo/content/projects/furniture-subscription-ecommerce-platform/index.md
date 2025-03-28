@@ -90,7 +90,7 @@ This phase introduced a significant shift: customers could now rent individual f
   - The system dynamically adjusted the final payment to reflect any remaining balance
 - **Inventory tracking:** Items were tied to specific locations, ensuring availability and accurate order fulfillment
 
-#### Challenges & solutions
+### Challenges & solutions
 
 - **Location-based inventory:** Implemented per-city product categories and inventory tracking
 - **Subscription tracking enhancements:** Since WooCommerce Subscriptions didn’t support prorated final payments, I developed a custom solution to handle last-month adjustments
