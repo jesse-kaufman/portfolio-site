@@ -15,7 +15,7 @@ tags:
 
 This project was a major undertaking I led as sole developer over four years, from the company's existing Squarespace site to a fully interactive eCommerce platform. Throughout this time, I not only handled all development but also played a key role in design work for every version except the final facelift. I also did the initial studio and lifestyle photography for the site.
 
-## v1.0 – **Initial Website**
+## v1.0 – **Initial website**
 
 Originally, the company operated with a simple Squarespace site featuring a basic form that stored submissions in a Google Doc. It had minimal features, analytics, and interactivity. Customers had no way to order online, pay, or even receive immediate feedback—they had to wait for a representative to contact them.
 
@@ -77,7 +77,7 @@ This version introduced eCommerce capabilities, allowing customers to configure 
 
 ---
 
-## v4.0 – Full Site Redesign
+## v4.0 – **Full site redesign**
 
 The company underwent a full rebrand, requiring a complete site overhaul. This version introduced a **new logo, color scheme, fonts, photos, and copy**, while maintaining the core functionality.
 
@@ -86,11 +86,11 @@ The company underwent a full rebrand, requiring a complete site overhaul. This v
 
 ---
 
-## v5.0 – "By the piece" ordering & rent-to-own
+## v5.0 – **"By the piece" & rent-to-own**
 
 This phase introduced a significant shift: customers could now rent individual furniture pieces rather than being locked into pre-defined packages.
 
-### Key Features
+### Key features
 
 - **Flexible ordering:** Customers could build custom packages with a minimum monthly spend
 - **Rent-to-own option:** Customers selecting a fixed rental term accumulated payments toward ownership
@@ -105,7 +105,7 @@ This phase introduced a significant shift: customers could now rent individual f
 
 ---
 
-## v5.0 – Site split & rebranding
+## v5.0 – **Site split & rebranding**
 
 Initially, the site was built to handle both "by the package" and "by the piece" offerings. However, the company decided to launch **a completely separate brand and website** for the new model.
 
