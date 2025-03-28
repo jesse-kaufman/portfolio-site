@@ -15,7 +15,7 @@ tags:
 
 This project was a major undertaking I led as sole developer for over four years—taking the company from an existing Squarespace site to a fully interactive eCommerce platform. Throughout this time, I not only handled all development but also played a key role in design work for every version except the final facelift. I also did the initial studio and lifestyle photography for the site.
 
-## **Existing website**
+## Existing website
 
 Originally, the company operated with a simple Squarespace site featuring a basic form that stored submissions in a Google Doc. It had minimal features, analytics, and interactivity. Customers had no way to order online, pay, or even receive immediate feedback—they had to wait for a representative to contact them.
 
@@ -95,7 +95,7 @@ This phase introduced a significant shift: customers could now rent individual f
 - **Location-based inventory:** Implemented per-city product categories and inventory tracking
 - **Subscription tracking enhancements:** Since WooCommerce Subscriptions didn’t support prorated final payments, I developed a custom solution to handle last-month adjustments
 
-## v5.0 – **Site split & rebranding**
+## v6.0 – **Site split & rebranding**
 
 Initially, the site was built to handle both "by the package" and "by the piece" offerings. However, the company decided to launch **a completely separate brand and website** for the new model.
 
