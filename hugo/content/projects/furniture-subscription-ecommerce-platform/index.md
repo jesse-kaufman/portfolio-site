@@ -99,11 +99,14 @@ This phase introduced a significant shift: customers could now rent individual f
 
 Initially, the site was built to handle both "by the package" and "by the piece" offerings. However, the company decided to launch **a completely separate brand and website** for the new model.
 
-**This required:**
+*This required:*
 
 - **Building an entirely new website** with a distinct brand identity, design, and user experience
 - **Migrating and adapting key functionalities** from the existing platform
 - **Ensuring both sites remained optimized and operational simultaneously**
+
+
+All in about few month's timeframe.
 
 ## Final thoughts
 
