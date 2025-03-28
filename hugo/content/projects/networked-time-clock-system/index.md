@@ -10,7 +10,7 @@ tags:
   - PyGTK
   - Python
 ---
-*This article covers a project I developed around 2003 for my employer at the time. It showcases some of my early experience in full-stack development, system administration, and commercial software deployment.*
+*This article covers a project I developed around 2003 for my employer at the time. I've tried to cover what I can recall, but it's been quite a while, so details are fuzzy at best. However, it showcases some of my early experience in full-stack development, system administration, and commercial software deployment.*
 
 ## Overview
 
