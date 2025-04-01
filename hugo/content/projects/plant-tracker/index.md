@@ -14,7 +14,11 @@ tags:
 ---
 The Plant Tracker API will allow users to manage and track their plants through different growth stages. Built with Node.js, Express.js, and MongoDB, the API will store plant data such as growth stages, start dates, and projected harvest dates. Users will be able to update plant stages, archive or delete plants, and retrieve plant information via a RESTful API. The application will be containerized with Docker for easy deployment and scalability.
 
-Planned future enhancements include a CLI client, a web GUI (likely in React), and incorporating notifications for plant care reminders [among others](#other-planned-features)
+Planned future enhancements include a CLI client, a web GUI (Vue.js + Tailwind CSS), and incorporating notifications for plant care reminders [among others](#other-planned-features).
+
+{{< figure src="/projects/plant-tracker/plant-view.jpg" alt="Mockup of plant dashboard showing plants in different states" caption="Mockup of plant dashboard showing plants in different states" class="small" >}}
+
+{{< figure src="/projects/plant-tracker/plant-list.jpg" alt="Mockup of plant dashboard showing plant details" caption="Mockup of plant dashboard showing plant details" class="small" >}}
 
 ## Tech Stack
 
