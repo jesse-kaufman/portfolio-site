@@ -396,3 +396,11 @@ If an error occurs, a response will be returned with the error message in the bo
       - [ ] Add ability to add plant journal entries
       - [ ] Add ability to edit plant journal entries
       - [ ] Add ability to delete plant journal entries
+
+---
+
+## Change Log
+
+- **2025.04.01**
+  - Added mockup screenshots for Vue.js GUI
+  - Added Vue.js and Tailwind CSS to tech stack
