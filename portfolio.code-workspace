@@ -1,11 +1,24 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../github-actions-api"
-		}
-	],
-	"settings": {}
+  "folders": [
+	{
+		"name": "portfolio",
+		"path": "."
+	},
+	{
+		"name": "client",
+		"path": "../contact-form/client"
+	},
+	{
+		"name": "server",
+		"path": "../contact-form/server"
+	},
+	{
+		"name": "github-actions-api",
+		"path": "../github-actions-api"
+	}
+],
+  "settings": {
+    "prettier.semi": false,
+    "vue.format.wrapAttributes": "force-aligned"
+  }
 }
