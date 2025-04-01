@@ -68,7 +68,7 @@ Planned future enhancements include a CLI client, a web GUI (Vue.js + Tailwind C
 
 ---
 
-## Create a new plant
+## **Create a new plant**
 
 `POST /api/v1/plants`
 
@@ -116,7 +116,7 @@ An active plant with the same name already exists. See [API Errors](#api-errors)
 
 An unrecoverable error occurred. See [API Errors](#api-errors) below.
 
-## Get all plants
+## **Get all plants**
 
 `GET /api/v1/plants`
 
@@ -182,7 +182,7 @@ No plants found matching the request data provided. See [API Errors](#api-errors
 
 An unrecoverable error occurred. See [API Errors](#api-errors) below.
 
-## Get a particular plant
+## **Get a particular plant**
 
 `GET /api/v1/plants/{plantId}`
 
@@ -220,7 +220,7 @@ Plant not found. See [API Errors](#api-errors) below.
 
 An unrecoverable error occurred. See [API Errors](#api-errors) below.
 
-## Update a plant
+## **Update a plant**
 
 `PUT /api/v1/plants/{plantId}`
 
@@ -304,7 +304,7 @@ To rename a plant from `'Tomato Plant 1'` to `'Roma Tomato Plant 1'`, send a `PU
 }
 ```
 
-## Delete a plant
+## **Delete a plant**
 
 `DELETE /api/v1/plants/{plantId}`
 
