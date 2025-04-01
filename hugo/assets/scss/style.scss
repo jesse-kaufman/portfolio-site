@@ -697,13 +697,14 @@ hr.post-end {
     margin-bottom: 0.5em;
 
     // Style li elements containing a checkbox
-    &:has(input[type="checkbox"]) {
+    &:has(> input[type="checkbox"]) {
       text-indent: -1.7em;
-      margin-left: 0.5em;
+      padding-left: 1.7em;
+      margin-left: -1.7em;
       list-style: none;
 
-      & > ul > li {
-        text-indent: initial;
+      > ul > li:not(:has(> input[type="checkbox"])) {
+        text-indent: 0;
         margin-left: -1em;
         list-style: initial;
       }
