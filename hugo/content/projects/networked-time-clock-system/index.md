@@ -2,6 +2,7 @@
 date: 2025-03-28T10:00:56-06:00
 title: Networked time clock system
 description: Originally developed as an internal tool, later expanded into a commercial product sold in Sam’s Club, featuring LAMP backend running on a custom Linux distribution, automated updates, and robust time-tracking capabilities.
+pin: true
 tags:
   - Apache
   - Linux

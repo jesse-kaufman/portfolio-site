@@ -5,6 +5,7 @@ description: A plant tracking API built with Node.js and Express, designed to ma
 github: https://github.com/jesse-kaufman/plantsdb
 images:
   - val_batch0_pred.jpg
+pin: true
 tags:
   - Express.js
   - MongoDB
