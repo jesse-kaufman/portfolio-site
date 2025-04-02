@@ -595,15 +595,19 @@ p.img-404 {
 
 .pinned-posts-group {
   display: flex;
-  margin-bottom: 1.9em;
+  margin-bottom: 1.2em;
   line-height: normal;
-  border-bottom: 2px $pinned-posts-group-border-bottom solid;
+  margin-top: 1em;
+  border-bottom: 1px $pinned-posts-group-border-bottom solid;
+  border-top: 1px $pinned-posts-group-border-bottom solid;
 
   .pinned-posts-list {
     flex-grow: 1;
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-direction: row;
   }
 
   .pinned-post-item {
@@ -611,6 +615,8 @@ p.img-404 {
     justify-content: start;
     align-items: baseline;
     padding: 12px 0;
+    margin-left: 0.5em;
+    margin-right: 1em;
 
     a {
       padding-left: 12px;
