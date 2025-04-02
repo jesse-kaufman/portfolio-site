@@ -72,7 +72,7 @@
 				<div class="posts-group">
 					<div class="post-year" id="{{ .Key }}">{{ .Key }}</div>
 					<ul class="posts-list">
-						{{- range where .Pages ".Params.pin" "ne" true }}
+						{{- range  .Pages  }}
 						{{ partial "list-item.html" . }}
 						{{- end }}
 					</ul>
