@@ -22,6 +22,7 @@ markup:
     style: onedark
 enableGitInfo: true
 params:
+  pinned: Pinned
   author:
     name: Jesse Kaufman
     about: https://www.jessekaufman.com
