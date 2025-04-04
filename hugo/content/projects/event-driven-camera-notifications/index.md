@@ -157,3 +157,5 @@ This system ensures that camera-triggered events are processed quickly and accur
 - **2025.03.28**:
   - Fix missing classify_timed_out in final logic before sending notification
   - Simplified classify flow to use a single function node
+- **2025.04.04**:
+  - Add collection of images when YOLO did not detect a person but cameras did (for later processing)
