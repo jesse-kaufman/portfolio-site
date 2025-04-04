@@ -388,7 +388,7 @@ If an error occurs, a response will be returned with the error message in the bo
   - [ ] Implement frontend GUI
     - **Plants:**
       - [ ] Add ability to create plants
-      - [ ] Add ability to view plants
+      - [x] Add ability to view plants
       - [ ] Add ability to edit plants
       - [ ] Add ability to delete plants
       - [ ] Add ability to move plants between stages
