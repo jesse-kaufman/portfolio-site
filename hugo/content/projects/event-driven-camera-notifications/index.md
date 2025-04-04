@@ -72,16 +72,7 @@ tags:
 
 ![Image-downloaded flow section in Node-RED](image-downloaded.jpg)
 
-### 4a. **Event-specific image handling**
-
-- After the image is classified by YOLO, the image is copied into event-specific locations (if applicable)
-- This provides Home Assistant the image entities for last motion, last person, last known person, last vehicle, and last pet, which can be used for notifications and dashboards
-
-{{< figure src="/projects/event-driven-camera-notifications/specific-events.jpg" alt="Image download flow section in Node-RED" caption="Image download flow section in Node-RED" >}}
-
-{{< figure src="/projects/event-driven-camera-notifications/latest-image-dashboard.jpg" alt="Image of latest camera images in Home Assistant" caption="Image of latest camera images in Home Assistant" class="narrow">}}
-
-### 4b. **Image description**
+### 4a. **Image description**
 
 - After the image is classified by YOLO, an `image_classified` event is triggered
 - **If the event is a "known person" event and the person name is set** in the payload, AI is skipped and the description is set to "\[name\] was spotted"
@@ -96,6 +87,19 @@ tags:
 
 {{< figure src="/projects/event-driven-camera-notifications/describe-image.jpg" alt="Generate image description subflow in Node-RED" caption="Generate image description subflow in Node-RED" >}}
 
+### 4b. **Event-specific image handling**
+
+- After the image is classified by YOLO, the image is copied into event-specific locations (if applicable)
+- This provides Home Assistant the image entities for last motion, last person, last known person, last vehicle, and last pet, which can be used for notifications and dashboards
+
+{{< figure src="/projects/event-driven-camera-notifications/specific-events.jpg" alt="Image download flow section in Node-RED" caption="Event-specific image handling flow section in Node-RED" >}}
+
+### 4c. **Collect images for iterative training**
+
+- If the original event was a person but YOLO did not detect a person, collect images for later processing
+- This allows for labelling false negatives (cases where a person was in the image) for future iterative training
+
+{{< figure src="/projects/event-driven-camera-notifications/collect-images.jpg" alt="Node-RED flow to collect images for iterative training" caption="Node-RED flow to collect images for iterative training">}}
 
 ### 5. **Describe complete & check for police**
 
