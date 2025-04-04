@@ -149,11 +149,11 @@ This system ensures that camera-triggered events are processed quickly and accur
 
 - **2025.03.25**:
   - Make capitalization consistent in headings
-  - Added information about person notification timers that are used to prevent notification fatigue
-  - Moved police detection from the "image_downloaded" section of the flow to the "image_described" section to keep things consistent and break up "image_downloaded" logically
-  - Moved firing event on `camera/[camera_name]/person` to the end of the flow so YOLO verification will prevent superfluous events to be fired when YOLO says a person is not in the image
+  - Add information about person notification timers that are used to prevent notification fatigue
+  - Move police detection from the "image_downloaded" section of the flow to the "image_described" section to keep things consistent and break up "image_downloaded" logically
+  - Move firing event on `camera/[camera_name]/person` to the end of the flow so YOLO verification will prevent superfluous events to be fired when YOLO says a person is not in the image
   - Only run YOLO verification on person events to reduce resource usage (since this is currently run on a non-accelerated CPU)
-  - Updated screenshots to reflect changes in flow mentioned above
+  - Update screenshots to reflect changes in flow mentioned above
 - **2025.03.28**:
-  - Fixed missing classify_timed_out in final logic before sending notification
+  - Fix missing classify_timed_out in final logic before sending notification
   - Simplified classify flow to use a single function node
