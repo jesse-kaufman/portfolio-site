@@ -890,11 +890,17 @@ a.footnote-ref {
   }
 }
 
+#tagcloud,
 #toc {
   left: 50%;
   top: 0;
   border-bottom: $dimmed-border;
   padding-bottom: 0.5em;
+}
+
+#tagcloud {
+  top: 10em !important;
+  border: none;
 }
 
 .toc-title {
@@ -1048,6 +1054,7 @@ a.footnote-ref {
     width: 30%;
   }
 
+  #tagcloud,
   #toc {
     position: fixed;
     top: 6em;
@@ -1083,6 +1090,7 @@ a.footnote-ref {
     width: 30%;
   }
 
+  #tagcloud,
   #toc {
     margin-left: 520px;
   }
