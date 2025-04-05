@@ -3,27 +3,60 @@
 {{ end }}
 
 {{ define "title" }}
-	{{- if in .Page.RelPermalink "tags" -}}
-		{{- with .Site.Params.tagSymbol | default "#" -}}{{ . }}{{- end -}}{{ .Title | lower }}
-	{{- else if in .Page.RelPermalink "categories" -}}
-		{{- with .Site.Params.categorySymbol | default "⊲" -}}{{ . }}{{- end -}}{{ .Title | lower }}
-	{{- else -}}
-		{{ .Title }}
-	{{- end -}}
+{{- if in .Page.RelPermalink "tags" -}}
+{{- with .Site.Params.tagSymbol | default "#" -}}{{ . }}{{- end -}}{{ .Title | lower }}
+{{- else if in .Page.RelPermalink "categories" -}}
+{{- with .Site.Params.categorySymbol | default "⊲" -}}{{ . }}{{- end -}}{{ .Title | lower }}
+{{- else -}}
+{{ .Title }}
+{{- end -}}
 {{ end }}
 
 {{ define "main" }}
-	<main class="site-main section-inner thin {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster{{- end -}}">
-		{{- if in .Page.RelPermalink "tags" -}}
-		<h1 class="tag">{{ .Title }}</h1>
-		{{- else if in .Page.RelPermalink "categories" -}}
-		<h1 class="category">{{ .Title }}</h1>
-		{{- else -}}
-		<h1>{{ .Title }}</h1>
-		{{- end -}}
-		{{- if .Content }}<div class="content">{{ .Content }}</div>{{ end -}}
+<main
+	  class="site-main section-inner thin {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster{{- end -}}">
+	{{- if in .Page.RelPermalink "tags" -}}
+	<h1 class="tag">{{ .Title }}</h1>
+	{{- else if in .Page.RelPermalink "categories" -}}
+	<h1 class="category">{{ .Title }}</h1>
+	{{- else -}}
+	<h1>{{ .Title }}</h1>
+	{{- end -}}
+	{{- if .Content }}<div class="content">{{ .Content }}</div>{{ end -}}
 
-		{{- if and (ge (len (where .Site.Pages ".Params.pin" true)) 1) (.Site.Params.pinned) (not (or (in .Page.RelPermalink "tags") (in .Page.RelPermalink "categories"))) -}}
+
+
+	{{/* If not viewing the tags or categories list page */}}
+	{{- $group_by_date := and (isset .Params "group_list_by_date") (ne .Params.group_list_by_date false) }}
+
+
+
+	{{- if not (or (in .Page.RelPermalink "tags") (in .Page.RelPermalink "categories")) -}}
+	<div id="tagcloud" class="container tagcloud post-tags">
+		{{ if ne (len $.Site.Taxonomies.tags) 0 }}
+		{{ $largestFontSize := 0.9 }}
+		{{ $smallestFontSize := 0.5 }}
+		{{ $fontSpread := sub $largestFontSize $smallestFontSize }}
+		{{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
+		{{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
+		{{ $spread := sub $max $min }}
+		{{ $fontStep := div $fontSpread $spread }}
+		{{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
+		{{ $tagCount := len $taxonomy.Pages }}
+		{{ $currentFontSize := (add $smallestFontSize (mul (sub $tagCount $min) $fontStep) ) }}
+		{{ $weigth := div (sub (math.Log $tagCount) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
+		{{ $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weigth)) }}
+		<a href="{{ " /tags/" | relURL }}{{ $name | urlize }}"
+		   class="{{ $name | lower | replaceRE " \\.| |\\/" "-" }} tag tagcloud-item"
+		   style="font-size: {{ $currentFontSize }}rem;">
+			{{ $name }}
+		</a>
+		{{ end }}
+		{{ end }}
+	</div>
+
+		{{- if and (ge (len (where .Site.Pages ".Params.pin" true)) 1) (.Site.Params.pinned) (not (or (in .Page.RelPermalink
+		"tags") (in .Page.RelPermalink "categories"))) -}}
 		<div class="pinned-posts-group">
 			<ul class="pinned-posts-list">
 				{{- range where .Site.Pages ".Params.pin" true }}
@@ -35,76 +68,54 @@
 			</ul>
 		</div>
 		{{- end -}}
+	{{- end -}}
 
-		{{/* If not viewing the tags or categories list page */}}
-		{{- $group_by_date := and (isset .Params "group_list_by_date") (ne .Params.group_list_by_date false) }}
 
-		{{- if not (or (in .Page.RelPermalink "tags") (in .Page.RelPermalink "categories")) -}}
-		<div class="container tagcloud post-tags">
-			{{ if ne (len $.Site.Taxonomies.tags) 0 }}
-			{{ $largestFontSize := 0.9 }}
-			{{ $smallestFontSize := 0.5 }}
-			{{ $fontSpread := sub $largestFontSize $smallestFontSize }}
-			{{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
-			{{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
-			{{ $spread := sub $max $min }}
-			{{ $fontStep := div $fontSpread $spread }}
-				{{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
-				{{ $tagCount := len $taxonomy.Pages }}
-				{{ $currentFontSize := (add $smallestFontSize (mul (sub $tagCount $min) $fontStep) ) }}
-				{{ $weigth := div (sub (math.Log $tagCount) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
-				{{ $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weigth)) }}
-					<a href="{{ "/tags/" | relURL }}{{ $name | urlize }}"
-					class="{{ $name | lower | replaceRE "\\.| |\\/" "-" }} tag tagcloud-item" style="font-size: {{ $currentFontSize }}rem;">
-					{{ $name }}
-					</a>
-				{{ end }}
-			{{ end }}
-		</div>
-		{{- end -}}
-
-		{{- if not (or (in .Page.RelPermalink "tags") (in .Page.RelPermalink "categories")) -}}
-			{{- if $group_by_date }}
-				{{- range .Data.Pages.GroupByDate "2006" }}
-				{{ $pages := len (.Pages) }}
-				{{ $pages_pin := len ( where .Pages ".Params.pin" "eq" true) }}
-				{{- if gt $pages $pages_pin -}}
-				<div class="posts-group">
-					<div class="post-year" id="{{ .Key }}">{{ .Key }}</div>
-					<ul class="posts-list">
-						{{- range  .Pages  }}
-						{{ partial "list-item.html" . }}
-						{{- end }}
-					</ul>
-				</div>
-				{{- end -}}
-				{{- end }}
-			{{- else -}}
-			<div class="posts-group">
-				<ul class="posts-list">
-				{{- range .Data.Pages }}
-				{{ $isPinned := .Params.pin }}
-				{{- if not $isPinned }}
-					{{ partial "list-item.html" . }}
-				{{- end }}
-				{{- end }}
-				</ul>
-			</div>
+	{{- if not (or (in .Page.RelPermalink "tags") (in .Page.RelPermalink "categories")) -}}
+	{{- if $group_by_date }}
+	{{- range .Data.Pages.GroupByDate "2006" }}
+	{{ $pages := len (.Pages) }}
+	{{ $pages_pin := len ( where .Pages ".Params.pin" "eq" true) }}
+	{{- if gt $pages $pages_pin -}}
+	<div class="posts-group">
+		<div class="post-year" id="{{ .Key }}">{{ .Key }}</div>
+		<ul class="posts-list">
+			{{- range .Pages }}
+			{{ partial "list-item.html" . }}
 			{{- end }}
-		{{- else -}}
-		{{/* If viewing by tag or by category list page */}}
-		{{- range .Data.Pages.GroupByDate "2006" }}
-		<div class="posts-group">
-			<div class="post-year" id="{{ .Key }}">{{ .Key }}</div>
-			<ul class="posts-list">
-				{{- range .Pages }}
-				{{ partial "list-item.html" . }}
-				{{- end }}
-			</ul>
-		</div>
-		{{- end }}
-		{{- end -}}
-	</main>
+		</ul>
+	</div>
+	{{- end -}}
+	{{- end }}
+	{{- else -}}
+	<div class="posts-group">
+		<ul class="posts-list">
+			{{- range .Data.Pages }}
+			{{ $isPinned := .Params.pin }}
+			{{- if not $isPinned }}
+			{{ partial "list-item.html" . }}
+			{{- end }}
+			{{- end }}
+		</ul>
+	</div>
+	{{- end }}
+	{{- else -}}
+	{{/* If viewing by tag or by category list page */}}
+	{{- range .Data.Pages.GroupByDate "2006" }}
+	<div class="posts-group">
+		<div class="post-year" id="{{ .Key }}">{{ .Key }}</div>
+		<ul class="posts-list">
+			{{- range .Pages }}
+			{{ partial "list-item.html" . }}
+			{{- end }}
+		</ul>
+	</div>
+	{{- end }}
+	{{- end -}}
+</main>
 {{ end }}
-{{ define "footer" }}<footer id="site-footer" class="section-inner thin {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">{{- if templates.Exists "partials/list-footer.html" -}}{{- partialCached "list-footer.html" . -}}{{- else -}}{{- partial "footer.html" . -}}{{- end -}}</footer>
+{{ define "footer" }}<footer id="site-footer"
+		class="section-inner thin {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">{{-
+	if templates.Exists "partials/list-footer.html" -}}{{- partialCached "list-footer.html" . -}}{{- else -}}{{- partial
+	"footer.html" . -}}{{- end -}}</footer>
 {{ end }}
