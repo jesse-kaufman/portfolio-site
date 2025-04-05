@@ -899,8 +899,9 @@ a.footnote-ref {
 }
 
 #tagcloud {
-  top: 10em !important;
+  top: auto !important;
   border: none;
+  bottom: 5%;
 }
 
 .toc-title {
