@@ -12,7 +12,6 @@ tags:
   - machine learning
   - MQTT
   - Node-RED
-type: post
 ---
 Forgetting to take out the trash can be frustrating, and I do it a lot. To solve this problem, I built a reminder system using Home assistant and Node-RED to alert me on my phone, computers, TV, and smart speakers. This worked great IF I remembered to turn off the "put out trash today" switch...I didn't.
 
