@@ -54,7 +54,7 @@ params:
   code_copy_button: true
   scrollToTop: true
   global_mathjax: false
-  readTime: true
+  readTime: false
   legacyLayout: false
   listLayout: ["date", "description", "tags", "categories", "legacy"]
   sitemap:
