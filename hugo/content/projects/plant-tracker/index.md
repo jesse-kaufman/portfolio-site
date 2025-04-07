@@ -6,7 +6,7 @@ weight: 1
 params:
   github: https://github.com/jesse-kaufman/plantsdb
 images:
-  - /projects/plant-tracker/plant-list.jpg
+  - plant-list.jpg
 tags:
   - Express.js
   - MongoDB
@@ -18,9 +18,9 @@ The Plant Tracker API will allow users to manage and track their plants through 
 
 Planned future enhancements include a CLI client, a web GUI (Vue.js + Tailwind CSS), and incorporating notifications for plant care reminders [among others](#other-planned-features).
 
-{{< figure src="/projects/plant-tracker/plant-view.jpg" alt="Mockup of plant dashboard showing plants in different states" caption="Mockup of plant dashboard showing plants in different states" class="small" >}}
+{{< figure src="plant-view.jpg" alt="Mockup of plant dashboard showing plants in different states" caption="Mockup of plant dashboard showing plants in different states" class="small" >}}
 
-{{< figure src="/projects/plant-tracker/plant-list.jpg" alt="Mockup of plant dashboard showing plant details" caption="Mockup of plant dashboard showing plant details" class="small" >}}
+{{< figure src="plant-list.jpg" alt="Mockup of plant dashboard showing plant details" caption="Mockup of plant dashboard showing plant details" class="small" >}}
 
 ## Tech Stack
 

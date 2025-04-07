@@ -4,14 +4,14 @@ title: Furniture subscription eCommerce platform
 description: This project was a major undertaking I led as sole developer for over four years—taking the company from an existing Squarespace site to a fully interactive eCommerce platform.
 weight: 2
 images:
-  - /projects/furniture-subscription-ecommerce-platform/furniture.jpg
+  - furniture.jpg
 tags:
   - MySQL
   - PHP
   - WooCommerce
   - WordPress
 ---
-{{< figure src="/projects/furniture-subscription-ecommerce-platform/furniture.jpg" alt="Photo of furniture from lifestyle shoot" caption="Photo of furniture from lifestyle shoot" class="left " >}}
+{{< figure src="furniture.jpg" alt="Photo of furniture from lifestyle shoot" caption="Photo of furniture from lifestyle shoot" class="left " >}}
 
 This project was a major undertaking I led as sole developer for over four years—taking the company from an existing Squarespace site to a fully interactive eCommerce platform. Throughout this time, I not only handled all development but also played a key role in design work for every version except the final facelift. I also did the initial studio and lifestyle photography for the site.
 

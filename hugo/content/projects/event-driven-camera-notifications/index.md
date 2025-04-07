@@ -3,7 +3,7 @@ date: 2025-03-14T10:00:56-06:00
 title: AI-powered security camera notifications
 description: This AI-powered event-driven camera notification system processes motion events from security cameras, classifies and describes images, and sends notifications based on various detection types such as person, pet, vehicle, or motion.
 images:
-  - /projects/event-driven-camera-notifications/camera-dashboard.jpg
+  - camera-dashboard.jpg
 tags:
   - AI
   - automation
@@ -16,7 +16,7 @@ tags:
 ---
 ## Overview
 
-{{< figure src="/projects/event-driven-camera-notifications/mailman-dave.jpg" alt="Image of Known Person notification from Home Assistant" caption="Image of Known Person notification from Home Assistant" class="left small" >}}This event-driven, asynchronous camera notification system processes motion events from security cameras, classifies and describes images, and sends notifications based on various detection types such as person, pet, vehicle, or motion. Using a series of timeouts, MQTT messaging, and integration with machine learning models like [YOLO](https://www.ultralytics.com/yolo) and [Google Gemini](https://gemini.google.com), the system aims to enhance detection accuracy and provide real-time alerts. It is built around an event-driven architecture that ensures responsiveness and scalability. [Home Assistant](https://www.home-assistant.io) supplies the data and triggers for automations, notification platform, and dashboard, while [Node-RED](https://www.nodered.org) orchestrates the logic and executes the workflows.
+{{< figure src="mailman-dave.jpg" alt="Image of Known Person notification from Home Assistant" caption="Image of Known Person notification from Home Assistant" class="left small" >}}This event-driven, asynchronous camera notification system processes motion events from security cameras, classifies and describes images, and sends notifications based on various detection types such as person, pet, vehicle, or motion. Using a series of timeouts, MQTT messaging, and integration with machine learning models like [YOLO](https://www.ultralytics.com/yolo) and [Google Gemini](https://gemini.google.com), the system aims to enhance detection accuracy and provide real-time alerts. It is built around an event-driven architecture that ensures responsiveness and scalability. [Home Assistant](https://www.home-assistant.io) supplies the data and triggers for automations, notification platform, and dashboard, while [Node-RED](https://www.nodered.org) orchestrates the logic and executes the workflows.
 
 *Yes, of course I am aware of the security implications of using cloud-based AI to describe the images. This was more of an experiment to see what's possible than anything. I'm working on finding a locally-hosted alternative that will provide the description detail I want in under 5 seconds.*
 
@@ -83,23 +83,23 @@ tags:
 - **Image and prompt are sent Google Gemini**
 - Once finished, description is saved to a Home Assistant text entity, and a `describe_complete` event is emitted
 
-{{< figure src="/projects/event-driven-camera-notifications/image-classified.jpg" alt="Image classification/verification flow section in Node-RED" caption="Image classification/verification flow section in Node-RED" >}}
+{{< figure src="image-classified.jpg" alt="Image classification/verification flow section in Node-RED" caption="Image classification/verification flow section in Node-RED" >}}
 
-{{< figure src="/projects/event-driven-camera-notifications/describe-image.jpg" alt="Generate image description subflow in Node-RED" caption="Generate image description subflow in Node-RED" >}}
+{{< figure src="describe-image.jpg" alt="Generate image description subflow in Node-RED" caption="Generate image description subflow in Node-RED" >}}
 
 ### 4b. **Event-specific image handling**
 
 - After the image is classified by YOLO, the image is copied into event-specific locations (if applicable)
 - This provides Home Assistant the image entities for last motion, last person, last known person, last vehicle, and last pet, which can be used for notifications and dashboards
 
-{{< figure src="/projects/event-driven-camera-notifications/specific-events.jpg" alt="Image download flow section in Node-RED" caption="Event-specific image handling flow section in Node-RED" >}}
+{{< figure src="specific-events.jpg" alt="Image download flow section in Node-RED" caption="Event-specific image handling flow section in Node-RED" >}}
 
 ### 4c. **Collect images for iterative training**
 
 - If the original event was a person but YOLO did not detect a person, collect images for later processing
 - This allows for labelling false negatives (cases where a person was in the image) for future iterative training
 
-{{< figure src="/projects/event-driven-camera-notifications/collect-images.jpg" alt="Node-RED flow to collect images for iterative training" caption="Node-RED flow to collect images for iterative training">}}
+{{< figure src="collect-images.jpg" alt="Node-RED flow to collect images for iterative training" caption="Node-RED flow to collect images for iterative training">}}
 
 ### 5. **Describe complete & check for police**
 
@@ -107,7 +107,7 @@ tags:
 - The description is checked for key words and a "Police Detected" input boolean is turned on if police are detected
   - This is used in the camera notification flow to update the icon and set the notification level to "critical" which causes alerts to occur even when silenced
 
-{{< figure src="/projects/event-driven-camera-notifications/image-described.jpg" alt="Police check flow section in Node-RED" caption="Police check flow section in Node-RED" >}}
+{{< figure src="image-described.jpg" alt="Police check flow section in Node-RED" caption="Police check flow section in Node-RED" >}}
 
 ### 6. **Processing complete / timeout handling**
 

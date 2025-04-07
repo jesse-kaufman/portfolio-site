@@ -4,7 +4,7 @@ title: "Evidence database for law enforcement (Initial PHP/MySQL version)"
 description: This project was developed to aggregate and centralize evidence of harassment and stalking incidents, providing fast, user-friendly, searchable access for law enforcement and district attorney.
 weight: 4
 images:
-  - /projects/evidence-database/uml.svg
+  - uml.svg
 tags:
   - Docker
   - MySQL
