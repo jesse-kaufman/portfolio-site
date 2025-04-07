@@ -3,7 +3,7 @@ date: 2025-03-07T17:00:56-06:00
 title: Home Assistant container microservices setup
 description: This project leverages Docker containers to create a scalable and efficient home automation system with microservices for seamless integration, management, and control of various smart devices and services.
 images:
-  - /projects/home-assistant-containers/home-assistant-containers.jpg
+  - home-assistant-containers.jpg
 tags:
   - Docker
   - Home Assistant
@@ -14,12 +14,12 @@ tags:
   - Traefik
   - Zigbee
 ---
-{{< figure src="/projects/home-assistant-containers/home-assistant-dashboard.jpg" alt="Primary Home Assistant dashboard view." caption="Primary Home Assistant dashboard view." class="right small" >}}
+{{< figure src="home-assistant-dashboard.jpg" alt="Primary Home Assistant dashboard view." caption="Primary Home Assistant dashboard view." class="right small" >}}
 
 This project leverages Docker containers to create a scalable and efficient home automation system with microservices for seamless integration, management, and control of various smart devices and services.
 
 **Diagram of Docker containers covered in this project**:
-{{< figure src="/projects/home-assistant-containers/home-assistant-containers.jpg" alt="Docker container setup for home automation system." caption="Docker container setup for home automation system." class="narrow " >}}
+{{< figure src="home-assistant-containers.jpg" alt="Docker container setup for home automation system." caption="Docker container setup for home automation system." class="narrow " >}}
 
 ## Home Assistant (HA)
 

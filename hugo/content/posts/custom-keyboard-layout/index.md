@@ -5,7 +5,7 @@ description: This custom keyboard layout is designed to reduce strain on the han
 params:
   github: https://github.com/jesse-kaufman/jk_ergodox_qmk_keymap/
 images:
-  - /projects/custom-keyboard-layout/keyboard.webp
+  - keyboard.webp
 tags:
   - C
   - ErgoDox
@@ -15,7 +15,7 @@ tags:
 
 This custom keyboard layout is designed to reduce strain on the hands—especially the pinkies—while improving typing speed and efficiency, particularly for developers. The layout utilizes custom firmware running on QMK and features multiple layers tailored for different tasks, including standard typing, numeric input, symbols, and coding.
 
-{{< figure src="/projects/custom-keyboard-layout/keyboard.webp" alt="Photograph of keyboard and trackball on desk." caption="Photograph of keyboard and trackball on desk." >}}
+{{< figure src="keyboard.webp" alt="Photograph of keyboard and trackball on desk." caption="Photograph of keyboard and trackball on desk." >}}
 
 ### Diagram conventions
 
@@ -47,7 +47,7 @@ The keyboard features 5 main layers:
 - All non-alphabetic keys remain the same across all layers
 - LEDs under keys glow green while on BASE layer
 
-{{< figure src="/projects/custom-keyboard-layout/base-layer.webp" alt="BASE layer on keyboard." caption="BASE layer on keyboard." >}}
+{{< figure src="base-layer.webp" alt="BASE layer on keyboard." caption="BASE layer on keyboard." >}}
 
 ### Modifiers
 
@@ -133,7 +133,7 @@ The META keys provides quick access to application-specific commands:
 - Holding `3` types a period (`.`)
 - Holding `2` types a comma (`,`)
 
-{{< figure src="/projects/custom-keyboard-layout/num-layer.webp" alt="NUM layer on keyboard." caption="NUM layer on keyboard." >}}
+{{< figure src="num-layer.webp" alt="NUM layer on keyboard." caption="NUM layer on keyboard." >}}
 
 ## **SYM Layer**
 
@@ -148,7 +148,7 @@ This layer is optimized for quick symbol entry without extra key presses. Lesser
 - Type `{}` followed by the left key by holding `[]` key
 - Type `“`, `”`, `‘`, `’` without holding option or shift
 
-{{< figure src="/projects/custom-keyboard-layout/sym-layer.webp" alt="SYM layer on keyboard." caption="SYM layer on keyboard." >}}
+{{< figure src="sym-layer.webp" alt="SYM layer on keyboard." caption="SYM layer on keyboard." >}}
 
 ## **CODE Layer**
 
@@ -165,7 +165,7 @@ Streamlines code entry by mapping common syntax and command line elements such a
 - Type `/**` by holding `/*` key
 - Type `[]` followed by the left key by holding `{}` key
 
-{{< figure src="/projects/custom-keyboard-layout/code-layer.webp" alt="CODE layer on keyboard." caption="CODE layer on keyboard." >}}
+{{< figure src="code-layer.webp" alt="CODE layer on keyboard." caption="CODE layer on keyboard." >}}
 
 ## **FN Layer**
 
@@ -174,7 +174,7 @@ Streamlines code entry by mapping common syntax and command line elements such a
 - Exit layer by releasing `T` or tapping one of the `L.BASE` keys (same keys that enter `L.FN`)
 - Holding `S` while holding `T` engages the NUM layer as long as `S` is held and reverts to FN layer when released
 
-{{< figure src="/projects/custom-keyboard-layout/fn-layer.webp" alt="Photograph of keyboard and trackball on desk." caption="Photograph of keyboard and trackball on desk." >}}
+{{< figure src="fn-layer.webp" alt="Photograph of keyboard and trackball on desk." caption="Photograph of keyboard and trackball on desk." >}}
 
 ### Special keys
 

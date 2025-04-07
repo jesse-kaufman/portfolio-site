@@ -3,7 +3,7 @@ date: 2025-03-20T00:00:56-06:00
 title: “Smart bed” – ESP32-based occupancy sensor
 description: This project enhances smart home automation by using an ESP32 microcontroller and force-sensitive resistors (FSRs) to accurately detect bed occupancy. By monitoring each side of the bed independently, it enables personalized automation and improves room occupancy detection.
 images:
-  - /projects/esp32-bed-occupancy-sensor/bedroom-dashboard-section.jpg
+  - bedroom-dashboard-section.jpg
 tags:
   - ESP32
   - ESPHome
@@ -12,13 +12,13 @@ tags:
 ---
 ## **Overview**
 
-{{< figure src="/projects/esp32-bed-occupancy-sensor/esp32-fsr-wiring.jpg" alt="Wiring diagram for ESP32 board and two force-sensitive resistors." caption="Wiring diagram for ESP32 board and two force-sensitive resistors." class="left small" >}}
+{{< figure src="esp32-fsr-wiring.jpg" alt="Wiring diagram for ESP32 board and two force-sensitive resistors." caption="Wiring diagram for ESP32 board and two force-sensitive resistors." class="left small" >}}
 
 This project enhances smart home automation by using an ESP32 microcontroller and force-sensitive resistors (FSRs) to accurately detect bed occupancy. By monitoring each side of the bed independently, it enables personalized automation and improves room occupancy detection.
 
 ## **Key features**
 
-{{< figure src="/projects/esp32-bed-occupancy-sensor/bed-occupied.jpg" alt="Node-RED flow for controlling bedroom lights based on bed occupancy." caption="Node-RED flow for controlling bedroom lights based on bed occupancy." class="small right" >}}
+{{< figure src="bed-occupied.jpg" alt="Node-RED flow for controlling bedroom lights based on bed occupancy." caption="Node-RED flow for controlling bedroom lights based on bed occupancy." class="small right" >}}
 
 ### Dual-sensor occupancy detection
 
@@ -30,7 +30,7 @@ A potentiometer is integrated as a variable resistor in each voltage divider cir
 
 ## **Practical applications**
 
-{{< figure src="/projects/esp32-bed-occupancy-sensor/bedroom-dashboard-section.jpg" alt="Bedroom overview section of Home Assistant dashboard." caption="Bedroom overview section of Home Assistant dashboard." class="small right" >}}
+{{< figure src="bedroom-dashboard-section.jpg" alt="Bedroom overview section of Home Assistant dashboard." caption="Bedroom overview section of Home Assistant dashboard." class="small right" >}}
 
 ### Enhanced room occupancy detection
 
@@ -42,21 +42,21 @@ I'm using a mixture of 5.8GHz and 24Ghz mmWave sensors, so even at night when th
 
 When either side of the bed is occupied, the main room light smoothly dims over two seconds before turning off, creating a seamless transition into sleep mode. Additionally, if my side of the bed is detected as occupied, my desk lamps also dim and turn off, further enhancing nighttime automation without requiring manual input.
 
-{{< figure src="/projects/esp32-bed-occupancy-sensor/bed-occupied-flow.jpg" alt="Node-RED flow for controlling bedroom lights based on bed occupancy." caption="Node-RED flow for controlling bedroom lights based on bed occupancy." >}}
+{{< figure src="bed-occupied-flow.jpg" alt="Node-RED flow for controlling bedroom lights based on bed occupancy." caption="Node-RED flow for controlling bedroom lights based on bed occupancy." >}}
 
 ## **Hardware & wiring**
 
-{{< figure src="/projects/esp32-bed-occupancy-sensor/bed-sensor-esp32-board.jpg" alt="Interior of bed sensor case showing wiring for ESP32 sensor." caption="Interior of bed sensor case showing wiring for ESP32 sensor." class="left small" >}}
+{{< figure src="bed-sensor-esp32-board.jpg" alt="Interior of bed sensor case showing wiring for ESP32 sensor." caption="Interior of bed sensor case showing wiring for ESP32 sensor." class="left small" >}}
 
 Since I'm still working on my soldering skills, I opted for an ESP32 board with headers pre-installed so I could use breadboard wires with pins for the connections. On the FSR end, I also opted for using the pin/header connection style over attempting to solder and potentially damaging the FSR. However, anywhere 2 or more wires meet was soldered and wrapped in heat-shrink insulation.
 
-{{< figure src="/projects/esp32-bed-occupancy-sensor/bed-sensor-case.jpg" alt="Complete bed sensor assembly for ESP32 board." caption="Complete bed sensor assembly for ESP32 board." class="right small" >}}
+{{< figure src="bed-sensor-case.jpg" alt="Complete bed sensor assembly for ESP32 board." caption="Complete bed sensor assembly for ESP32 board." class="right small" >}}
 
 The ESP32 board was then installed inside a small electronics project case I ordered online after using a Dremel to allow wires through the case when closed.
 
 ## **Sensor placement**
 
-{{< figure src="/projects/esp32-bed-occupancy-sensor/bed-sensor-placement.jpg" alt="Photo of bed sensor placement on box spring." caption="Photo of bed sensor placement on box spring." class="right small" >}}
+{{< figure src="bed-sensor-placement.jpg" alt="Photo of bed sensor placement on box spring." caption="Photo of bed sensor placement on box spring." class="right small" >}}
 
 To ensure accurate and reliable readings, careful consideration was given to the placement of the force-sensitive resistors (FSRs).
 
