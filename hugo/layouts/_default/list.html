@@ -23,8 +23,9 @@
 	<h1>{{ .Title }}</h1>
 	{{- end -}}
 	{{- if .Content }}<div class="content">{{ .Content }}</div>{{ end -}}
-
-
+	{{ if .Params.description }}
+	<p class="list-description">{{ .Params.description }}</p>
+  	{{ end }}
 
 	{{/* If not viewing the tags or categories list page */}}
 	{{- $group_by_date := and (isset .Params "group_list_by_date") (ne .Params.group_list_by_date false) }}
