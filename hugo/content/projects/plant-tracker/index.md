@@ -6,7 +6,6 @@ params:
   github: https://github.com/jesse-kaufman/plantsdb
 images:
   - /projects/plant-tracker/plant-list.jpg
-pin: true
 tags:
   - Express.js
   - MongoDB
