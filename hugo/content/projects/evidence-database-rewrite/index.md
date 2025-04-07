@@ -53,19 +53,19 @@ This collection contains each evidence item in a document with optional sub-docu
 
 ### Text (SMS) item document
 
-| Field         | Type     | Description                                       |
-|---------------|----------|---------------------------------------------------|
-| `_id`         | ObjectId | unique ID                                         |
-| `type`        | String   | set to "text" for text evidence items             |
-| `date_sent`   | Date     | date communication was sent                       |
-| `from`        | String   | phone number from which message was sent          |
-| `from`        | String   | phone number to which message was sent            |
-| `victim`      | String   | victim involved in communication ("name 1", "name 2", or "both") |
-| `direction`   | String   | direction of message (IN = sent to victim; OUT = sent from victim) |
-| `body`        | String   | body of text                                      |
-| `hash`        | String   | MD5 used to detect potential duplicates           |
-| `attachments[]`     | \[[Attachment](#attachment-sub-document)\]    | *optional;* array of attachments sent with text              |
-| `screenshots[]`     | \[String\]    | *optional;* array of screenshots of text              |
+| Field           | Type                                       | Description                                                        |
+| --------------- | ------------------------------------------ | ------------------------------------------------------------------ |
+| `_id`           | ObjectId                                   | unique ID                                                          |
+| `type`          | String                                     | set to "text" for text evidence items                              |
+| `date_sent`     | Date                                       | date communication was sent                                        |
+| `from`          | String                                     | phone number from which message was sent                           |
+| `from`          | String                                     | phone number to which message was sent                             |
+| `victim`        | String                                     | victim involved in communication ("name 1", "name 2", or "both")   |
+| `direction`     | String                                     | direction of message (IN = sent to victim; OUT = sent from victim) |
+| `body`          | String                                     | body of text                                                       |
+| `hash`          | String                                     | MD5 used to detect potential duplicates                            |
+| `attachments[]` | \[[Attachment](#attachment-sub-document)\] | *optional;* array of attachments sent with text                    |
+| `screenshots[]` | \[String\]                                 | *optional;* array of screenshots of text                           |
 
 #### Example text
 
@@ -151,22 +151,22 @@ This collection contains each evidence item in a document with optional sub-docu
 
 ### Email item document
 
-| Field         | Type     | Description                                       |
-|---------------|----------|---------------------------------------------------|
-| `_id`         | ObjectId | unique ID                                         |
-| `type`        | String   | set to "email" for email evidence items           |
-| `date_sent`   | Date     | date communication was sent                       |
-| `from`        | String   | email address from which message was sent         |
-| `to`          | String   | email address to which message was sent           |
-| `victim`      | String   | victim involved in communication ("name 1", "name 2", or "both") |
-| `direction`   | String   | direction of message (IN = sent to victim; OUT = sent from victim) |
-| `subject`     | String   | subject line from email                           |
-| `body`        | String   | text-only body of email                           |
-| `body_html`   | String   | HTML body of email (if applicable)                |
-| `message_id`  | String   | used in path to attachments to prevent filename collisions |
-| `hash`        | String   | MD5 used to detect potential duplicates           |
-| `attachments[]`     | \[[Attachment](#attachment-sub-document)\]    | *optional;* array of attachments sent with email              |
-| `screenshots[]`   | \[String\] | *optional;* array of strings of screenshot filenames |
+| Field           | Type                                       | Description                                                        |
+| --------------- | ------------------------------------------ | ------------------------------------------------------------------ |
+| `_id`           | ObjectId                                   | unique ID                                                          |
+| `type`          | String                                     | set to "email" for email evidence items                            |
+| `date_sent`     | Date                                       | date communication was sent                                        |
+| `from`          | String                                     | email address from which message was sent                          |
+| `to`            | String                                     | email address to which message was sent                            |
+| `victim`        | String                                     | victim involved in communication ("name 1", "name 2", or "both")   |
+| `direction`     | String                                     | direction of message (IN = sent to victim; OUT = sent from victim) |
+| `subject`       | String                                     | subject line from email                                            |
+| `body`          | String                                     | text-only body of email                                            |
+| `body_html`     | String                                     | HTML body of email (if applicable)                                 |
+| `message_id`    | String                                     | used in path to attachments to prevent filename collisions         |
+| `hash`          | String                                     | MD5 used to detect potential duplicates                            |
+| `attachments[]` | \[[Attachment](#attachment-sub-document)\] | *optional;* array of attachments sent with email                   |
+| `screenshots[]` | \[String\]                                 | *optional;* array of strings of screenshot filenames               |
 
 #### Example email
 
@@ -194,22 +194,22 @@ This collection contains each evidence item in a document with optional sub-docu
 
 ### Voicemail item document
 
-| Field             | Type     | Description                                     |
-|-------------------|----------|-------------------------------------------------|
-| `_id`             | ObjectId | unique ID                                       |
-| `type`            | String   | set to "voicemail" for voicemail evidence items |
-| `date_sent`       | Date     | date communication was sent                     |
-| `from`            | String   | phone number from which message was sent        |
-| `to`              | String   | phone number to which message was sent          |
-| `victim`          | String   | victim involved in communication ("name 1", "name 2", or "both") |
-| `direction`       | String   | direction of message (IN = sent to victim; OUT = sent from victim) |
-| `body`            | String   | transcription of voicemail                      |
-| `duration`        | String   | duration of voicemail in `hh:mm:ss` format      |
-| `durationSeconds` | Number   | duration of voicemail in seconds                |
-| `filename`        | String   | *deprecated,* filename of voicemail audio file  |
-| `video_filename`   | String   | filename of video containing voicemail audio    |
-| `hash`            | String   | MD5 used to detect potential duplicates         |
-| `screenshots[]`   | \[String\] | *optional;* array of strings of screenshot filenames |
+| Field             | Type       | Description                                                        |
+| ----------------- | ---------- | ------------------------------------------------------------------ |
+| `_id`             | ObjectId   | unique ID                                                          |
+| `type`            | String     | set to "voicemail" for voicemail evidence items                    |
+| `date_sent`       | Date       | date communication was sent                                        |
+| `from`            | String     | phone number from which message was sent                           |
+| `to`              | String     | phone number to which message was sent                             |
+| `victim`          | String     | victim involved in communication ("name 1", "name 2", or "both")   |
+| `direction`       | String     | direction of message (IN = sent to victim; OUT = sent from victim) |
+| `body`            | String     | transcription of voicemail                                         |
+| `duration`        | String     | duration of voicemail in `hh:mm:ss` format                         |
+| `durationSeconds` | Number     | duration of voicemail in seconds                                   |
+| `filename`        | String     | *deprecated,* filename of voicemail audio file                     |
+| `video_filename`  | String     | filename of video containing voicemail audio                       |
+| `hash`            | String     | MD5 used to detect potential duplicates                            |
+| `screenshots[]`   | \[String\] | *optional;* array of strings of screenshot filenames               |
 
 #### Example voicemail
 
@@ -236,19 +236,19 @@ This collection contains each evidence item in a document with optional sub-docu
 
 ### Video item document
 
-| Field             | Type     | Description                                              |
-|-------------------|----------|----------------------------------------------------------|
-| `_id`             | ObjectId | unique ID                                                |
-| `type`            | String   | set to "video" for video evidence items                  |
-| `date_sent`       | Date     | date video was posted                                    |
-| `from`            | String   | YouTube account on which video was posted                |
-| `direction`       | String   | direction of message (IN = sent to victim; OUT = sent from victim) |
-| `title`           | String   | title of video on YouTube                                |
-| `body`            | String   | automatic transcription of video from YouTube            |
-| `duration`        | String   | duration of video in `hh:mm:ss` format                   |
-| `durationSeconds` | Number   | duration of video in seconds                             |
-| `filename`        | String   | filename of video for embedding in web interface         |
-| `screenshots[]`   | \[String\] | *optional;* array of strings of screenshot filenames |
+| Field             | Type       | Description                                                        |
+| ----------------- | ---------- | ------------------------------------------------------------------ |
+| `_id`             | ObjectId   | unique ID                                                          |
+| `type`            | String     | set to "video" for video evidence items                            |
+| `date_sent`       | Date       | date video was posted                                              |
+| `from`            | String     | YouTube account on which video was posted                          |
+| `direction`       | String     | direction of message (IN = sent to victim; OUT = sent from victim) |
+| `title`           | String     | title of video on YouTube                                          |
+| `body`            | String     | automatic transcription of video from YouTube                      |
+| `duration`        | String     | duration of video in `hh:mm:ss` format                             |
+| `durationSeconds` | Number     | duration of video in seconds                                       |
+| `filename`        | String     | filename of video for embedding in web interface                   |
+| `screenshots[]`   | \[String\] | *optional;* array of strings of screenshot filenames               |
 
 #### Example video
 
@@ -273,9 +273,9 @@ This collection contains each evidence item in a document with optional sub-docu
 
 ### Attachment sub-document
 
-| Field      | Type   | Description                                              |
-|------------|--------|----------------------------------------------------------|
-| `filename` | String | filename of attachment                                   |
+| Field      | Type   | Description            |
+| ---------- | ------ | ---------------------- |
+| `filename` | String | filename of attachment |
 
 ## Outcome
 

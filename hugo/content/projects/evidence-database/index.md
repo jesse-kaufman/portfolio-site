@@ -38,81 +38,81 @@ Attachments are stored in a separate table to allow for a simple many-to-one rel
 
 ### Texts
 
-| Column Name         | Description                                            |
-|---------------------|--------------------------------------------------------|
-| `id`              | unique ID                                              |
-| `date_sent`       | date communication was sent                            |
-| `date_sent_year`  | generated column containing only year                  |
-| `date_sent_month` | generated column containing only month number          |
-| `date_sent_day`   | generated column containing only day number            |
-| `from_address`    | phone number from which message was sent               |
-| `to_address`      | phone number to which message was sent                 |
-| `victim`          | victim involved in communication ("name 1", "name 2", or "both") |
+| Column Name       | Description                                                        |
+| ----------------- | ------------------------------------------------------------------ |
+| `id`              | unique ID                                                          |
+| `date_sent`       | date communication was sent                                        |
+| `date_sent_year`  | generated column containing only year                              |
+| `date_sent_month` | generated column containing only month number                      |
+| `date_sent_day`   | generated column containing only day number                        |
+| `from_address`    | phone number from which message was sent                           |
+| `to_address`      | phone number to which message was sent                             |
+| `victim`          | victim involved in communication ("name 1", "name 2", or "both")   |
 | `direction`       | direction of message (IN = sent to victim; OUT = sent from victim) |
-| `body`            | body of text                                           |
-| `hash`            | MD5 hash of body/time/number used to detect potential duplicates |
+| `body`            | body of text                                                       |
+| `hash`            | MD5 hash of body/time/number used to detect potential duplicates   |
 
 ### Emails
 
-| Column Name         | Description                                            |
-|---------------------|--------------------------------------------------------|
-| `id`              | unique ID                                              |
-| `date_sent`       | date communication was sent                            |
-| `date_sent_year`  | generated column containing only year                  |
-| `date_sent_month` | generated column containing only month number          |
-| `date_sent_day`   | generated column containing only day number            |
-| `from_address`    | email address from which message was sent              |
-| `to_address`      | email address to which message was sent                |
-| `victim`          | victim involved in communication ("name 1", "name 2", or "both") |
-| `direction`       | direction of message (IN = sent to victim; OUT = sent from victim) |
-| `subject`         | subject line from email                                |
-| `body`            | text-only body of email                                |
-| `html_body`       | HTML body of email (if applicable)                     |
-| `message_id`      | used in path to email attachments to prevent filename collisions |
+| Column Name       | Description                                                                            |
+| ----------------- | -------------------------------------------------------------------------------------- |
+| `id`              | unique ID                                                                              |
+| `date_sent`       | date communication was sent                                                            |
+| `date_sent_year`  | generated column containing only year                                                  |
+| `date_sent_month` | generated column containing only month number                                          |
+| `date_sent_day`   | generated column containing only day number                                            |
+| `from_address`    | email address from which message was sent                                              |
+| `to_address`      | email address to which message was sent                                                |
+| `victim`          | victim involved in communication ("name 1", "name 2", or "both")                       |
+| `direction`       | direction of message (IN = sent to victim; OUT = sent from victim)                     |
+| `subject`         | subject line from email                                                                |
+| `body`            | text-only body of email                                                                |
+| `html_body`       | HTML body of email (if applicable)                                                     |
+| `message_id`      | used in path to email attachments to prevent filename collisions                       |
 | `hash`            | MD5 hash of body/time/number used to detect potential duplicates during initial import |
 
 ### Voicemails
 
-| Column Name         | Description                                            |
-|---------------------|--------------------------------------------------------|
-| `id`              | unique ID                                              |
-| `date_sent`       | date communication was sent                            |
-| `date_sent_year`  | generated column containing only year                  |
-| `date_sent_month` | generated column containing only month number          |
-| `date_sent_day`   | generated column containing only day number            |
-| `from_address`    | phone number from which message was sent               |
-| `to_address`      | phone number to which message was sent                 |
-| `victim`          | victim involved in communication ("name 1", "name 2", or "both") |
-| `direction`       | direction of message (IN = sent to victim; OUT = sent from victim) |
-| `body`            | transcription of voicemail                             |
-| `duration`        | duration of voicemail in seconds                       |
-| `filename`        | filename of voicemail for embedding in web interface   |
+| Column Name       | Description                                                                            |
+| ----------------- | -------------------------------------------------------------------------------------- |
+| `id`              | unique ID                                                                              |
+| `date_sent`       | date communication was sent                                                            |
+| `date_sent_year`  | generated column containing only year                                                  |
+| `date_sent_month` | generated column containing only month number                                          |
+| `date_sent_day`   | generated column containing only day number                                            |
+| `from_address`    | phone number from which message was sent                                               |
+| `to_address`      | phone number to which message was sent                                                 |
+| `victim`          | victim involved in communication ("name 1", "name 2", or "both")                       |
+| `direction`       | direction of message (IN = sent to victim; OUT = sent from victim)                     |
+| `body`            | transcription of voicemail                                                             |
+| `duration`        | duration of voicemail in seconds                                                       |
+| `filename`        | filename of voicemail for embedding in web interface                                   |
 | `hash`            | MD5 hash of body/time/number used to detect potential duplicates during initial import |
 
 ### Videos
 
-| Column Name         | Description                                            |
-|---------------------|--------------------------------------------------------|
-| `id`              | unique ID                                              |
-| `date_sent`       | date video was posted                                  |
-| `date_sent_year`  | generated column containing only year                  |
-| `date_sent_month` | generated column containing only month number          |
-| `date_sent_day`   | generated column containing only day number            |
-| `from_address`    | YouTube account on which video was posted              |
-| `victim`          | victim involved in communication (unused; always "both") |
+| Column Name       | Description                                                        |
+| ----------------- | ------------------------------------------------------------------ |
+| `id`              | unique ID                                                          |
+| `date_sent`       | date video was posted                                              |
+| `date_sent_year`  | generated column containing only year                              |
+| `date_sent_month` | generated column containing only month number                      |
+| `date_sent_day`   | generated column containing only day number                        |
+| `from_address`    | YouTube account on which video was posted                          |
+| `victim`          | victim involved in communication (unused; always "both")           |
 | `direction`       | direction of message (IN = sent to victim; OUT = sent from victim) |
-| `title`           | title of video on YouTube                              |
-| `body`            | automatic transcription of video from YouTube          |
-| `duration`        | duration of video in seconds                           |
-| `filename`        | filename of video for embedding in web interface       |
+| `title`           | title of video on YouTube                                          |
+| `body`            | automatic transcription of video from YouTube                      |
+| `duration`        | duration of video in seconds                                       |
+| `filename`        | filename of video for embedding in web interface                   |
 
 ### Attachments
 
-| Column Name         | Description                                            |
-|---------------------|--------------------------------------------------------|
-| `attachment_id`   | unique ID / primary key                                |
-| `message_id`      | foreign key referencing either texts or emails tables  |
-| `filename`        | filename of attachment                                 |
+| Column Name     | Description                                           |
+| --------------- | ----------------------------------------------------- |
+| `attachment_id` | unique ID / primary key                               |
+| `message_id`    | foreign key referencing either texts or emails tables |
+| `filename`      | filename of attachment                                |
 
 ## Web UI
 
