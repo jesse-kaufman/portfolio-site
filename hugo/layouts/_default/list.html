@@ -39,7 +39,7 @@
 		{{ $smallestFontSize := 0.5 }}
 		{{ $fontSpread := sub $largestFontSize $smallestFontSize }}
 		{{ $max := add (len (where (index $.Site.Taxonomies.tags.ByCount 0).Pages "Section" $currentSection)) 1 }}
-		{{ $min := len (where (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages "Section" $currentSection) }}
+		{{ $min := 1 }}
 		{{ $spread := sub $max $min }}
 		{{ $fontStep := div $fontSpread $spread }}
 
