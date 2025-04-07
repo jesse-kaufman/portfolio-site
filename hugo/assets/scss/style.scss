@@ -624,6 +624,13 @@ p.img-404 {
   }
 }
 
+.list-description {
+  font-size: 1em;
+  opacity: $dimmed-opacity;
+  font-style: italic;
+  line-height: 1.3em;
+}
+
 // single.html
 //
 .bg-img {
