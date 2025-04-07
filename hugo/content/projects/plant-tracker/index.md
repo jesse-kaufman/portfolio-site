@@ -374,7 +374,7 @@ If an error occurs, a response will be returned with the error message in the bo
 
 - **Authentication:**
 
-  - [ ] Implement OAauth and JWT-based authentication for API
+  - [ ] Implement OAuth and JWT-based authentication for API
   - [ ] Implement password-based authentication for GUI
 
 - **Plant Journal:**
