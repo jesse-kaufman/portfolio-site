@@ -1,6 +1,11 @@
-{{- range .Site.Menus.main -}}
+{{ $isHome := .IsHome}}
 
-{{- $MyName := .Name | replaceRE "Development Projects" "Projects" | replaceRE "Tech Blog" "Blog" }}
+{{- range .Site.Menus.main -}}
+{{ $MyName := .Name }}
+
+{{ if not $isHome }}
+{{ $MyName = .Name | replaceRE "Development Projects" "Projects" | replaceRE "Tech Blog" "Blog" }}
+{{ end }}
 
 {{- if .HasChildren -}}
 <a href="{{ .URL | absLangURL }}" class="has-children">{{ $MyName }}</a>
