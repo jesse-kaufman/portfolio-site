@@ -4,7 +4,6 @@ title: Furniture subscription eCommerce platform
 description: This project was a major undertaking I led as sole developer for over four years—taking the company from an existing Squarespace site to a fully interactive eCommerce platform.
 images:
   - /projects/furniture-subscription-ecommerce-platform/furniture.jpg
-github: https://github.com/jesse-kaufman/evidencedb/tree/main/node-only
 tags:
   - MySQL
   - PHP
