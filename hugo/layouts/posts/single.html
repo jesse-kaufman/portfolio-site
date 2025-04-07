@@ -16,12 +16,13 @@
 <div class="bg-img"></div>
 {{- end }}
 <main
-  class="site-main section-inner {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">
+      class="site-main section-inner {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">
   <article class="thin">
     <header class="post-header">
       <h1>{{ .Title }}</h1>
     </header>
-    {{- partial "posts_single_info.html" . -}} {{- if .Params.toc }}
+    {{- partial "posts_single_info.html" . -}}
+
     <aside id="toc">
       <div class="toc-title">
         {{- if fileExists "i18n" -}} {{ i18n "tableOfContents" }} {{- else -}}
@@ -29,7 +30,7 @@
       </div>
       {{ .TableOfContents }}
     </aside>
-    {{- end }}
+
     <div class="content">{{ .Content | safeHTML }}</div>
     {{ partial "brainMade.html" . }} {{- if .Site.Params.relatedPosts }} {{-
     partial "related-posts.html" . -}} {{- end }}
@@ -38,36 +39,32 @@
   <div class="post-nav thin">
     {{- with .NextInSection }}
     <a
-      class="next-post"
-      href="{{ .Permalink }}">
-      <span class="post-nav-label"
-        >{{- partial "svg.html" (dict "context" . "name" "next") -}}&nbsp;{{- if
+       class="next-post"
+       href="{{ .Permalink }}">
+      <span class="post-nav-label">{{- partial "svg.html" (dict "context" . "name" "next") -}}&nbsp;{{- if
         fileExists "i18n" -}} {{ i18n "newer" }} {{- else -}} Newer {{- end
-        -}}</span
-      ><br /><span>{{ .Title }}</span>
+        -}}</span><br /><span>{{ .Title }}</span>
     </a>
     {{- end }} {{- with .PrevInSection }}
     <a
-      class="prev-post"
-      href="{{ .Permalink }}">
-      <span class="post-nav-label"
-        >{{- if fileExists "i18n" -}} {{ i18n "older" }} {{- else -}} Older {{-
+       class="prev-post"
+       href="{{ .Permalink }}">
+      <span class="post-nav-label">{{- if fileExists "i18n" -}} {{ i18n "older" }} {{- else -}} Older {{-
         end -}}&nbsp;{{- partial "svg.html" (dict "context" . "name" "previous")
-        -}}</span
-      ><br /><span>{{ .Title }}</span>
+        -}}</span><br /><span>{{ .Title }}</span>
     </a>
     {{- end }}
   </div>
   <div
-    id="comments"
-    class="thin">
+       id="comments"
+       class="thin">
     {{- partial "comments.html" . -}}
   </div>
 </main>
 {{ end }} {{ define "footer" }}
 <footer
-  id="site-footer"
-  class="section-inner thin {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">
+        id="site-footer"
+        class="section-inner thin {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">
   {{- if templates.Exists "partials/posts-footer.html" -}}{{- partialCached
   "posts-footer.html" . -}}{{- else -}}{{- partial "footer.html" . -}}{{- end
   -}}
