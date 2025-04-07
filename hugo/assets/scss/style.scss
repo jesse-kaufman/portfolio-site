@@ -958,10 +958,12 @@ a.footnote-ref {
 .post-nav {
   display: flex;
   justify-content: space-between;
-  margin-top: 1.5em;
+  margin-top: 3em;
   margin-bottom: 2.5em;
-  font-size: 1.2em;
-
+  font-size: 1em;
+  span {
+    font-size: 0.8em;
+  }
   a {
     flex-basis: 50%;
     flex-grow: 1;
