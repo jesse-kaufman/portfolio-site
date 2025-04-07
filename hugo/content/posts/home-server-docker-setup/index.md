@@ -15,10 +15,6 @@ tags:
 
 {{< figure src="grafana-dashboard-internet.jpg" alt="Grafana dashboard for monitoring Internet connection stats" caption="Grafana dashboard for monitoring Internet connection stats" class="right" >}}
 
-*This is a work in progress as I get everything documented.*
-
-My home network is a self-hosted environment designed for automation, media management, and system orchestration. It runs a Docker-based infrastructure that leverages various containerized services for AI-powered automation, notifications, and home management.
-
 **The primary goals of this setup are:**
 
 - Scalability & security
