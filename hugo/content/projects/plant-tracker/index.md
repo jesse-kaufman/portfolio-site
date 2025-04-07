@@ -401,6 +401,9 @@ If an error occurs, a response will be returned with the error message in the bo
     - **Integration with Home Assistant:**
       - [ ] Add ability to pull environmental data (temp, humidity, soil moisture, etc.) via API
       - [ ] Potentially use WebSockets for realtime updates
+    - **Easy, containerized deployment as turnkey solution**
+      - [ ] Docker container running backend and serving frontend with NGINX
+      - [ ] Docker image automatically rebuilt whenever frontend or backend is updated
 
 ---
 
@@ -411,3 +414,4 @@ If an error occurs, a response will be returned with the error message in the bo
   - Added Vue.js and Tailwind CSS to tech stack
 - **2025.04.07**
   - Added Home Assistant integration to planned features
+  - Added easy deployment section to planned features
