@@ -42,7 +42,7 @@ params:
     - /images/vscodium.jpg
     - /projects/event-driven-camera-notifications/camera-dashboard.jpg
   dateformShort: "Jan 2"
-  dateform: "Jan 2, 2006"
+  dateform: "January 2, 2006"
   dateformNum: "2006-01-02"
   dateformNumTime: "2006-01-02 15:04 -0700"
   footerCopyright: "All rights reserved "
