@@ -2,7 +2,8 @@
 date: 2025-03-22T00:00:56-06:00
 title: Custom keyboard layout/firmware (ErgoDox)
 description: This custom keyboard layout is designed to reduce strain on the hands—especially the pinkies—while improving typing speed and efficiency, particularly for developers.
-github: https://github.com/jesse-kaufman/jk_ergodox_qmk_keymap/
+params:
+  github: https://github.com/jesse-kaufman/jk_ergodox_qmk_keymap/
 images:
   - /projects/custom-keyboard-layout/keyboard.webp
 tags:
