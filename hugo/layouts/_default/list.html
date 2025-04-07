@@ -53,7 +53,7 @@
 		{{- if gt (len $matchingSectionPages) 0 }} <!-- Only display tag if pages in current section -->
 
 		<a href="{{ "/tags/" | relURL }}{{ $name | urlize }}"
-		   class="{{ $name | lower | replaceRE " \\.| |\\/" "-" }} tag tagcloud-item"
+		   class="{{ $name | lower | replaceRE "\\.| |\\/" "-" }} tag tagcloud-item"
 		   style="font-size: {{ $currentFontSize }}rem;">
 			{{ $name }}
 		</a>
