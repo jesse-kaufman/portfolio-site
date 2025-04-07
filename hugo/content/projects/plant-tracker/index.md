@@ -398,6 +398,9 @@ If an error occurs, a response will be returned with the error message in the bo
       - [ ] Add ability to add plant journal entries
       - [ ] Add ability to edit plant journal entries
       - [ ] Add ability to delete plant journal entries
+    - **Integration with Home Assistant:**
+      - [ ] Add ability to pull environmental data (temp, humidity, soil moisture, etc.) via API
+      - [ ] Potentially use WebSockets for realtime updates
 
 ---
 
@@ -406,3 +409,5 @@ If an error occurs, a response will be returned with the error message in the bo
 - **2025.04.01**
   - Added mockup screenshots for Vue.js GUI
   - Added Vue.js and Tailwind CSS to tech stack
+- **2025.04.07**
+  - Added Home Assistant integration to planned features
