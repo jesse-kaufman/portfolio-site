@@ -11,10 +11,7 @@ tags:
   - ErgoDox
   - QMK
 ---
-## Overview
-
-This custom keyboard layout is designed to reduce strain on the hands—especially the pinkies—while improving typing speed and efficiency, particularly for developers. The layout utilizes custom firmware running on QMK and features multiple layers tailored for different tasks, including standard typing, numeric input, symbols, and coding.
-
+The layout utilizes custom firmware running on QMK and features multiple layers tailored for different tasks, including standard typing, numeric input, symbols, and coding.
 {{< figure src="keyboard.webp" alt="Photograph of keyboard and trackball on desk." caption="Photograph of keyboard and trackball on desk." >}}
 
 ### Diagram conventions

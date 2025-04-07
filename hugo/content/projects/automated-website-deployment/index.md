@@ -9,8 +9,6 @@ tags:
   - Github actions
   - NGINX
 ---
-This project implements a streamlined CI/CD pipeline (using Github actions) for my self-hosted portfolio website, built with Hugo CMS and deployed as static files. When commits are pushed to the Github repository, an automated deployment workflow is triggered to publish the changes to the live site.
-
 ## Architecture & workflow
 
 My portfolio is built using [Hugo](https://gohugo.io/)—a fast and flexible static site generator. Hugo compiles the site into static HTML, CSS, and JavaScript files, creating a performant site with reduced attack surface for optimal security.

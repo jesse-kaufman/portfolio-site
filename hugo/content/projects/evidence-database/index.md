@@ -1,7 +1,7 @@
 ---
 date: 2025-03-18T10:00:56-06:00
 title: "Evidence database for law enforcement (Initial PHP/MySQL version)"
-description: This project was developed to aggregate and centralize evidence of harassment and stalking incidents, providing fast, user-friendly, searchable access for law enforcement and district attorney.
+description: This project was developed to aggregate and centralize evidence of harassment and stalking incidents, providing fast, user-friendly, searchable access for law enforcement and the district attorney handling the case. It enabled investigators and attorneys to efficiently filter and review various forms of digital contact between the harasser and victims.
 weight: 4
 images:
   - uml.svg
@@ -12,10 +12,6 @@ tags:
   - PHP
   - Traefik
 ---
-## Purpose
-
-This project was developed to aggregate and centralize evidence of harassment and stalking incidents, providing fast, user-friendly, searchable access for law enforcement and the district attorney handling the case. It enabled investigators and attorneys to efficiently filter and review various forms of digital contact between the harasser and victims.
-
 Project turnaround was of utmost importance as it dealt with an ongoing case. The original version of this project was created in about a day and a half with [a rewrite a few months later](../evidence-database-rewrite/).
 
 *I have been unable to find a copy of the original PHP version of this project or I would provide a GitHub link. However, the code for the initial PHP-based tools I wrote to import emails/texts from different sources can be found [here](https://github.com/jesse-kaufman/evidencedb/tree/main/import_tools).*

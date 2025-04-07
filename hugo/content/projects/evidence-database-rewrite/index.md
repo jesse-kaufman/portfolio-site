@@ -19,7 +19,7 @@ tags:
 
 ## Overview
 
-This project is a full rewrite of [an evidence database originally built with **PHP and MySQL**](../evidence-database/), transitioning it to **Node.js and MongoDB** for improved performance, a simplified architecture, and hands-on learning. The database aggregates **communication records** (texts, emails, social media messages, etc.) for use by law enforcement and the district attorney in an ongoing harassment case.
+The database aggregates **communication records** (texts, emails, social media messages, etc.) for use by law enforcement and the district attorney in an ongoing harassment case. For more details, [see this writeup](../evidence-database/) on the initial PHP/MySQL version.
 
 ## Why the rewrite?
 

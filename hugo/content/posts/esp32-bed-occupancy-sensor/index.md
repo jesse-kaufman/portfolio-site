@@ -10,11 +10,7 @@ tags:
   - Home Assistant
   - Node-RED
 ---
-## **Overview**
-
 {{< figure src="esp32-fsr-wiring.jpg" alt="Wiring diagram for ESP32 board and two force-sensitive resistors." caption="Wiring diagram for ESP32 board and two force-sensitive resistors." class="left small" >}}
-
-This project enhances smart home automation by using an ESP32 microcontroller and force-sensitive resistors (FSRs) to accurately detect bed occupancy. By monitoring each side of the bed independently, it enables personalized automation and improves room occupancy detection.
 
 ## **Key features**
 
