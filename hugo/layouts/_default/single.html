@@ -2,7 +2,7 @@
 {{ if .Params.featuredImg -}}
 <style>
 	.bg-img {
-		background-image: url('{{.Params.featuredImg}}');
+		background-image: url('{{.Params.featuredImg | absURL}}');
 	}
 </style>
 {{- else if .Params.images -}}
