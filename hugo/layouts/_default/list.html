@@ -33,19 +33,25 @@
 
 	{{- if not (or (in .Page.RelPermalink "tags") (in .Page.RelPermalink "categories")) -}}
 	<div id="tagcloud" class="container tagcloud post-tags">
+		{{- $currentSection := .Section }}
 		{{ if ne (len $.Site.Taxonomies.tags) 0 }}
 		{{ $largestFontSize := 0.9 }}
 		{{ $smallestFontSize := 0.5 }}
 		{{ $fontSpread := sub $largestFontSize $smallestFontSize }}
-		{{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
-		{{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
+		{{ $max := add (len (where (index $.Site.Taxonomies.tags.ByCount 0).Pages "Section" $currentSection)) 1 }}
+		{{ $min := len (where (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages "Section" $currentSection) }}
 		{{ $spread := sub $max $min }}
 		{{ $fontStep := div $fontSpread $spread }}
+
 		{{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
-		{{ $tagCount := len $taxonomy.Pages }}
+		{{- $matchingSectionPages := where $taxonomy.Pages "Section" $currentSection }}
+
+		{{ $tagCount := len $matchingSectionPages }}
 		{{ $currentFontSize := (add $smallestFontSize (mul (sub $tagCount $min) $fontStep) ) }}
 		{{ $weight := div (sub (math.Log $tagCount) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
 		{{ $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weight)) }}
+		{{- if gt (len $matchingSectionPages) 0 }} <!-- Only display tag if pages in current section -->
+
 		<a href="{{ "/tags/" | relURL }}{{ $name | urlize }}"
 		   class="{{ $name | lower | replaceRE " \\.| |\\/" "-" }} tag tagcloud-item"
 		   style="font-size: {{ $currentFontSize }}rem;">
@@ -53,7 +59,8 @@
 		</a>
 		{{ end }}
 		{{ end }}
-	</div>
+		</div>
+	{{ end }}
 
 	{{- if and
 		(ge (len (where (where .Site.Pages "Params.pin" true) "Section" .Section)) 1)
