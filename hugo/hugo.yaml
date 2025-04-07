@@ -20,6 +20,13 @@ markup:
     codeFences: true
     noClasses: false
     style: onedark
+permalinks:
+  section:
+    projects: /projects/
+    posts: /posts/
+  page:
+    projects: /projects/:slug/
+    posts: /posts/:year/:month/:slug/
 enableGitInfo: true
 params:
   pinned: Pinned
