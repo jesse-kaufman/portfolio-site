@@ -18,6 +18,13 @@
 	<p class="post-date"><strong>Last updated:</strong> {{ .Lastmod.Format .Site.Params.dateform }}</p>
 	{{- end -}}
 
+	{{ if .Page.Params.github }}
+	<a class="github-button button" href="{{ .Page.Params.github }}">{{partial "svg.html" (dict "name" "github")}} View on Github
+		▸</a>
+	{{ end }}
+
+	<p class="page-description">{{ .Params.description }}</p>
+
 	{{- if gt (len .TableOfContents) 100 }}
 	<div id="toc">
 		<h3>Table of Contents</h3>
@@ -26,10 +33,7 @@
 	{{- end }}
 
 	<div class="content">
-		{{ if .Page.Params.github }}
-		<a class="button" href="{{ .Page.Params.github }}">{{partial "svg.html" (dict "name" "github")}} View on Github
-			▸</a>
-		{{ end }}
+
 		{{ .Content | replaceRE "(<h[1-6] id=\"([^\"]+)\".+)(</h[1-6]+>)" `${1}<a href="#${2}" class="anchor"
 			   aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
 					 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -37,6 +41,8 @@
 					<line x1="8" y1="12" x2="16" y2="12"></line>
 				</svg></a>${3}` | safeHTML }}
 	</div>
+=
+
 	{{ partial "brainMade.html" . }}
 	{{- if .Params.comments }}
 	<div id="comments" class="thin">
