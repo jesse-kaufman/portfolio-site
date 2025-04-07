@@ -1,51 +1,51 @@
-{{ define "head" }}
-{{- partial "bg-image.html" . }}
-{{ end }}
-
-{{ define "header" }}
-{{ partial "header.html" . }}
-{{ end }}
-
-{{ define "main" }}
-{{- if (or .Params.images .Params.featuredImg) }}
+{{ define "head" }} {{- partial "bg-image.html" . }} {{ end }} {{ define
+"header" }} {{ partial "header.html" . }} {{ end }} {{ define "main" }} {{- if
+(or .Params.images .Params.featuredImg) }}
 <div class="bg-img"></div>
 {{- end }}
 <main
-	  class="site-main section-inner thin {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">
-	<h1>{{ .Title }}</h1>
-	<p class="post-date"><strong>Posted:</strong> {{ .Date.Format .Site.Params.dateform }}</p>
-	{{ if ne (.Date.Format "2006-01-02") (.Lastmod.Format "2006-01-02") -}}
-	<p class="post-date"><strong>Last updated:</strong> {{ .Lastmod.Format .Site.Params.dateform }}</p>
-	{{- end -}}
+  class="site-main section-inner thin {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">
+  <h1>{{ .Title }}</h1>
+  <p class="post-date">
+    <strong>Posted:</strong> {{ .Date.Format .Site.Params.dateform }}
+  </p>
+  {{ if ne (.Date.Format "2006-01-02") (.Lastmod.Format "2006-01-02") -}}
+  <p class="post-date">
+    <strong>Last updated:</strong> {{ .Lastmod.Format .Site.Params.dateform }}
+  </p>
+  {{- end -}} {{ if .Page.Params.github }}
+  <a
+    class="github-button button"
+    href="{{ .Page.Params.github }}"
+    >{{partial "svg.html" (dict "name" "github")}} View on Github ▸</a
+  >
+  {{ end }}
 
-	{{ if .Page.Params.github }}
-	<a class="github-button button" href="{{ .Page.Params.github }}">{{partial "svg.html" (dict "name" "github")}} View on Github
-		▸</a>
-	{{ end }}
+  <p class="page-description">{{ .Params.description }}</p>
 
-	<p class="page-description">{{ .Params.description }}</p>
+  {{- if gt (len .TableOfContents) 100 }}
+  <div id="toc">
+    <h3>Table of Contents</h3>
+    {{ .TableOfContents }}
+  </div>
+  {{- end }}
 
-	{{- if gt (len .TableOfContents) 100 }}
-	<div id="toc">
-		<h3>Table of Contents</h3>
-		{{ .TableOfContents }}
-	</div>
-	{{- end }}
+  <div class="content">{{ .Content | safeHTML }}</div>
 
-	<div class="content">{{ .Content | safeHTML }}</div>
-
-	{{ partial "brainMade.html" . }}
-	{{- if .Params.comments }}
-	<div id="comments" class="thin">
-		{{ partial "comments.html" . }}
-	</div>
-	{{- end }}
+  {{ partial "brainMade.html" . }} {{- if .Params.comments }}
+  <div
+    id="comments"
+    class="thin">
+    {{ partial "comments.html" . }}
+  </div>
+  {{- end }}
 </main>
-{{ end }}
-
-{{ define "footer" }}<footer id="site-footer"
-		class="section-inner thin {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">{{-
-	if
-	templates.Exists "partials/single-footer.html" -}}{{- partialCached "single-footer.html" . -}}{{- else -}}{{-
-	partial "footer.html" . -}}{{- end -}}</footer>
+{{ end }} {{ define "footer" }}
+<footer
+  id="site-footer"
+  class="section-inner thin {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">
+  {{- if templates.Exists "partials/single-footer.html" -}}{{- partialCached
+  "single-footer.html" . -}}{{- else -}}{{- partial "footer.html" . -}}{{- end
+  -}}
+</footer>
 {{ end }}
