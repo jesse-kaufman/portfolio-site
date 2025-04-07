@@ -2,6 +2,7 @@
 date: 2025-03-05T17:00:56-06:00
 title: Plant Tracker API project
 description: A plant tracking API built with Node.js and Express, designed to manage plant growth from seedling to harvest with efficient status updates and progress tracking.
+weight: 1
 params:
   github: https://github.com/jesse-kaufman/plantsdb
 images:

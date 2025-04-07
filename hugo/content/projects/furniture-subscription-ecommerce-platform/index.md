@@ -2,6 +2,7 @@
 date: 2025-03-28T11:00:56-06:00
 title: Furniture subscription eCommerce platform
 description: This project was a major undertaking I led as sole developer for over four years—taking the company from an existing Squarespace site to a fully interactive eCommerce platform.
+weight: 2
 images:
   - /projects/furniture-subscription-ecommerce-platform/furniture.jpg
 tags:

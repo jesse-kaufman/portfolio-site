@@ -2,6 +2,7 @@
 date: 2025-03-18T11:00:56-06:00
 title: Evidence database for law enforcement (Node.js/MongoDB rewrite)
 description: This project is a full rewrite of an evidence database originally built with PHP and MySQL, transitioning it to Node.js and MongoDB for improved performance, a simplified architecture, and hands-on learning.
+weight: 5
 images:
   - /projects/evidence-database/uml.svg
 params:
