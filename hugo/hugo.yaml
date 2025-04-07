@@ -73,7 +73,7 @@ menu:
       url: /projects/
       weight: 1
 
-    - name: Articles
+    - name: Tech Blog
       url: /posts/
       weight: 2
 
