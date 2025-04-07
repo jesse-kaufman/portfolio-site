@@ -8,8 +8,6 @@ tags:
   - Express.js
   - Node.js
 ---
-This custom-built video editing tool automates multiple tasks to streamline the process of converting and editing videos, making it efficient and easy vs having to remember ffmpeg command line switches.
-
 ## Tech Stack
 
 - **Node.js**: Provides the backend environment for building and executing the media conversion logic.
