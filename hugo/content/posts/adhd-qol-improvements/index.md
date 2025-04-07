@@ -3,7 +3,7 @@ date: 2025-03-04T17:00:56-06:00
 title: ADHD Quality of Life enhancements
 description: Two smart home automations designed to improve daily life in a neurodivergent household—intelligent reminders to prevent food from being forgotten in the microwave and wet clothes from sitting in the washer.
 images:
--  /projects/adhd-qol-improvements/food-in-microwave-flow.jpg
+- food-in-microwave-flow.jpg
 tags:
   - Home Assistant
   - MQTT
@@ -17,7 +17,7 @@ tags:
 
 ## **Food left in microwave reminders**
 
-{{< figure src="/projects/adhd-qol-improvements/food-in-microwave-notification.jpg" alt="Notification sent by Home Assistant companion app." caption="Notification sent by Home Assistant." class="left rounded" >}}
+{{< figure src="food-in-microwave-notification.jpg" alt="Notification sent by Home Assistant companion app." caption="Notification sent by Home Assistant." class="left rounded" >}}
 
 This automation ensures that food left in the microwave doesn't go unnoticed by leveraging smart home technology. The system operates as follows:
 
@@ -31,7 +31,7 @@ This automation ensures that food left in the microwave doesn't go unnoticed by 
 
 4. **Clearing notifications on interaction** – once the door is opened, any microwave notifications are cleared from devices to prevent clutter and notification fatigue
 
-{{< figure src="/projects/adhd-qol-improvements/food-in-microwave-flow.jpg" alt="Food left in microwave flow in Node-RED." caption="Food left in microwave flow in Node-RED." >}}
+{{< figure src="food-in-microwave-flow.jpg" alt="Food left in microwave flow in Node-RED." caption="Food left in microwave flow in Node-RED." >}}
 
 ### Outcome
 
@@ -56,7 +56,7 @@ This stack allows for **real-time event detection, recurring reminders with mult
 
 ## **Wet clothes in washer reminders**
 
-{{< figure src="/projects/adhd-qol-improvements/wet-clothes-in-washer.jpg" alt="Notification sent by Home Assistant companion app." caption="Notification sent by Home Assistant." class="left rounded" >}}
+{{< figure src="wet-clothes-in-washer.jpg" alt="Notification sent by Home Assistant companion app." caption="Notification sent by Home Assistant." class="left rounded" >}}
 
 This automation helps remind users when the washing cycle is complete, and wet clothes are left in the washer:
 
@@ -70,7 +70,7 @@ This automation helps remind users when the washing cycle is complete, and wet c
 
 5. **Door open action** – if the washer door is opened at any point during the timer, the timer is stopped, the "wet clothes in washer" sensor is turned off, and any washing machine notifications are cleared from devices to prevent notification clutter
 
-{{< figure src="/projects/adhd-qol-improvements/full-washing-machine-flow.jpg" alt="Full washing machine logic in Node-RED." caption="Full washing machine logic in Node-RED." >}}
+{{< figure src="full-washing-machine-flow.jpg" alt="Full washing machine logic in Node-RED." caption="Full washing machine logic in Node-RED." >}}
 
 ### Outcome
 
