@@ -55,16 +55,21 @@
 		{{ end }}
 	</div>
 
-		{{- if and (ge (len (where .Site.Pages ".Params.pin" true)) 1) (.Site.Params.pinned) (not (or (in .Page.RelPermalink
-		"tags") (in .Page.RelPermalink "categories"))) -}}
+	{{- if and
+		(ge (len (where (where .Site.Pages "Params.pin" true) "Section" .Section)) 1)
+		(.Site.Params.pinned)
+		(not (or (in .Page.RelPermalink "tags")
+		(in .Page.RelPermalink "categories"))) -}}
 		<div class="pinned-posts-group">
 			<ul class="pinned-posts-list">
-				{{- range where .Site.Pages ".Params.pin" true }}
+			{{- range where .Site.Pages "Params.pin" true -}}
+			{{- if eq .Section .Page.Section -}}
 				<li class="pinned-post-item">
 					{{- partial "svg.html" (dict "context" . "name" (.Site.Params.pinnedSVGname | default "pin")) }}
 					<a href="{{.Permalink}}"><span class="post-title">{{.Title}}</span></a>
 				</li>
-				{{- end }}
+			{{- end -}}
+		{{- end -}}
 			</ul>
 		</div>
 		{{- end -}}
