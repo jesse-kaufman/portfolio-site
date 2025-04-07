@@ -864,13 +864,13 @@ a.footnote-ref {
   content: "Þ";
 }
 
-.post-description {
+.post-description,
+.post-details {
   font-size: 0.8rem;
   line-height: 1.2em;
   margin-bottom: 0.75em;
   display: block;
   font-style: italic;
-  opacity: $dimmed-opacity;
 
   p {
     margin: 0.8em 0;
@@ -884,10 +884,23 @@ a.footnote-ref {
     margin-right: 0.8em;
   }
 
-  .tag,
+  .post-tags,
   .category {
-    margin-right: 0.5em;
+    font-size: 0.8em;
   }
+}
+
+.post-details .post-tags {
+  margin-top: 1em;
+}
+
+.post-date,
+.post-wordcount {
+  font-size: 0.8rem;
+  line-height: 1.4em;
+  margin: 0 0 0 0.25em !important;
+  display: block;
+  opacity: 0.6;
 }
 
 #tagcloud,
@@ -972,9 +985,9 @@ a.footnote-ref {
 
 .related-posts {
   padding: 0.8em;
-  margin-top: 1.5em;
+  margin-top: 3em;
   font-size: 0.8rem;
-  border: 3px dashed rgba(255, 255, 255, 0.2);
+  border: 0.5px dashed rgba(255, 255, 255, 0.2);
   border-radius: 5px;
 
   h2 {
