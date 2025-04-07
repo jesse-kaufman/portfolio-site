@@ -27,10 +27,7 @@
 <main
 	  class="site-main section-inner thin {{- if ne false .Site.Params.usesAnimation }} animated fadeIn faster {{- end -}}">
 	<h1>{{ .Title }}</h1>
-	<p class="post-date"><strong>Posted:</strong> {{ .Date.Format .Site.Params.dateform }}</p>
-	{{ if ne (.Date.Format "2006-01-02") (.Lastmod.Format "2006-01-02") -}}
-	<p class="post-date"><strong>Last updated:</strong> {{ .Lastmod.Format .Site.Params.dateform }}</p>
-	{{- end -}}
+
 
 	{{- if gt (len .TableOfContents) 100 }}
 	<div id="toc">
