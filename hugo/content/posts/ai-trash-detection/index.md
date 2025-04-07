@@ -93,7 +93,7 @@ This lets me know with reasonable certainty **whether the trash cans are in the 
 
 ![Image of Node-RED logic flow for trash can detection](detect-trash-cans-logic.jpg)
 
-1. Node-RED listens to the MQTT topic `camera/+/event` for an `image_downloaded` event sent by my [camera notifications flow](../event-driven-camera-notifications/#2-image-change-monitoring-and-download)
+1. Node-RED listens to the MQTT topic `camera/+/event` for an `image_downloaded` event sent by my [camera notifications flow](../event-driven-camera-notifications#2-image-change-monitoring-and-download)
 2. The image size (contained in the MQTT payload) is compared to the known size of a full notification image and only proceeds it matches
     - *This prevents cropped images (such as would occur with a person detection event on the camera) from being processed for trash cans, as they often are cropped out*
 3. The image is sent to a locally-run YOLO service using a model custom-trained on my particular trash cans

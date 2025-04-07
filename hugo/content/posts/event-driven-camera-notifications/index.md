@@ -60,7 +60,7 @@ Using a series of timeouts, MQTT messaging, and integration with machine learnin
 - When a change is detected, the system begins a timeout for downloading the image
 - After the image is downloaded, it is copied into the correct location for the camera’s last motion image entity
 - The timestamp for the last motion is updated, and a `download_complete` event is fired
-- Other flows, like [trash can detection](../ai-trash-detection/), listen for the `download_complete` event to trigger subsequent actions
+- Other flows, like [trash can detection](../ai-trash-detection), listen for the `download_complete` event to trigger subsequent actions
 
 ![Image-changed flow section in Node-RED](image-changed.jpg)
 
