@@ -19,7 +19,7 @@
 			<p id="home-subtitle">{{.}}</p>
 			{{- end }}
 			<nav id="home-nav" class="site-nav">
-				{{ partialCached "menu.html" . }}
+				{{ partial "menu.html" . }}
 			</nav>
 			{{- with .Site.Params.socialLinks }}
 			<div id="home-links">
