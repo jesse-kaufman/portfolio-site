@@ -886,8 +886,12 @@ a.footnote-ref {
     margin: 0.8em 0;
   }
 
-  a:hover {
+  a:not(.tag):hover {
     border-bottom: 1px solid $post-description-a-hover-border-bottom;
+  }
+
+  .tag {
+    font-style: normal;
   }
 
   svg {
