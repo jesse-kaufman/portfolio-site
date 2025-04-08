@@ -19,6 +19,10 @@ The Plant Tracker API will allow users to manage and track their plants through 
 
 Planned future enhancements include a CLI client, a web GUI (Vue.js + Tailwind CSS), and incorporating notifications for plant care reminders [among others](#other-planned-features).
 
+{{< button link="plants-demo.lloydnet.org" text="View GUI demo" target="_blank" >}}
+
+The GUI demo uses `json-server` and a .json file to provide a sample API for data while I finish the actual API.
+
 {{< figure src="plant-view.jpg" alt="Mockup of plant dashboard showing plants in different states" caption="Mockup of plant dashboard showing plants in different states" class="small" >}}
 
 {{< figure src="plant-list.jpg" alt="Mockup of plant dashboard showing plant details" caption="Mockup of plant dashboard showing plant details" class="small" >}}
