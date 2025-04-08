@@ -1,0 +1,10 @@
+{{ $link := .Get "link" }}
+{{ if not (or (hasPrefix $link "http://") (hasPrefix $link "https://") (hasPrefix $link ".") (hasPrefix $link "/")) }}
+  {{ $link = printf "https://%s" $link }}
+{{ end -}}
+
+<a class='button{{ if .Get "class"}} {{ .Get "class" }}{{ end }}'
+    href='{{ $link }}'
+    {{ if .Get "target" }}target='{{ .Get "target"}}'{{ end }}
+    rel="noopener noreferrer"
+    >{{ .Get "text"}} ▸</a>
