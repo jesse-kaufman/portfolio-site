@@ -3,6 +3,7 @@ date: 2025-03-05T17:00:56-06:00
 title: Plant tracking system (Express.js + Vue.js)
 description: A plant tracking API (built with Node.js and Express.js) and frontend (built with Vue.js and Tailwind CSS), designed to manage plant growth from seedling to harvest with efficient status updates and progress tracking.
 weight: 1
+slug: plant-tracker
 params:
   github: https://github.com/jesse-kaufman/plantsdb
 images:
