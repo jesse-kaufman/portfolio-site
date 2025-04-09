@@ -140,7 +140,7 @@ This lets me know with reasonable certainty **whether the trash cans are in the 
 
 ## **Future improvements**
 
-- [ ] Streamline YOLO call to reduce duplicated nodes
+- [x] Streamline YOLO call to reduce duplicated nodes
 - [ ] Add support for checking if image is mostly black and discarding any detection results to prevent false negatives
   - Would fix the need for the current time-based condition which isn't ideal
   - Maybe instead use lux measured by back door motion sensor?
@@ -158,7 +158,7 @@ This lets me know with reasonable certainty **whether the trash cans are in the 
 
 ### Semi-automated retraining
 
-- [ ] Manually label images in training directory
+- Manually label images in training directory
 - [ ] Automatically generate dataset with `labelme2yolo` when new Labelme labels are detected in training directory
 - [ ] Automatically run YOLO iterative training process for ~10 epochs when changes are detected to output directory of `labelme2yolo`
 - [ ] Copy new model .pt file into place when complete
@@ -182,3 +182,6 @@ This project showcases how AI and automation can be combined to create smart, pr
   - Added automated image collection to future improvements
   - Added semi-automated retraining to future improvements
   - Added fully automated retraining to future improvements
+- **2025.04.09:**
+  - Updated image for "trash can detection logic" to match new streamlined version
+  - Cross off "Streamline YOLO call to reduce duplicated nodes" on future features list
