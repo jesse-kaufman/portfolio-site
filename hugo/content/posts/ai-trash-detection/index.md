@@ -159,6 +159,10 @@ This lets me know with reasonable certainty **whether the trash cans are in the 
 ### Semi-automated retraining
 
 - Manually label images in training directory
+- [x] Setup npm scripts to automate training
+  - [x] `npm run train` runs training command (`yolo train data=dataset/dataset.yaml epochs=50 imgsz=640 model=yolo11n.pt freeze=10 pretrained=../yolo-trashcan/trashcan.pt`)
+  - [x] `npm run label` start LabelMe
+  - [x] `npm run label2yolo` converts LabelMe labels to YOLO labels with `labelme2yolo`
 - [ ] Automatically generate dataset with `labelme2yolo` when new Labelme labels are detected in training directory
 - [ ] Automatically run YOLO iterative training process for ~10 epochs when changes are detected to output directory of `labelme2yolo`
 - [ ] Copy new model .pt file into place when complete
@@ -185,3 +189,4 @@ This project showcases how AI and automation can be combined to create smart, pr
 - **2025.04.09:**
   - Updated image for "trash can detection logic" to match new streamlined version
   - Cross off "Streamline YOLO call to reduce duplicated nodes" on future features list
+  - Add NPM scripts to future improvements and mark complete
