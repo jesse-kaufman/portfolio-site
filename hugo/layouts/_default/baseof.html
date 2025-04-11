@@ -10,9 +10,18 @@
 	{{- partial "webschema.html" . -}}
 	<title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
 
-	<script defer data-domain="jessekaufman.com"
-		src="https://plausible.lloydnet.org/js/script.file-downloads.outbound-links.pageview-props.revenue.tagged-events.js"></script>
-	<script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+	<script defer data-domain="jessekaufman.com" src="https://plausible.lloydnet.org/js/script.file-downloads.outbound-links.pageview-props.tagged-events.js"></script>
+	<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-73LE1H3BHL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-73LE1H3BHL');
+</script>
 
 	<style type="text/css">
 		#home-subtitle {
