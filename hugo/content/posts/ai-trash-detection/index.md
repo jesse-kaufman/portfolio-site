@@ -160,7 +160,7 @@ This lets me know with reasonable certainty **whether the trash cans are in the 
 
 - Manually label images in training directory
 - [x] Setup npm scripts to automate training
-  - [x] `npm run train` runs training command (`yolo train data=dataset/dataset.yaml epochs=50 imgsz=640 model=yolo11n.pt freeze=10 pretrained=../yolo-trashcan/trashcan.pt`)
+  - [x] `npm run train` runs training command (`yolo train data=dataset/dataset.yaml epochs=50 imgsz=640 patience=5 model=../yolo-trashcan/trashcan.pt`)
   - [x] `npm run label` start LabelMe
   - [x] `npm run label2yolo` converts LabelMe labels to YOLO labels with `labelme2yolo`
 - [ ] Automatically generate dataset with `labelme2yolo` when new Labelme labels are detected in training directory
