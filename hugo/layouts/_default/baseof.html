@@ -3,15 +3,15 @@
 <html lang="{{.Site.LanguageCode}}">
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-73LE1H3BHL"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-73LE1H3BHL"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-73LE1H3BHL');
+	</script>
 
-gtag('config', 'G-73LE1H3BHL');
-</script>
 	{{- partial "google-tag-manager.html" (dict "context" . "name" "head") -}}
 	{{- partial "analytics.html" . -}}
 	{{- partial "site-meta.html" . -}}
