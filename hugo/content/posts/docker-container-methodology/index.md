@@ -4,6 +4,8 @@ title: Docker microservice setup & methodology
 description: This article breaks down how I organize and manage Docker projects using a modular docker-compose setup. I’ll cover the structure, security practices, reverse proxy configuration, and the reasoning behind each decision, with the goal of creating a setup that’s flexible, maintainable, and production-aware.
 tags:
   - Docker
+  - security
+  - networking
 ---
 
 ## Service structure & philosophy
