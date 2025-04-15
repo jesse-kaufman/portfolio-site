@@ -25,8 +25,8 @@ permalinks:
     projects: /projects/
     posts: /posts/
   page:
-    projects: /projects/:slug/
-    posts: /posts/:year/:month/:slug/
+    projects: /projects/:filename/
+    posts: /posts/:year/:month/:filename/
 enableGitInfo: true
 params:
   pinned: Pinned
