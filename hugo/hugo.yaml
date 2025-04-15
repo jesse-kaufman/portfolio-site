@@ -40,7 +40,6 @@ params:
   description: "Passionate and versatile problem-solver and software developer with over 25 years of experience in web development, primarily focusing on PHP, JavaScript, and Node.js."
   images:
     - /images/vscodium.jpg
-    - /projects/event-driven-camera-notifications/camera-dashboard.jpg
   dateformShort: "Jan 2"
   dateform: "January 2, 2006"
   dateformNum: "2006-01-02"
