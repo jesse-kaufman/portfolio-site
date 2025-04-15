@@ -3,8 +3,8 @@
   "short_name": "JesseK",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "443c52",
-  "theme_color": "##241F2B",
+  "background_color": "#443c52",
+  "theme_color": "#241F2B",
   "orientation": "portrait",
   "scope": "/",
   "icons": [
